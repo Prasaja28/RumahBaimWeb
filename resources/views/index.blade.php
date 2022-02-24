@@ -1,7 +1,48 @@
 @extends('layout-komponen.master')
 @section('title','Rumah Baim Website') <!-- name title -->
 @section('css-internal')
-
+<style>
+    .title-about{
+        text-align: center;
+        font-family: 'Poppins';
+        font-size: 36px;
+    }
+    #img-about{
+        Height: 468px;
+        Width: 428px;
+        margin-top: 80px;
+    }
+    #img-about1{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 120px;
+        height: 8px;
+        margin-top: 24px;
+    }
+    .about-content{
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 85px;
+    }
+    .btn-more{
+        font-family: "Poppins";
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 6px 24px;
+        border-radius: 50px;
+        transition: 0.5s;
+        margin-bottom: 30px;
+        border: 2px solid #71c55d;
+        background: #fff;
+        color: #71c55d;
+        text-decoration: none;
+        margin-left: 150px;
+    }
+</style>
 @endsection
 @section('konten')
 <!-- ======= Hero Section ======= -->
@@ -10,93 +51,36 @@
         <h1>Welcome to Rumah Baim</h1>
         <h2>Elegant Bootstrap Template for Startups, Apps &amp; more...</h2>
         <img src="assets/img/hero-img.png" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
-        <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
-        <div class="btns">
-            <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
-            <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
-            <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
-        </div>
+        <a href="#about-us" class="btn-get-started scrollto">Get Started</a>
         </div>
     </section><!-- End Hero Section -->
 
     <main id="main">
-
-        <!-- ======= Get Started Section ======= -->
-        <section id="get-started" class="padd-section text-center">
-
-        <div class="container" data-aos="fade-up">
-            <div class="section-title text-center">
-
-            <h2>simple systeme fordiscount </h2>
-            <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="feature-block">
-
-                <img src="assets/img/svg/cloud.svg" alt="img">
-                <h4>introducing whatsapp</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                <a href="#">read more</a>
-
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="feature-block">
-
-                <img src="assets/img/svg/planet.svg" alt="img">
-                <h4>user friendly interface</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                <a href="#">read more</a>
-
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                <div class="feature-block">
-
-                <img src="assets/img/svg/asteroid.svg" alt="img">
-                <h4>build the app everyone love</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                <a href="#">read more</a>
-
-                </div>
-            </div>
-
-            </div>
-        </div>
-
-        </section><!-- End Get Started Section -->
 
         <!-- ======= About Us Section ======= -->
         <section id="about-us" class="about-us padd-section">
         <div class="container" data-aos="fade-up">
             <div class="row justify-content-center">
 
-            <div class="col-md-5 col-lg-3">
-                <img src="assets/img/about-img.png" alt="About" data-aos="zoom-in" data-aos-delay="100">
+            <div class="title-about">
+                <h2>Tentang Kami</h2>
+            </div>
+            
+            <div class="line-title">
+                <img id="img-about1" src="img/about1.png" alt="">
+            </div>
+
+            <div class="col-md-5">
+                <img id="img-about" src="img/about.png" alt="About" data-aos="zoom-in" data-aos-delay="100">
             </div>
 
             <div class="col-md-7 col-lg-5">
                 <div class="about-content" data-aos="fade-left" data-aos-delay="100">
 
-                <h2><span>eStartup</span>UI Design Mobile </h2>
-                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-
-                <ul class="list-unstyled">
-                    <li><i class="vi bi-chevron-right"></i>Creative Design</li>
-                    <li><i class="vi bi-chevron-right"></i>Retina Ready</li>
-                    <li><i class="vi bi-chevron-right"></i>Easy to Use</li>
-                    <li><i class="vi bi-chevron-right"></i>Unlimited Features</li>
-                    <li><i class="vi bi-chevron-right"></i>Unlimited Features</li>
-                </ul>
+                
+                <a href="#" class="btn-more">Selengkapnya</a>
 
                 </div>
             </div>
@@ -222,82 +206,6 @@
             </div>
         </div>
         </section><!-- End Video Section -->
-
-        <!-- ======= Team Section ======= -->
-        <section id="team" class="padd-section text-center">
-
-        <div class="container" data-aos="fade-up">
-            <div class="section-title text-center">
-
-            <h2>Team Member</h2>
-            <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-            </div>
-
-            <div class="row">
-
-            <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-                <div class="team-block bottom">
-                <img src="assets/img/team/1.jpg" class="img-responsive" alt="img">
-                <div class="team-content">
-                    <ul class="list-unstyled">
-                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                    </ul>
-                    <span>manager</span>
-                    <h4>Kimberly Tran</h4>
-                </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-                <div class="team-block bottom">
-                <img src="assets/img/team/2.jpg" class="img-responsive" alt="img">
-                <div class="team-content">
-                    <ul class="list-unstyled">
-                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                    </ul>
-                    <span>manager</span>
-                    <h4>Kimberly Tran</h4>
-                </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-                <div class="team-block bottom">
-                <img src="assets/img/team/3.jpg" class="img-responsive" alt="img">
-                <div class="team-content">
-                    <ul class="list-unstyled">
-                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                    </ul>
-                    <span>manager</span>
-                    <h4>Kimberly Tran</h4>
-                </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
-                <div class="team-block bottom">
-                <img src="assets/img/team/4.jpg" class="img-responsive" alt="img">
-                <div class="team-content">
-                    <ul class="list-unstyled">
-                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                    </ul>
-                    <span>manager</span>
-                    <h4>Kimberly Tran</h4>
-                </div>
-                </div>
-            </div>
-
-            </div>
-        </div>
-        </section><!-- End Team Section -->
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="padd-section text-center">
@@ -454,6 +362,82 @@
             </div>
         </div>
         </section><!-- End Pricing Section -->
+
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="padd-section text-center">
+
+        <div class="container" data-aos="fade-up">
+            <div class="section-title text-center">
+
+            <h2>Team Member</h2>
+            <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+            </div>
+
+            <div class="row">
+
+            <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                <div class="team-block bottom">
+                <img src="assets/img/team/1.jpg" class="img-responsive" alt="img">
+                <div class="team-content">
+                    <ul class="list-unstyled">
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                    </ul>
+                    <span>manager</span>
+                    <h4>Kimberly Tran</h4>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                <div class="team-block bottom">
+                <img src="assets/img/team/2.jpg" class="img-responsive" alt="img">
+                <div class="team-content">
+                    <ul class="list-unstyled">
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                    </ul>
+                    <span>manager</span>
+                    <h4>Kimberly Tran</h4>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                <div class="team-block bottom">
+                <img src="assets/img/team/3.jpg" class="img-responsive" alt="img">
+                <div class="team-content">
+                    <ul class="list-unstyled">
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                    </ul>
+                    <span>manager</span>
+                    <h4>Kimberly Tran</h4>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                <div class="team-block bottom">
+                <img src="assets/img/team/4.jpg" class="img-responsive" alt="img">
+                <div class="team-content">
+                    <ul class="list-unstyled">
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                    </ul>
+                    <span>manager</span>
+                    <h4>Kimberly Tran</h4>
+                </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        </section><!-- End Team Section -->
 
         <!-- ======= Blog Section ======= -->
         <section id="blog" class="padd-sectio">
