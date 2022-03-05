@@ -7,7 +7,9 @@
       <a href="index.html">St</a>
     </div>
     <ul class="sidebar-menu">
-        <li class="menu-header">Dashboard</li>
+        <li class="nav-item dropdown active">
+          <a href="/dashboard" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+        </li>
         <li class="nav-item dropdown active">
           <a href="/admin-akun" class="nav-link"><i class="fas fa-fire"></i><span>Akun</span></a>
         </li>

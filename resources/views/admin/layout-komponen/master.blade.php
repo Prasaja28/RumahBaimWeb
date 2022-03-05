@@ -1,3 +1,4 @@
+@if(\Session::has('user_id'))
 <!doctype html>
 <html lang="en">
   <head>
@@ -26,3 +27,6 @@
     </div>
   </body>
 </html>
+@else
+    @include('admin.nologin')
+@endif
