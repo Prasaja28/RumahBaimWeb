@@ -44,10 +44,10 @@
                             @endif
                             <td class="text-center">
                             @if($users->status == 1)
-                                <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#delete{{$data->id}}"><i class="fas fa-trash-alt"></i></i></button>
+                                <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#delete{{$users->id}}"><i class="fas fa-trash-alt"></i></i></button>
                                 |
                             @endif
-                                <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#edit{{$data->id}}"><i class="fas fa-pen-square"></i></button>
+                                <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#edit{{$users->id}}"><i class="fas fa-pen-square"></i></button>
                             </td>
                         </tr>
                         @empty
@@ -73,10 +73,10 @@
     </section>
 </div>
 <!-- Model Delete -->
-<!-- @include('admin.faq-admin.faq-admin-delete') -->
+@include('admin.akun-admin.akun-admin-delete')
 <!-- Model Update -->
-<!-- @include('admin.faq-admin.faq-admin-update') -->
-<!-- @include('admin.faq-admin.faq-admin-create') -->
+@include('admin.akun-admin.akun-admin-update')
+@include('admin.akun-admin.akun-admin-create')
 @endsection
 
 @section('script')

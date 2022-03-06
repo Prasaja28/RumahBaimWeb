@@ -36,6 +36,6 @@ Route::post('/admin-faq/store',[FaqController::class, 'store']);
 
 //Akun
 Route::get('/admin-akun',[UsersController::class, 'index']);
-// Route::get('/akun-admin/delete/{id}',[UsersController::class, 'destroy']);
-// Route::post('/akun-admin/store',[UsersController::class, 'store']);
-// Route::put('/akun-admin/update/{id}',[UsersController::class, 'update']);
+Route::get('/admin-akun/delete/{id}',[UsersController::class, 'destroy']);
+Route::put('/admin-akun/update/{id}',[UsersController::class, 'update']);
+Route::post('/admin-akun/store',[UsersController::class, 'store']);
