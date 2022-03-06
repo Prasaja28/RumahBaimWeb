@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,9 @@ Route::get('/admin-faq',[FaqController::class, 'index']);
 Route::get('/admin-faq/delete/{id}',[FaqController::class, 'destroy']);
 Route::put('/admin-faq/update/{id}',[FaqController::class, 'update']);
 Route::post('/admin-faq/store',[FaqController::class, 'store']);
+
+//Akun
+Route::get('/admin-akun',[UsersController::class, 'index']);
+// Route::get('/akun-admin/delete/{id}',[UsersController::class, 'destroy']);
+// Route::post('/akun-admin/store',[UsersController::class, 'store']);
+// Route::put('/akun-admin/update/{id}',[UsersController::class, 'update']);

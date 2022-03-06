@@ -12,9 +12,6 @@
           <a href="{{ url('/dashboard') }}" class="nav-link"><i class="fas fa-home"></i><span>Dashboard</span></a>
         </li>
         <li class="nav-item dropdown active">
-          <a href="{{ url('/admin-akun') }}" class="nav-link"><i class="fas fa-fire"></i><span>Akun</span></a>
-        </li>
-        <li class="nav-item dropdown active">
           <a href="{{ url('/admin-portofolio') }}" class="nav-link"><i class="fas fa-fire"></i><span>Portofolio</span></a>
         </li>
         <li class="nav-item dropdown active">
@@ -25,6 +22,9 @@
         </li>
         <li class="nav-item dropdown active">
           <a href="{{ url('/admin-contact') }}" class="nav-link"><i class="fas fa-fire"></i><span>Contact</span></a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a href="{{ url('/admin-akun') }}" class="nav-link"><i class="fas fa-mail-bulk"></i><span>Akun</span></a>
         </li>
     </ul>
   </aside>
