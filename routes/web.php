@@ -44,6 +44,12 @@ Route::post('/admin-akun/store',[UsersController::class, 'store']);
 
 //Profil
 Route::get('/admin-profil',[ProfilController::class, 'index']);
-// Route::get('/admin-profil/delete/{id}',[ProfilController::class, 'destroy']);
-// Route::put('/admin-profil/update/{id}',[ProfilController::class, 'update']);
-// Route::post('/admin-profil/store',[ProfilController::class, 'store']);
+Route::get('/admin-profil/delete-video/{id}',[ProfilController::class, 'videoDestroy']);
+Route::put('/admin-profil/update-video/{id}',[ProfilController::class, 'videoUpdate']);
+Route::post('/admin-profil/video-store',[ProfilController::class, 'videoStore']);
+Route::get('/admin-profil/delete-tentang/{id}',[ProfilController::class, 'tentangDestroy']);
+Route::put('/admin-profil/update-tentang/{id}',[ProfilController::class, 'tentangUpdate']);
+Route::post('/admin-profil/store-tentang',[ProfilController::class, 'tentangStore']);
+Route::get('/admin-profil/delete-kontak/{id}',[ProfilController::class, 'kontakDestroy']);
+Route::put('/admin-profil/update-kontak/{id}',[ProfilController::class, 'kontakUpdate']);
+Route::post('/admin-profil/store-kontaj',[ProfilController::class, 'kontakStore']);

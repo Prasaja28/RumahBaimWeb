@@ -22,6 +22,12 @@
                 <div class="container text-center"><br>
                     <h4>Data Video Profil Studio Arsitek</h4>
                 </div>
+                @forelse($video as $data) 
+                    @empty
+                    <div class="container"><br>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#ModalCreateVideo">Masukan Data Video</button><br><br>
+                    </div>
+                @endforelse
                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
@@ -31,16 +37,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($profil as $data)
-                            @if ($data->jenis == "video profil")
+                        @foreach($video as $data)
                             <tr>
-                                <td>{{$data->isian}}</td>
+                                <td>{{$data->link}}</td>
                                 <td>{{$data->created_at}}</td>
-                                <td class="text-center">
-                                    <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#edit{{$data->id}}"><i class="fas fa-pen-square"></i></button>
+                                <td class="">
+                                    <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#editVideo{{$data->id}}"><i class="fas fa-pen-square"></i></button>
+                                    |
+                                    <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#deleteVideo{{$data->id}}"><i class="fas fa-trash-alt"></i></i></button>
+                                    
                                 </td>
                             </tr>
-                            @endif
                         @endforeach
                     </tbody>
                     
@@ -49,6 +56,12 @@
                 <div class="container text-center"><br>
                     <h4>Data Tentang Kami</h4>
                 </div>
+                @forelse($tentang as $data) 
+                    @empty
+                    <div class="container"><br>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#ModalCreateTentang">Masukan Data Tentang Kami</button><br><br>
+                    </div>
+                @endforelse
                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
@@ -58,7 +71,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                   
+                        @foreach($tentang as $data)
+                            <tr>
+                                <td size="3">{{$data->deskripsi}}</td>
+                                <td>{{$data->created_at}}</td>
+                                <td class="">
+                                    <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#editTentang{{$data->id}}"><i class="fas fa-pen-square"></i></button>
+                                    |
+                                    <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#deleteTentang{{$data->id}}"><i class="fas fa-trash-alt"></i></i></button>
+                                    
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                     
                 </table>
@@ -85,8 +109,13 @@
         </div>
     </section>
 </div>
-<!-- Model Delete -->
+<!-- Model Video -->
+@include('admin.profil-admin.profil-admin-create-video')
+@include('admin.profil-admin.profil-admin-update-video')
+@include('admin.profil-admin.profil-admin-delete-video')
 
+<!-- Model Tentang Kami -->
+@include('admin.profil-admin.profil-admin-create-tentang')
 @endsection
 
 @section('script')
