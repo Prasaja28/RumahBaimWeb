@@ -21,9 +21,6 @@
                 @yield('js-internal')
             </div>
         </div>
-        <div>
-          @yield('content')
-        </div>
     </div>
   </body>
 </html>
