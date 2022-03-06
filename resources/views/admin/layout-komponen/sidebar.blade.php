@@ -12,7 +12,7 @@
           <a href="{{ url('/dashboard') }}" class="nav-link"><i class="fas fa-home"></i><span>Dashboard</span></a>
         </li>
         <li class="nav-item dropdown active">
-          <a href="{{ url('/admin-portofolio') }}" class="nav-link"><i class="fas fa-fire"></i><span>Portofolio</span></a>
+          <a href="{{ url('/admin-porto') }}" class="nav-link"><i class="fas fa-bookmark"></i><span>Portofolio</span></a>
         </li>
         <li class="nav-item dropdown active">
           <a href="{{ url('/admin-layanan') }}" class="nav-link"><i class="fas fa-fire"></i><span>Layanan Jasa</span></a>

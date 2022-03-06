@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\PortoController;
 use App\Http\Controllers\UsersController;
 
 /*
@@ -33,6 +34,12 @@ Route::get('/admin-faq',[FaqController::class, 'index']);
 Route::get('/admin-faq/delete/{id}',[FaqController::class, 'destroy']);
 Route::put('/admin-faq/update/{id}',[FaqController::class, 'update']);
 Route::post('/admin-faq/store',[FaqController::class, 'store']);
+
+//portofolio
+Route::get('/admin-porto',[PortoController::class, 'index']);
+Route::get('/admin-porto/delete/{id}',[PortoController::class, 'destroy']);
+Route::put('/admin-porto/update/{id}',[PortoController::class, 'update']);
+Route::post('/admin-porto/store',[PortoController::class, 'store']);
 
 //Akun
 Route::get('/admin-akun',[UsersController::class, 'index']);
