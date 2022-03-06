@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\ProfilController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +41,9 @@ Route::get('/admin-akun',[UsersController::class, 'index']);
 Route::get('/admin-akun/delete/{id}',[UsersController::class, 'destroy']);
 Route::put('/admin-akun/update/{id}',[UsersController::class, 'update']);
 Route::post('/admin-akun/store',[UsersController::class, 'store']);
+
+//Profil
+Route::get('/admin-profil',[ProfilController::class, 'index']);
+// Route::get('/admin-profil/delete/{id}',[ProfilController::class, 'destroy']);
+// Route::put('/admin-profil/update/{id}',[ProfilController::class, 'update']);
+// Route::post('/admin-profil/store',[ProfilController::class, 'store']);

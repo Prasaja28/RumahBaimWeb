@@ -9,19 +9,19 @@
     </div>
     <ul class="sidebar-menu">
         <li class="nav-item dropdown active">
-          <a href="{{ url('/dashboard') }}" class="nav-link"><i class="fas fa-home"></i><span>Dashboard</span></a>
+          <a href="{{ url('/dashboard') }}" class="nav-link"><i class="fas fa-home"></i><span>Beranda</span></a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a href="{{ url('/admin-profil') }}" class="nav-link"><i class="fas fa-fire"></i><span>Profil</span></a>
         </li>
         <li class="nav-item dropdown active">
           <a href="{{ url('/admin-portofolio') }}" class="nav-link"><i class="fas fa-fire"></i><span>Portofolio</span></a>
+        </li>        
+        <li class="nav-item dropdown active">
+          <a href="{{ url('/admin-faq') }}" class="nav-link"><i class="fas fa-question"></i><span>Tanya Jawab</span></a>
         </li>
         <li class="nav-item dropdown active">
-          <a href="{{ url('/admin-layanan') }}" class="nav-link"><i class="fas fa-fire"></i><span>Layanan Jasa</span></a>
-        </li>
-        <li class="nav-item dropdown active">
-          <a href="{{ url('/admin-faq') }}" class="nav-link"><i class="fas fa-question"></i><span>FAQ</span></a>
-        </li>
-        <li class="nav-item dropdown active">
-          <a href="{{ url('/admin-contact') }}" class="nav-link"><i class="fas fa-fire"></i><span>Contact</span></a>
+          <a href="{{ url('/admin-contact') }}" class="nav-link"><i class="fas fa-fire"></i><span>Kontak</span></a>
         </li>
         <li class="nav-item dropdown active">
           <a href="{{ url('/admin-akun') }}" class="nav-link"><i class="fas fa-mail-bulk"></i><span>Akun</span></a>
