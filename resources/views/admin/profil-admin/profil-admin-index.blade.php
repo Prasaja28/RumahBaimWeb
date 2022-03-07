@@ -73,7 +73,7 @@
                     <tbody>
                         @foreach($tentang as $data)
                             <tr>
-                                <td size="3">{{$data->deskripsi}}</td>
+                                <td>{{$data->deskripsi}}</td>
                                 <td>{{$data->created_at}}</td>
                                 <td class="">
                                     <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#editTentang{{$data->id}}"><i class="fas fa-pen-square"></i></button>
@@ -90,6 +90,11 @@
                 <div class="container text-center"><br>
                     <h4>Data Kontak</h4>
                 </div>
+                @if(count($kontak) < 4)
+                <div class="container"><br>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#ModalCreateKontak">Masukan Data Kontak</button><br><br>
+                </div>
+                @endif
                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
@@ -100,7 +105,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                   
+                        @foreach($kontak as $data)
+                            <tr>
+                                <td>{{$data->jenis}}</td>
+                                <td>{{$data->isian}}</td>
+                                <td>{{$data->created_at}}</td>
+                                <td class="">
+                                    <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#editKontak{{$data->id}}"><i class="fas fa-pen-square"></i></button>
+                                    |
+                                    <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#deleteKontak{{$data->id}}"><i class="fas fa-trash-alt"></i></i></button>
+                                    
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                     
                 </table>
@@ -116,7 +133,15 @@
 
 <!-- Model Tentang Kami -->
 @include('admin.profil-admin.profil-admin-create-tentang')
+@include('admin.profil-admin.profil-admin-update-tentang')
+@include('admin.profil-admin.profil-admin-delete-tentang')
+
+<!-- Model Kontak -->
+@include('admin.profil-admin.profil-admin-create-kontak')
+@include('admin.profil-admin.profil-admin-update-kontak')
+@include('admin.profil-admin.profil-admin-delete-kontak')
 @endsection
+
 
 @section('script')
 <!-- script internal place -->

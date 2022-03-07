@@ -59,4 +59,4 @@ Route::put('/admin-profil/update-tentang/{id}',[ProfilController::class, 'tentan
 Route::post('/admin-profil/store-tentang',[ProfilController::class, 'tentangStore']);
 Route::get('/admin-profil/delete-kontak/{id}',[ProfilController::class, 'kontakDestroy']);
 Route::put('/admin-profil/update-kontak/{id}',[ProfilController::class, 'kontakUpdate']);
-Route::post('/admin-profil/store-kontaj',[ProfilController::class, 'kontakStore']);
+Route::post('/admin-profil/store-kontak',[ProfilController::class, 'kontakStore']);

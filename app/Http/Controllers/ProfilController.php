@@ -69,6 +69,33 @@ class ProfilController extends Controller
         ]);
         return redirect('/admin-profil')->with('Data Berhasil Di Hapus!!!');
     }
+    
+    public function kontakStore(Request $request)
+    {
+        Kontak::create([
+            'jenis' => $request->jenis,
+            'isian' => $request->isian
+        ]);
+        return redirect('/admin-profil')->with('Data Berhasil Di Simpan!!!');
+    }
+    
+    public function kontakUpdate(Request $request, $id)
+    {
+        Kontak::where('id',$id)
+            ->update([
+            'jenis' => $request->jenis,
+            'isian' => $request->isian
+        ]);
+        return redirect('/admin-profil')->with('Data Berhasil Di update!!!');
+    }
+
+    public function kontakDestroy($id)
+    {
+        Kontak::where('id',$id)
+        ->update([
+        ]);
+        return redirect('/admin-profil')->with('Data Berhasil Di Hapus!!!');
+    }
 
     //
 

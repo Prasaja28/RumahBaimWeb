@@ -10,6 +10,6 @@ class Kontak extends Model
     use HasFactory;
     protected $table = 'kontak';
     protected $primaryKey = 'id';
-    protected $fillable = ['jenis','isian','created_at'];
+    protected $fillable = ['jenis','isian'];
     protected $guarded = [];
 }
