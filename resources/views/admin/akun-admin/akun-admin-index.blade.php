@@ -56,16 +56,7 @@
                         </div>
                     @endforelse
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>No</th>
-                            <th>Nama</th>
-                            <th>password</th>
-                            <th>email</th>
-                            <th>status</th>
-                            <th>Action</th>
-                        </tr>
-                    </tfoot>
+                    
                 </table>
               </div>
             </div>

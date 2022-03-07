@@ -1,6 +1,6 @@
 <!-- Modal Tambah Bidang -->
 <!-- Modal -->
-<div class="modal fade bd-example-modal-lg" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" id="createPortofolio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
           <div class="modal-header">
@@ -10,7 +10,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{ url('/admin-porto/store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ url('/admin-porto/store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                     <div class="form-group">
                         <label for="nama_desain">Nama Desain :</label>

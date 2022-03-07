@@ -41,19 +41,8 @@
                             </td>
                         </tr>
                         @empty
-                        <div class="alert alert-danger">
-                            Data FAQ belum Tersedia
-                        </div>
                     @endforelse
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>No</th>
-                            <th>Pertanyaan</th>
-                            <th>Jawaban</th>
-                            <th>Action</th>
-                        </tr>
-                    </tfoot>
                 </table>
               </div>
             </div>
@@ -61,10 +50,10 @@
     </section>
 </div>
 <!-- Model Delete -->
-@include('admin.faq-admin.faq-admin-delete')
-<!-- Model Update -->
-@include('admin.faq-admin.faq-admin-update')
+
 @include('admin.faq-admin.faq-admin-create')
+@include('admin.faq-admin.faq-admin-update')
+@include('admin.faq-admin.faq-admin-delete')
 @endsection
 
 @section('script')

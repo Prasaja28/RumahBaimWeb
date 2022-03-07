@@ -37,22 +37,23 @@ class PortoController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'foto_utama' => 'max:88'
-        ]);
+        // $request->validate([
+        //     'foto_utama' => 'max:88'
+        // ]);
         $path = null; 
-            if($request->foto_utama)
-            {
-                $file = $request->file('foto_utama');
-                $path = '/img/porto-img/'.time().'-'.$file->getClientOriginalName();
-                $file->move(public_path('img/porto-img'), $path);
-            }
-            Portofolio::create([
-                'nama_desain' => $request->nama_desain,
-                'deskripsi' => $request->deskripsi,
-                'foto_utama' => $path
-            ]);
-            return redirect('/admin-porto')->with('Data Berhasil Di Simpan!!!'); 
+        if($request->foto_utama)
+        {
+            $file = $request->file('foto_utama');
+            $path = '/img/porto-img/'.time().'-'.$file->getClientOriginalName();
+            $file->move(public_path('img/porto-img'), $path);
+        }
+            // echo $path;
+        Portofolio::create([
+            'nama_desain' => $request->nama_desain,
+            'deskripsi' => $request->deskripsi,
+            'foto_utama' => $path
+        ]);
+        return redirect('/admin-porto')->with('Data Berhasil Di Simpan!!!'); 
     }
 
     /**
@@ -98,7 +99,7 @@ class PortoController extends Controller
             }else{
                 $path = $request->foto_utama2;
             }
-            News::where('id',$id)
+            Portofolio::where('id',$id)
             ->update([
                 'nama_desain' => $request->nama_desain,
                 'deskripsi' => $request->deskripsi,

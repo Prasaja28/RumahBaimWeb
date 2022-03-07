@@ -1,4 +1,5 @@
 <!-- Modal -->
+@foreach ($faq as $data)
 <div class="modal fade bd-example-modal-lg" id="edit{{$data->id}}" tabindex="-1" role="dialog" aria-labelledby="faqupdate" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -40,3 +41,4 @@
     </div>
   </div>
 </div>
+@endforeach

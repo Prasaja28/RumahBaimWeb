@@ -17,7 +17,7 @@
             <div class="col-12">
               <div class="card card-statistic-1">
                 <div class="container"><br>
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Tambah Data</button><br><br>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#createPortofolio">Tambah Data</button><br><br>
                 </div>
                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
@@ -48,20 +48,8 @@
                             </td>
                         </tr>
                         @empty
-                        <div class="alert alert-danger">
-                            Portofolio belum Tersedia
-                        </div>
                     @endforelse
                     </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>No</th>
-                            <th>Nama Desain</th>
-                            <th>Deskripsi</th>
-                            <th>Foto Utama</th>
-                            <th>Action</th>
-                        </tr>
-                    </tfoot>
                 </table>
               </div>
             </div>

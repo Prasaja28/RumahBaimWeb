@@ -1,4 +1,5 @@
 <!-- Modal -->
+@foreach ($faq as $data)
 <div class="modal fade" id="delete{{$data->id}}" tabindex="-1" role="dialog" aria-labelledby="faqDELETE" aria-hidden="true">
   <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -20,3 +21,4 @@
     </div>
   </div>
 </div>
+@endforeach
