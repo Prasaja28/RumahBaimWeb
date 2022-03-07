@@ -8,23 +8,19 @@
       <a href="index.html"><span style="color: #F17922">RB</span></a>
     </div>
     <ul class="sidebar-menu">
-        <li class="nav-item dropdown active">
+        <li class="nav-item dropdown {{ (request()->is('dashboard*')) ? 'active' : '' }}">
           <a href="{{ url('/dashboard') }}" class="nav-link"><i class="fas fa-home"></i><span>Beranda</span></a>
         </li>
-        <li class="nav-item dropdown active">
-          <a href="{{ url('/admin-porto') }}" class="nav-link"><i class="fas fa-bookmark"></i><span>Portofolio</span></a>
+        <li class="nav-item dropdown {{ (request()->is('admin-profil*')) ? 'active' : '' }}">
           <a href="{{ url('/admin-profil') }}" class="nav-link"><i class="fas fa-fire"></i><span>Profil</span></a>
+        </li>       
+        <li class="nav-item dropdown {{ (request()->is('admin-porto*')) ? 'active' : '' }}">
+          <a href="{{ url('/admin-porto') }}" class="nav-link"><i class="fas fa-bookmark"></i><span>Portofolio</span></a>
         </li>
-        <li class="nav-item dropdown active">
-          <a href="{{ url('/admin-portofolio') }}" class="nav-link"><i class="fas fa-fire"></i><span>Portofolio</span></a>
-        </li>        
-        <li class="nav-item dropdown active">
+        <li class="nav-item dropdown {{ (request()->is('admin-faq*')) ? 'active' : '' }}">
           <a href="{{ url('/admin-faq') }}" class="nav-link"><i class="fas fa-question"></i><span>Tanya Jawab</span></a>
         </li>
-        <li class="nav-item dropdown active">
-          <a href="{{ url('/admin-contact') }}" class="nav-link"><i class="fas fa-fire"></i><span>Kontak</span></a>
-        </li>
-        <li class="nav-item dropdown active">
+        <li class="nav-item dropdown {{ (request()->is('admin-akun*')) ? 'active' : '' }}">
           <a href="{{ url('/admin-akun') }}" class="nav-link"><i class="fas fa-mail-bulk"></i><span>Akun</span></a>
         </li>
     </ul>
