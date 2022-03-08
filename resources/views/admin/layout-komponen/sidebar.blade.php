@@ -11,7 +11,6 @@
         <li class="nav-item dropdown {{ (request()->is('dashboard*')) ? 'active' : '' }}">
           <a href="{{ url('/dashboard') }}" class="nav-link"><i class="fas fa-home"></i><span>Beranda</span></a>
         </li>
-<<<<<<< Updated upstream
         <li class="nav-item dropdown {{ (request()->is('admin-profil*')) ? 'active' : '' }}">
           <a href="{{ url('/admin-profil') }}" class="nav-link"><i class="fas fa-fire"></i><span>Profil</span></a>
         </li>       
@@ -19,15 +18,6 @@
           <a href="{{ url('/admin-porto') }}" class="nav-link"><i class="fas fa-bookmark"></i><span>Portofolio</span></a>
         </li>
         <li class="nav-item dropdown {{ (request()->is('admin-faq*')) ? 'active' : '' }}">
-=======
-        <li class="nav-item dropdown active">
-          <a href="{{ url('/admin-profil') }}" class="nav-link"><i class="fas fa-user-edit"></i><span>Profil</span></a>
-        </li>
-        <li class="nav-item dropdown active">
-          <a href="{{ url('/admin-porto') }}" class="nav-link"><i class="fas fa-bookmark"></i><span>Portofolio</span></a>
-        </li>        
-        <li class="nav-item dropdown active">
->>>>>>> Stashed changes
           <a href="{{ url('/admin-faq') }}" class="nav-link"><i class="fas fa-question"></i><span>Tanya Jawab</span></a>
         </li>
         <li class="nav-item dropdown {{ (request()->is('admin-akun*')) ? 'active' : '' }}">

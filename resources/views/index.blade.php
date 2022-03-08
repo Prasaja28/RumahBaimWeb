@@ -5,6 +5,15 @@
     .justify-content-center {
         margin-bottom: 145px;
     }
+    #home-col5{
+        margin-top: 35px;
+    }
+    .back-to-top{
+        background: #F17922;
+    }
+    .back-to-top:hover {
+        background: #FFE5D2;
+    }
     #hero{
         background-image:none;
         height: auto;
@@ -40,6 +49,12 @@
         background: #F17922;
         color: white;
         margin-top: 20px;
+    }
+    #hero .btn-get-started:hover {
+        background: #FFE5D2;
+        color: #F17922;
+        border-style: solid;
+        border-color: #F17922;
     }
     .title-about{
         text-align: center;
@@ -152,7 +167,6 @@
         color: white;
         margin-top: 20px;
         font-family: "Red Hat Display";
-        text-transform: uppercase;
         font-weight: 400;
         font-size: 13px;
         letter-spacing: 1px;
@@ -162,13 +176,146 @@
         transition: 0.5s;
         margin-bottom: 30px;
     }
+    #portofolios .btn-get-more:hover {
+        background: #FFE5D2;
+        color: #F17922;
+        border-style: solid;
+        border-color: #F17922;
+    }
+    .title-jasa h2{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        color: #FFFFFF;
+    }
+    #pricing{
+        background-color: #333333;
+    }
+    #pricing .row .block-pricing{
+        border-radius: 25px;
+    }
+    #pricing .row h4{
+        color: #F17922;
+        margin-top: -20px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    #pricing .row #img-c1{
+        width: auto;
+        height: 154px;
+        margin-left: -1px;
+        margin-top: -27px;
+    }
+    #pricing .row #img-c2{
+        margin-top: 22px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
+    #pricing .row .price-list p{
+        background-color: #FFEC45;
+        font-weight: normal;
+        font-family: Poppins;
+        font-size: 10px;
+        margin-top: 110px;
+        margin-bottom: 20px;
+    }
+    #pricing .row .price-list span{
+        color: #333333;
+        font-weight: 500;
+        font-size: 13px;
+    }
+    #pricing .row .price-list2 p{
+        background-color: #FFEC45;
+        font-weight: normal;
+        font-family: Poppins;
+        font-size: 10px;
+        margin-top: 16px;
+        margin-bottom: 20px;
+    }
+    #pricing .row .price-list2 span{
+        color: #333333;
+        font-weight: 500;
+        font-size: 13px;
+    }
+    #pricing .row .t_button .btn-get-chat {
+        border: none;
+        background: #F17922;
+        color: white;
+        margin-top: 20px;
+        font-family: "Red Hat Display";
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 11px 36px;
+        border-radius: 50px;
+        transition: 0.5s;
+        margin-bottom: 30px;
+    }
+    #pricing .row .t_button .btn-get-chat{
+        border: none;
+        background: #F17922;
+        color: white;
+        margin-top: 20px;
+        margin-top: -14px;
+        margin-bottom: -14px;
+    }
+    #pricing .row .t_button .btn-get-chat:hover {
+        background: #FFE5D2;
+        color: #F17922;
+        border-style: solid;
+        border-color: #F17922;
+    }
+    #pricing .row .pricing-table #img-c1-2{
+        width: auto;
+        height: 149px;
+        margin-left: -1px;
+        margin-top: -24px;
+    }
+    #pricing .row .pricing-table #img-c1-3{
+        width: auto;
+        height: 149px;
+        margin-left: -1px;
+        margin-top: -24px;
+    }
+    #pricing .row .pricing-table #img-c1-4{
+        width: auto;
+        height: 149px;
+        margin-left: -1px;
+        margin-top: -24px;
+    }
+    #faq .title-faq{
+        font-family: Montserrat;
+        font-weight: bold;
+        font-size: 36px;
+        color: #333333;
+    }
+    #faq .container #accordion{
+        margin-top: 60px;
+    }
+    #faq .container .btn{
+        font-family: Poppins;
+        font-weight: bold;
+        font-size: 16px;
+        color: #333333;
+        text-align: left;
+    }
+    #faq .container .btn .card-body{
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 16px;
+        color: #5E5E5E;
+    }
 </style>
 @endsection
 @section('konten')
 <!-- ======= Home Section ======= -->
     <section id="hero">
         <div class="row justify-content-center">
-            <div class="col-md-5">
+            <div id="home-col5" class="col-md-5">
                 <h2><span>Membangun Rumah itu Mudah Bersama Tim</span> Rumah Baim!</h2>
                 <p>Kami Menyediakan Layanan Jasa Untuk Mewujudkan Rumah Impian Anda</p>
                 <a href="#portofolios" class="btn-get-started scrollto">View Project</a>
@@ -176,9 +323,29 @@
             </div>
 
             <div class="col-md-7 col-lg-5">
-                <div class="videoWrapper">
-                    <!-- Copy & Pasted from YouTube -->
+                <!-- <div class="videoWrapper">
                     <iframe width="560" height="349" src="https://www.youtube.com/embed/kCPQUAtMZR4" frameborder="0" allowfullscreen></iframe>
+                </div> -->
+                <div id="carousel-example-generic" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item  active">
+                            <div class="top-top">
+                                <img style="width: auto;height: 396px;" src="img/home-carousel.png" alt="">
+                            </div>
+                        </div>
+    
+                        <div class="carousel-item ">
+                            <div class="top-top">
+                                <img style="width: auto;height: 396px;" src="img/home-carousel2.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btm-btm">
+                        <ul class="list-unstyled carousel-indicators">
+                            <li data-bs-target="#carousel-example-generic" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carousel-example-generic" data-bs-slide-to="1"></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -257,255 +424,162 @@
                         </div>
                     </div>
                 </div>
-                <a href="#contact" class="btn-get-more scrollto">Selengkapnya ></a>
+                <a href="#" class="btn-get-more scrollto">Selengkapnya ></a>
                 
             </div>
         </section><!-- End Screenshots Section -->
 
-        <!-- ======= Video Section ======= -->
-        <section id="video" class="text-center">
-        <div class="overlay">
-            <div class="container-fluid container-full" data-aos="zoom-in">
-
-            <div class="row">
-                <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q&feature=emb_title" class="glightbox play-btn"></a>
-            </div>
-
-            </div>
-        </div>
-        </section><!-- End Video Section -->
-
-        <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="padd-section text-center">
-        <div class="container" data-aos="fade-up">
-            <div class="row justify-content-center">
-
-            <div class="col-md-8">
-
-                <div class="testimonials-content">
-                <div id="carousel-example-generic" class="carousel slide" data-bs-ride="carousel">
-
-                    <div class="carousel-inner" role="listbox">
-
-                    <div class="carousel-item  active">
-                        <div class="top-top">
-
-                        <h2>Our Users Speack volumes us</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                            specimen book. It has survived not only five centuries.</p>
-                        <h4>Kimberly Tran<span>manager</span></h4>
-
-                        </div>
-                    </div>
-
-                    <div class="carousel-item ">
-                        <div class="top-top">
-
-                        <h2>Our Users Speack volumes us</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                            specimen book. It has survived not only five centuries.</p>
-                        <h4>Henderson<span>manager</span></h4>
-
-                        </div>
-                    </div>
-
-                    <div class="carousel-item ">
-                        <div class="top-top">
-
-                        <h2>Our Users Speack volumes us</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                            specimen book. It has survived not only five centuries.</p>
-                        <h4>David Spark<span>manager</span></h4>
-
-                        </div>
-                    </div>
-
-                    </div>
-
-                    <div class="btm-btm">
-
-                    <ul class="list-unstyled carousel-indicators">
-                        <li data-bs-target="#carousel-example-generic" data-bs-slide-to="0" class="active"></li>
-                        <li data-bs-target="#carousel-example-generic" data-bs-slide-to="1"></li>
-                        <li data-bs-target="#carousel-example-generic" data-bs-slide-to="2"></li>
-                    </ul>
-
-                    </div>
-
-                </div>
-                </div>
-            </div>
-
-            </div>
-        </div>
-        </section><!-- End Testimonials Section -->
-
-        <!-- ======= Pricing Section ======= -->
+        <!-- ======= service Section ======= -->
         <section id="pricing" class="padd-section text-cente">
+            <div class="container" data-aos="fade-up">
+                    <div class="section-title text-center">
+                        <div class="title-jasa">
+                            <h2>Paket Jasa</h2>
+                        </div>
+                
+                        <div class="line-title">
+                            <img id="img-about1" src="img/about1.png" alt="">
+                        </div>
+                    </div>
 
-        <div class="container" data-aos="fade-up">
-            <div class="section-title text-center">
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
 
-            <h2>Meet With Price</h2>
-            <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-            </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="block-pricing">
+                            <div class="pricing-table">
+                                <h4>Desain</h4>
+                                <img id="img-c1" src="img/img-service1.png" alt="">
+                                <img id="img-c2" src="img/jasa-content1.png" alt="">
+                                <div class="price-list">
+                                    <p>
+                                        Harga mulai dari <span>Rp 50 ribu /m2</span>
+                                    </p>    
+                                </div>
+                                <div class="t_button">
+                                    <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="col-md-6 col-lg-3">
-                <div class="block-pricing">
-                <div class="pricing-table">
-                    <h4>basic</h4>
-                    <h2>$29</h2>
-                    <ul class="list-unstyled">
-                    <li><b>4 GB</b> Ram</li>
-                    <li><b>7/24</b> Tech Support</li>
-                    <li><b>40 GB</b> SSD Cloud Storage</li>
-                    <li>Monthly Backups</li>
-                    <li>Palo Protection</li>
-                    </ul>
-                    <div class="table_btn">
-                    <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
+                <div class="col-md-6 col-lg-3">
+                    <div class="block-pricing">
+                        <div class="pricing-table">
+                            <h4>Desain dan Bangun</h4>
+                            <img id="img-c1-2" src="img/img-service2.png" alt="">
+                            <img id="img-c2" src="img/jasa-content2.png" alt="">
+                            <div class="price-list2">
+                                <p>
+                                    Harga mulai dari <span>Rp 2 juta / m2</span>
+                                </p>    
+                            </div>
+                            <div class="t_button">
+                                <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-            </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="block-pricing">
-                <div class="pricing-table">
-                    <h4>PERSONAL</h4>
-                    <h2>$29</h2>
-                    <ul class="list-unstyled">
-                    <li><b>4 GB</b> Ram</li>
-                    <li><b>7/24</b> Tech Support</li>
-                    <li><b>40 GB</b> SSD Cloud Storage</li>
-                    <li>Monthly Backups</li>
-                    <li>Palo Protection</li>
-                    </ul>
-                    <div class="table_btn">
-                    <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
+                <div class="col-md-6 col-lg-3">
+                    <div class="block-pricing">
+                        <div class="pricing-table">
+                            <h4>Renovasi</h4>
+                            <img id="img-c1-3" src="img/img-service3.png" alt="">
+                            <img id="img-c2" src="img/jasa-content3.png" alt="">
+                            <div class="price-list2">
+                                <p>
+                                    Harga mulai dari <span>Rp 2 juta / m2</span>
+                                </p>    
+                            </div>
+                            <div class="t_button">
+                                <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-            </div>
 
-            <div class="col-md-6 col-lg-3">
-                <div class="block-pricing">
-                <div class="pricing-table">
-                    <h4>BUSINESS</h4>
-                    <h2>$29</h2>
-                    <ul class="list-unstyled">
-                    <li><b>4 GB</b> Ram</li>
-                    <li><b>7/24</b> Tech Support</li>
-                    <li><b>40 GB</b> SSD Cloud Storage</li>
-                    <li>Monthly Backups</li>
-                    <li>Palo Protection</li>
-                    </ul>
-                    <div class="table_btn">
-                    <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
+                <div class="col-md-6 col-lg-3">
+                    <div class="block-pricing">
+                        <div class="pricing-table">
+                            <h4>Desain Interior</h4>
+                            <img id="img-c1-4" src="img/img-service4.png" alt="">
+                            <img id="img-c2" src="img/jasa-content4.png" alt="">
+                            <div class="price-list2">
+                                <p>
+                                    Harga mulai dari <span>Rp 2 juta / m2</span>
+                                </p>    
+                            </div>
+                            <div class="t_button">
+                                <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="block-pricing">
-                <div class="pricing-table">
-                    <h4>profeesional</h4>
-                    <h2>$29</h2>
-                    <ul class="list-unstyled">
-                    <li><b>4 GB</b> Ram</li>
-                    <li><b>7/24</b> Tech Support</li>
-                    <li><b>40 GB</b> SSD Cloud Storage</li>
-                    <li>Monthly Backups</li>
-                    <li>Palo Protection</li>
-                    </ul>
-                    <div class="table_btn">
-                    <a href="#" class="btn"><i class="bi bi-cart"></i> Buy Now</a>
-                    </div>
-                </div>
-                </div>
-            </div>
             </div>
         </div>
         </section><!-- End Pricing Section -->
 
-        <!-- ======= Team Section ======= -->
-        <section id="team" class="padd-section text-center">
-
-        <div class="container" data-aos="fade-up">
-            <div class="section-title text-center">
-
-            <h2>Team Member</h2>
-            <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-            </div>
-
-            <div class="row">
-
-            <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-                <div class="team-block bottom">
-                <img src="assets/img/team/1.jpg" class="img-responsive" alt="img">
-                <div class="team-content">
-                    <ul class="list-unstyled">
-                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                    </ul>
-                    <span>manager</span>
-                    <h4>Kimberly Tran</h4>
+        <!-- ======= faq Section ======= -->
+        <section id="faq" class="padd-section">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title-faq text-center">
+                    <div class="title-faq">
+                        <h2>FAQ</h2>
+                    </div>
+                    
+                    <div class="line-title">
+                        <img id="img-about1" src="img/about1.png" alt="">
+                    </div>
                 </div>
-                </div>
-            </div>
+                <div class="container">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    CLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?
+                                    </button>
+                                </h5>
+                            </div>
 
-            <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-                <div class="team-block bottom">
-                <img src="assets/img/team/2.jpg" class="img-responsive" alt="img">
-                <div class="team-content">
-                    <ul class="list-unstyled">
-                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                    </ul>
-                    <span>manager</span>
-                    <h4>Kimberly Tran</h4>
-                </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-                <div class="team-block bottom">
-                <img src="assets/img/team/3.jpg" class="img-responsive" alt="img">
-                <div class="team-content">
-                    <ul class="list-unstyled">
-                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                    </ul>
-                    <span>manager</span>
-                    <h4>Kimberly Tran</h4>
-                </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
-                <div class="team-block bottom">
-                <img src="assets/img/team/4.jpg" class="img-responsive" alt="img">
-                <div class="team-content">
-                    <ul class="list-unstyled">
-                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                    </ul>
-                    <span>manager</span>
-                    <h4>Kimberly Tran</h4>
-                </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            </div>
-        </div>
-        </section><!-- End Team Section -->
+        </section><!-- End faq Section -->
 
         <!-- ======= Blog Section ======= -->
         <section id="blog" class="padd-sectio">
