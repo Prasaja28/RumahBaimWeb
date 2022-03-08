@@ -35,7 +35,6 @@
                             <td>{{$loop->iteration}}</td>
                             <td>{{$portos->nama_desain}}</td>
                             <td>{{$portos->deskripsi}}</td>
-                            <!-- <td>{{$portos->foto_utama}}</td> -->
                             @if($portos->foto_utama == null)
                                 <td><img style="width: 150px;" src= "{{ asset('img/porto-img'.$portos->file_path) }}" alt=""></td>
                             @else

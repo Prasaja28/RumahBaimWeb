@@ -2,6 +2,9 @@
 @section('title','Rumah Baim Website') <!-- name title -->
 @section('css-internal')
 <style>
+    .justify-content-center {
+        margin-bottom: 145px;
+    }
     #hero{
         background-image:none;
         height: auto;
@@ -31,6 +34,12 @@
     }
     .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
         color: #F17922;
+    }
+    #hero .btn-get-started {
+        border: none;
+        background: #F17922;
+        color: white;
+        margin-top: 20px;
     }
     .title-about{
         text-align: center;
@@ -90,6 +99,69 @@
         font-size: 15px;
         margin-left: 6px;
     }
+    #about-us-extended{
+        background-color: #333333;
+    }
+    .text-upper p{
+        color: white;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: justify;
+    }
+    .work-process img{
+        width: auto;
+        height: 910px;
+        margin-left: -89px;
+        margin-top: -24px;
+    }
+    .title-porto{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 44px;
+        color: #333333;
+    }
+    #img-latest-bg{
+        margin-top: 71px;
+    }
+    #content-latest-porto{
+        background-image: url(img/porto-black.png);
+        background-repeat: no-repeat;
+        width: 740px;
+        margin-left: -75px;
+        margin-top: 100px;
+    }
+    #content-latest-porto .container{
+        position:absolute;
+        margin-left: -145px;
+    }
+    #content-latest-porto .container .img-content{
+        width: auto;
+        height: 220px;
+        margin-top: 72px;
+        margin-right: 40px;
+        margin-left: -50px;
+    }
+    #portofolios .btn-get-more {
+        border: none;
+        background: #F17922;
+        color: white;
+        margin-top: 20px;
+        font-family: "Red Hat Display";
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 11px 36px;
+        border-radius: 50px;
+        transition: 0.5s;
+        margin-bottom: 30px;
+    }
 </style>
 @endsection
 @section('konten')
@@ -99,7 +171,7 @@
             <div class="col-md-5">
                 <h2><span>Membangun Rumah itu Mudah Bersama Tim</span> Rumah Baim!</h2>
                 <p>Kami Menyediakan Layanan Jasa Untuk Mewujudkan Rumah Impian Anda</p>
-                <a href="#screenshots" class="btn-get-started scrollto">View Project</a>
+                <a href="#portofolios" class="btn-get-started scrollto">View Project</a>
                 <a href="#contact" class="btn-get-started scrollto">Hubungi Kami</a>
             </div>
 
@@ -147,117 +219,47 @@
             </div>
         </section><!-- End About Us Section -->
 
-        <!-- procedure section -->
+        <!-- Proses Kerja section -->
         <section id="about-us-extended" class="about-us padd-section">
             <div class="container">
-
+                <div class="text-upper" data-aos="fade-up">
+                    <p>
+                    Membangun rumah akan lebih mudah bersama Rumah Baim. Jadi percayakan kebutuhan bangunan Anda pada kami dan kami akan melayani dengan senang hati. Untuk mewujudkan bangunan rumah impian anda, berikut merupakan prosedur kerja layanan jasa kami. Prosedur tersebut dapat berubah sesuai dengan paket layanan jasa yang anda pilih.
+                    </p>
+                </div>
+                <div class="work-process" data-aos="fade-up">
+                    <img src="img/proses-kerja.png" alt="">
+                </div>
             </div>
         </section>
-        <!-- end procedure section -->
+        <!-- end Proses Kerja section -->
 
-        <!-- ======= Features Section ======= -->
-        <section id="features" class="padd-section text-center">
-
-        <div class="container" data-aos="fade-up">
-            <div class="section-title text-center">
-            <h2>Amazing Features.</h2>
-            <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-            </div>
-
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-block">
-                <img src="assets/img/svg/paint-palette.svg" alt="img">
-                <h4>creative design</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <!-- ======= Portofolio Section ======= -->
+        <section id="portofolios" class="padd-section text-center">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="title-porto">
+                        <h2>Portofolio</h2>
+                    </div>
+    
+                    <div class="line-title">
+                        <img id="img-about1" src="img/about1.png" alt="">
+                    </div>
+    
+                    <div class="col-md-5">
+                        <img id="img-latest-bg" src="img/latest.png" alt="latest" data-aos="zoom-in"data-aos-delay="100">
+                    </div>
+    
+                    <div id="content-latest-porto" class="col-md-7 col-lg-5">
+                        <div class="container">
+                            <img class="img-content" src="img/content-img.png" alt="">
+                            <img class="img-content" src="img/content-img.png" alt="">
+                        </div>
+                    </div>
                 </div>
+                <a href="#contact" class="btn-get-more scrollto">Selengkapnya ></a>
+                
             </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-block">
-                <img src="assets/img/svg/vector.svg" alt="img">
-                <h4>Retina Ready</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-block">
-                <img src="assets/img/svg/design-tool.svg" alt="img">
-                <h4>easy to use</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-block">
-                <img src="assets/img/svg/asteroid.svg" alt="img">
-                <h4>Free Updates</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-block">
-                <img src="assets/img/svg/asteroid.svg" alt="img">
-                <h4>Free Updates</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-block">
-                <img src="assets/img/svg/cloud-computing.svg" alt="img">
-                <h4>App store support</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-block">
-                <img src="assets/img/svg/pixel.svg" alt="img">
-                <h4>Perfect Pixel</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-                <div class="feature-block">
-                <img src="assets/img/svg/code.svg" alt="img">
-                <h4>clean codes</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                </div>
-            </div>
-
-            </div>
-        </div>
-        </section><!-- End Features Section -->
-
-        <!-- ======= Screenshots Section ======= -->
-        <section id="screenshots" class="padd-section text-center">
-
-        <div class="container" data-aos="fade-up">
-            <div class="section-title text-center">
-            <h2>App Gallery</h2>
-            <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-            </div>
-
-            <div class="screens-slider swiper">
-            <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide"><img src="assets/img/screen/1.jpg" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/screen/2.jpg" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/screen/3.jpg" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/screen/4.jpg" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/screen/5.jpg" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/screen/6.jpg" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/screen/7.jpg" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/screen/8.jpg" class="img-fluid" alt=""></div>
-            </div>
-            <div class="swiper-pagination"></div>
-            </div>
-        </div>
-
         </section><!-- End Screenshots Section -->
 
         <!-- ======= Video Section ======= -->
