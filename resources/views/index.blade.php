@@ -300,14 +300,76 @@
         font-family: Poppins;
         font-weight: bold;
         font-size: 16px;
-        color: #333333;
+        color: white;
         text-align: left;
+        border: none;
     }
-    #faq .container .btn .card-body{
+    #faq .container .card-body{
         font-family: Poppins;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 12px;
         color: #5E5E5E;
+    }
+    #faq .container .card-header{
+        background-color: #F17922;
+    }
+    #call-us .bg-image{
+        background-image: url("img/hubungi-kami.png");
+        height: 100%;
+        background-repeat: no-repeat;
+    }
+    #call-us .bg-image .container h1{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 72px;
+        color: #FFFFFF;
+    }
+    #call-us .bg-image .container p{
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: justify;
+        color: #FFFFFF;
+        margin-top: -80px;
+    }
+    #call-us .bg-image .btn-get-call {
+        border: none;
+        background: #F17922;
+        color: white;
+        margin-top: 20px;
+        font-family: "Red Hat Display";
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 11px 36px;
+        border-radius: 50px;
+        transition: 0.5s;
+        margin-bottom: 30px;
+    }
+    #call-us .bg-image .btn-get-call{
+        border: none;
+        background: #F17922;
+        color: white;
+        margin-top: 20px;
+        margin-top: -14px;
+        margin-bottom: -14px;
+    }
+    #call-us .bg-image .btn-get-call:hover {
+        background: #FFE5D2;
+        color: #F17922;
+        border-style: solid;
+        border-color: #F17922;
+    }
+    #contact .section-title .title-kontak h2{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 44px;
     }
 </style>
 @endsection
@@ -576,150 +638,81 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section><!-- End faq Section -->
 
-        <!-- ======= Blog Section ======= -->
-        <section id="blog" class="padd-sectio">
+        <!-- ======= Hubungi Kami Section ======= -->
+        <section id="call-us" class="call text-center">
+            <div class="bg-image padd-section">
+                <div class="container" data-aos="zoom-in">
+                    <div class="row justify-content-center">
+                        <h1>Konsultasi Gratis</h1>
+                    </div>
 
-        <div class="container" data-aos="fade-up">
-            <div class="section-title text-center">
-
-            <h2>Latest posts</h2>
-            <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-            </div>
-
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="col-md-6 col-lg-4">
-                <div class="block-blog text-left">
-                <a href="#"><img src="assets/img/blog/blog-image-1.jpg" alt="img"></a>
-                <div class="content-blog">
-                    <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-                    <span>05, juin 2017</span>
-                    <a class="float-end readmore" href="#">read more</a>
-                </div>
+                    <div class="container">
+                        <p>
+                            Jika ada yang ingin ditanyakan anda dapat melakukan konsultasi bersama tim kami secara gratis melalui WhatsApp. Jangan ragu untuk segera mewujudkan rumah impian anda, dengan senang hati kami akan bantu!
+                        </p>
+                        <a href="#" class="btn-get-call scrollto">Hubungi Kami</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="block-blog text-left">
-                <a href="#"><img src="assets/img/blog/blog-image-2.jpg" class="img-responsive" alt="img"></a>
-                <div class="content-blog">
-                    <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-                    <span>05, juin 2017</span>
-                    <a class="float-end readmore" href="#">read more</a>
-                </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="block-blog text-left">
-                <a href="#"><img src="assets/img/blog/blog-image-3.jpg" class="img-responsive" alt="img"></a>
-                <div class="content-blog">
-                    <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-                    <span>05, juin 2017</span>
-                    <a class="float-end readmore" href="#">read more</a>
-                </div>
-                </div>
-            </div>
-
-            </div>
-        </div>
-        </section><!-- End Blog Section -->
-
-        <!-- ======= Newsletter Section ======= -->
-        <section id="newsletter" class="newsletter text-center">
-        <div class="overlay padd-section">
-            <div class="container" data-aos="zoom-in">
-
-            <div class="row justify-content-center">
-                <div class="col-md-9 col-lg-6">
-                <form class="d-flex" method="POST" action="#">
-                    <input type="email" class="form-control " placeholder="Email Adress" name="email">
-                    <button type="submit" class="btn btn-default"><i class="bi bi-location-arrow"></i>Subscribe</button>
-                </form>
-                </div>
-            </div>
-
-            <ul class="list-unstyled">
-                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-            </ul>
-
-            </div>
-        </div>
-        </section><!-- End Newsletter Section -->
+        </section><!-- End Hubungi Kami Section -->
 
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="padd-section">
-
-        <div class="container" data-aos="fade-up">
-            <div class="section-title text-center">
-            <h2>Contact</h2>
-            <p class="separator">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-            </div>
-
-            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="col-lg-3 col-md-4">
-
-                <div class="info">
-                <div>
-                    <i class="bi bi-geo-alt"></i>
-                    <p>A108 Adam Street<br>New York, NY 535022</p>
+            <div class="container" data-aos="fade-up">
+                <div class="section-title text-center">
+                    <div class="title-kontak">
+                        <h2>Kontak</h2>
+                    </div>
+                    
+                    <div class="line-title">
+                        <img id="img-about1" src="img/about1.png" alt="">
+                    </div>
                 </div>
 
-                <div class="email">
-                    <i class="bi bi-envelope"></i>
-                    <p>info@example.com</p>
-                </div>
+                <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="info">
+                            <div>
+                                <i class="bi bi-geo-alt"></i>
+                                <p>A108 Adam Street<br>New York, NY 535022</p>
+                            </div>
 
-                <div>
-                    <i class="bi bi-phone"></i>
-                    <p>+1 5589 55488 55s</p>
-                </div>
-                </div>
+                            <div class="email">
+                                <i class="bi bi-envelope"></i>
+                                <p>info@example.com</p>
+                            </div>
 
-                <div class="social-links">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                </div>
+                            <div>
+                                <i class="bi bi-phone"></i>
+                                <p>+1 5589 55488 55s</p>
+                            </div>
+                        </div>
+                    </div>
 
-            </div>
-
-            <div class="col-lg-5 col-md-8">
-                <div class="form">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                    <div class="form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                    <div class="col-lg-5 col-md-8">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.1409907669185!2d110.38376870218993!3d-7.797628036231348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5734088512fd%3A0x26690348ac8080f4!2secc.co.id%20(PT.%20ECC)!5e0!3m2!1sid!2sid!4v1646798364536!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
-                    <div class="form-group mt-3">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group mt-3">
-                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                    </div>
-                    <div class="my-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                    </div>
-                    <div class="text-center"><button type="submit">Send Message</button></div>
-                </form>
                 </div>
             </div>
-            </div>
-        </div>
         </section><!-- End Contact Section -->
 
     </main><!-- End #main -->
