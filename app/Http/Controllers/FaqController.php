@@ -91,9 +91,7 @@ class FaqController extends Controller
      */
     public function destroy($id)
     {
-        Faq::where('id',$id)
-        ->update([
-        ]);
+        Faq::where('id',$id)->delete();
         return redirect('/admin-faq')->with('Data Berhasil Di Hapus!!!');
     }
 }

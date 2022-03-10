@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Portofolio;
+use App\Models\GaleriPorto;
 use Session;
 
 class PortoController extends Controller
@@ -65,6 +66,9 @@ class PortoController extends Controller
     public function show($id)
     {
         //
+        $detail = Portofolio::where('id',$id)->get();
+        $galeri = GaleriPorto::where('porto_id', $id)->get();
+        return view('admin.porto-admin.porto-admin-detail',compact('detail'));
     }
 
     /**
@@ -116,9 +120,7 @@ class PortoController extends Controller
      */
     public function destroy($id)
     {
-        Portofolio::where('id',$id)
-        ->update([
-        ]);
+        Portofolio::where('id',$id)->delete();
         return redirect('/admin-porto')->with('Data Berhasil Di Hapus!!!');
     }
 }

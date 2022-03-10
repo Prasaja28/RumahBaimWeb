@@ -6,6 +6,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\PortoController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\GaleriController;
 
 
 /*
@@ -43,6 +44,9 @@ Route::get('/admin-porto/delete/{id}',[PortoController::class, 'destroy']);
 Route::put('/admin-porto/update/{id}',[PortoController::class, 'update']);
 Route::post('/admin-porto/store',[PortoController::class, 'store']);
 
+//detail Portofolio
+Route::get('/admin-porto-detail/{id}',[PortoController::class, 'show']);
+
 //Akun
 Route::get('/admin-akun',[UsersController::class, 'index']);
 Route::get('/admin-akun/delete/{id}',[UsersController::class, 'destroy']);
@@ -60,3 +64,10 @@ Route::post('/admin-profil/store-tentang',[ProfilController::class, 'tentangStor
 Route::get('/admin-profil/delete-kontak/{id}',[ProfilController::class, 'kontakDestroy']);
 Route::put('/admin-profil/update-kontak/{id}',[ProfilController::class, 'kontakUpdate']);
 Route::post('/admin-profil/store-kontak',[ProfilController::class, 'kontakStore']);
+
+//galeri portofolio
+Route::get('/admin-galeri',[GaleriController::class, 'index']);
+Route::get('/admin-galeri/show',[GaleriController::class, 'show']);
+Route::get('/admin-galeri/delete/{id}',[GaleriController::class, 'destroy']);
+Route::put('/admin-galeri/update/{id}',[GaleriController::class, 'update']);
+Route::post('/admin-galeri/store',[GaleriController::class, 'store']);

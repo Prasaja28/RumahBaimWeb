@@ -20,12 +20,12 @@
                     <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Tambah Kategori</button><br><br>
                 </div>-->
                 <div class="container text-center"><br>
-                    <h4>Data Video Profil Studio Arsitek</h4>
+                    <h4>Data Foto Bagian Profil</h4>
                 </div>
                 @forelse($video as $data) 
                     @empty
                     <div class="container"><br>
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#ModalCreateVideo">Masukan Data Video</button><br><br>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#ModalCreateVideo">Masukan Data Foto</button><br><br>
                     </div>
                 @endforelse
                 <table id="example" class="table table-striped table-bordered" style="width:100%">
@@ -71,14 +71,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($tentang as $data)
+                        @foreach($tentang as $dataTentang)
                             <tr>
-                                <td>{{$data->deskripsi}}</td>
-                                <td>{{$data->created_at}}</td>
+                                <td>{{$dataTentang->deskripsi}}</td>
+                                <td>{{$dataTentang->created_at}}</td>
                                 <td class="">
-                                    <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#editTentang{{$data->id}}"><i class="fas fa-pen-square"></i></button>
+                                    <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#editTentang{{$dataTentang->id}}"><i class="fas fa-pen-square"></i></button>
                                     |
-                                    <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#deleteTentang{{$data->id}}"><i class="fas fa-trash-alt"></i></i></button>
+                                    <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#deleteTentang{{$dataTentang->id}}"><i class="fas fa-trash-alt"></i></i></button>
                                     
                                 </td>
                             </tr>
@@ -126,10 +126,7 @@
         </div>
     </section>
 </div>
-<!-- Model Video -->
-@include('admin.profil-admin.profil-admin-create-video')
-@include('admin.profil-admin.profil-admin-update-video')
-@include('admin.profil-admin.profil-admin-delete-video')
+
 
 <!-- Model Tentang Kami -->
 @include('admin.profil-admin.profil-admin-create-tentang')
@@ -140,6 +137,11 @@
 @include('admin.profil-admin.profil-admin-create-kontak')
 @include('admin.profil-admin.profil-admin-update-kontak')
 @include('admin.profil-admin.profil-admin-delete-kontak')
+
+<!-- Model Video -->
+@include('admin.profil-admin.profil-admin-create-video')
+@include('admin.profil-admin.profil-admin-update-video')
+@include('admin.profil-admin.profil-admin-delete-video')
 @endsection
 
 

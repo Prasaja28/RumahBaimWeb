@@ -24,7 +24,6 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Desain</th>
-                            <th>Deskripsi</th>
                             <th>Foto Utama</th>
                             <th>Action</th>
                         </tr>
@@ -34,14 +33,14 @@
                         <tr>
                             <td>{{$loop->iteration}}</td>
                             <td>{{$portos->nama_desain}}</td>
-                            <td>{{$portos->deskripsi}}</td>
-                            <!-- <td>{{$portos->foto_utama}}</td> -->
                             @if($portos->foto_utama == null)
                                 <td><img style="width: 150px;" src= "{{ asset('img/porto-img'.$portos->file_path) }}" alt=""></td>
                             @else
                                 <td><img style="width: 150px;" src="{{ $portos->foto_utama }}" alt=""></td>
                             @endif
-                            <td class="text-center">
+                            <td class="">
+                                <button class="btn btn-info" alt="View" data-toggle="modal" data-target="#view{{$portos->id}}"><i class="fas fa-eye"></i></i></button>
+                                |
                                 <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#delete{{$portos->id}}"><i class="fas fa-trash-alt"></i></i></button>
                                 |
                                 <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#edit{{$portos->id}}"><i class="fas fa-pen-square"></i></button>
@@ -61,6 +60,7 @@
 @include('admin.porto-admin.porto-admin-delete')
 <!-- Model Update -->
 @include('admin.porto-admin.porto-admin-update')
+@include('admin.porto-admin.porto-admin-detail')
 @endsection
 
 @section('script')

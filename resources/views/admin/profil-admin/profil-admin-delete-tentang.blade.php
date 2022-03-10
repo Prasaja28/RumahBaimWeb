@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="deleteTentang{{$data->id}}" tabindex="-1" role="dialog" aria-labelledby="faqDELETE" aria-hidden="true">
+<div class="modal fade" id="deleteTentang{{$dataTentang->id}}" tabindex="-1" role="dialog" aria-labelledby="faqDELETE" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">

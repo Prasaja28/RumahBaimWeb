@@ -64,9 +64,7 @@ class ProfilController extends Controller
 
     public function tentangDestroy($id)
     {
-        Tentang_Kami::where('id',$id)
-        ->update([
-        ]);
+        Tentang_Kami::where('id',$id)->delete();
         return redirect('/admin-profil')->with('Data Berhasil Di Hapus!!!');
     }
     
@@ -91,9 +89,7 @@ class ProfilController extends Controller
 
     public function kontakDestroy($id)
     {
-        Kontak::where('id',$id)
-        ->update([
-        ]);
+        Kontak::where('id',$id)->delete();
         return redirect('/admin-profil')->with('Data Berhasil Di Hapus!!!');
     }
 
