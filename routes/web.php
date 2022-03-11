@@ -23,6 +23,9 @@ use App\Http\Controllers\GaleriController;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/detail-porto', function () {
+    return view('detail-porto');
+});
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });

@@ -364,12 +364,23 @@
         border-style: solid;
         border-color: #F17922;
     }
+    #contact .info {
+        color: #222;
+        margin-left: -165px;
+    }
     #contact .section-title .title-kontak h2{
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
         font-size: 36px;
         line-height: 44px;
+    }
+    #contact .info p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        margin-left: -51px;
     }
 </style>
 @endsection
@@ -486,7 +497,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn-get-more scrollto">Selengkapnya ></a>
+                <a href="detail-porto" class="btn-get-more scrollto">Selengkapnya ></a>
                 
             </div>
         </section><!-- End Screenshots Section -->
@@ -692,18 +703,18 @@
                     <div class="col-lg-3 col-md-4">
                         <div class="info">
                             <div>
-                                <i class="bi bi-geo-alt"></i>
-                                <p>A108 Adam Street<br>New York, NY 535022</p>
+                                <h4>Alamat :</h4>
+                                <p>Jl. Imogiri Timur KM 11 Wonokromo Pleret Bantul</p>
                             </div>
-
-                            <div class="email">
-                                <i class="bi bi-envelope"></i>
-                                <p>info@example.com</p>
-                            </div>
-
                             <div>
-                                <i class="bi bi-phone"></i>
-                                <p>+1 5589 55488 55s</p>
+                                <h4>Jam Operasional :</h4>
+                                <p>Senin - Jumat (08.00 - 16.00 WIB)</p>
+                            </div>
+                            <div>
+                                <h4>Sosial Media :</h4>
+                                <img src="img/logo-gmail.png" alt=""><p>rumahbaim18@gmail.com</p>
+                                <img src="img/logo-whatsapp.png" alt=""><p>+6285643945374</p>
+                                <img src="img/logo-instagram.png" alt=""><p>@rumah.baim</p>
                             </div>
                         </div>
                     </div>
