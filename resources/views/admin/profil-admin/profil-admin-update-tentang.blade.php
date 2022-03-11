@@ -1,4 +1,5 @@
 <!-- Modal -->
+@if ($tentang->count() != 0)
 <div class="modal fade bd-example-modal-lg" id="editTentang{{$dataTentang->id}}" tabindex="-1" role="dialog" aria-labelledby="faqupdate" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -31,3 +32,4 @@
       </div>
     </div>
   </div>
+  @endif

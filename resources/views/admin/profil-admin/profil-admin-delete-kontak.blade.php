@@ -1,4 +1,5 @@
 <!-- Modal -->
+@if ($kontak != null)
 @foreach ($kontak as $data)
 <div class="modal fade" id="deleteKontak{{$data->id}}" tabindex="-1" role="dialog" aria-labelledby="faqDELETE" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -20,3 +21,4 @@
     </div>
   </div>
   @endforeach
+  @endif

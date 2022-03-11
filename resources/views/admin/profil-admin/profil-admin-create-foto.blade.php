@@ -4,23 +4,20 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel2">Tambah Data Video</h5>
+                <h5 class="modal-title" id="exampleModalLabel2">Tambah Data Foto</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
               </div>
               <div class="modal-body">
-                  <form action="{{ url('/admin-profil/video-store') }}" method="post" enctype="multipart/form-data">
+                  <form action="{{ url('/admin-profil/store-foto') }}" method="post" enctype="multipart/form-data">
                   @csrf
-                      <div class="form-group">
-                          <label for="link">Link :</label>
-                          <input type="text" class="form-control form-control-border @error('link') is-invalid @enderror" id="link" placeholder="Link....." name="link" value="{{ old('link') }}" required>
-                          @error('link')
-                              <span class="invalid-feedback" role="alert">
-                                  <strong>{{ $message }}</strong>
-                              </span>
-                          @enderror
-                      </div>
+                        <div class="item form-group" style="margin-right:-40px;">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" style="text-align:left; margin-right: -100px;" >Masukkan Foto <span class="required">*</span></label>
+                            <div class="col-md-9 col-sm-6 col-xs-12" style="margin-left:60px;">
+                                <input type="file" name="foto_home" id="foto_home" accept=".png, .jpg, .jpeg" required>
+                            </div>
+                        </div>
                       <button type="submit" class="btn btn-primary">Simpan</button>
                   </form>
               </div>

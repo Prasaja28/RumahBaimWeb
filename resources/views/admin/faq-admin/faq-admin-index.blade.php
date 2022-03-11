@@ -25,6 +25,7 @@
                             <th>No</th>
                             <th>Pertanyaan</th>
                             <th>Jawaban</th>
+                            <th>Tampilkah?</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -34,10 +35,15 @@
                             <td>{{$loop->iteration}}</td>
                             <td>{{$data->pertanyaan}}</td>
                             <td>{{$data->jawaban}}</td>
+                            @if ($data->tampilkan == 1)
+                            <td>Tampil</td>
+                            @else
+                            <td>Tidak Tampil</td>
+                            @endif
                             <td class="text-center">
-                                <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#delete{{$data->id}}"><i class="fas fa-trash-alt"></i></i></button>
-                                |
                                 <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#edit{{$data->id}}"><i class="fas fa-pen-square"></i></button>
+                                |
+                                <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#delete{{$data->id}}"><i class="fas fa-trash-alt"></i></i></button>
                             </td>
                         </tr>
                         @empty

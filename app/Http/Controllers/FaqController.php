@@ -78,7 +78,8 @@ class FaqController extends Controller
         Faq::where('id',$id)
             ->update([
             'pertanyaan' => $request->pertanyaan,
-            'jawaban' => $request->jawaban
+            'jawaban' => $request->jawaban,
+            'tampilkan' => $request->tampilkan
         ]);
         return redirect('/admin-faq')->with('Data Berhasil Di update!!!');
     }

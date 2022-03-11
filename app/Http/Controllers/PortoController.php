@@ -92,7 +92,7 @@ class PortoController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'foto_utama' => 'max:88'
+            'foto_utama' => 'max:10000'
         ]);
         $path = null; 
             if($request->foto_utama)

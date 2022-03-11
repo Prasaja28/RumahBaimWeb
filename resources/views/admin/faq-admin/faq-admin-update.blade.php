@@ -31,6 +31,18 @@
                             </span>
                         @enderror
                     </div>
+                    <div class="form-group">
+                        <label for="jawaban">Tampilkan ?</label>
+                        <select class="form-control" name="tampilkan">
+                            @if($data->tampilkan == 1)
+                            <option value="1" selected>Tampilkan</option>
+                            <option value="0">Sembunyikan</option>
+                            @else
+                            <option value="1">Tampilkan</option>
+                            <option value="0" selected>Sembunyikan</option>
+                            @endif
+                        </select>
+                    </div>
                     <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
 

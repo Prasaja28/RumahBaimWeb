@@ -17,6 +17,7 @@ class CreateFaqTable extends Migration
             $table->increments('id');
             $table->string('pertanyaan');
             $table->string('jawaban');
+            $table->string('tampilkan')->default(True);
             $table->timestamps();
             $table->softDeletes();
         });

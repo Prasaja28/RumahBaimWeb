@@ -20,31 +20,34 @@
                     <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">Tambah Kategori</button><br><br>
                 </div>-->
                 <div class="container text-center"><br>
-                    <h4>Data Foto Bagian Profil</h4>
+                    <h4>Data Foto Bagian Depan</h4>
                 </div>
-                @forelse($video as $data) 
-                    @empty
+                @if($foto->count() < 2)
                     <div class="container"><br>
                         <button class="btn btn-primary" data-toggle="modal" data-target="#ModalCreateVideo">Masukan Data Foto</button><br><br>
                     </div>
-                @endforelse
+                @endif
                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
-                            <th>Link Video (Youtube)</th>
+                            <th>Foto</th>
                             <th>Tanggal Diunggah</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($video as $data)
+                        @foreach($foto as $dataFoto)
                             <tr>
-                                <td>{{$data->link}}</td>
-                                <td>{{$data->created_at}}</td>
+                                @if($dataFoto->foto == null)
+                                    <td><img style="width: 150px;" src= "{{ asset('img/porto-img'.$dataFoto->foto) }}" alt=""></td>
+                                @else
+                                    <td><img style="width: 150px;" src="{{ $dataFoto->foto }}" alt=""></td>
+                                @endif
+                                <td>{{$dataFoto->created_at}}</td>
                                 <td class="">
-                                    <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#editVideo{{$data->id}}"><i class="fas fa-pen-square"></i></button>
+                                    <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#editFoto{{$dataFoto->id}}"><i class="fas fa-pen-square"></i></button>
                                     |
-                                    <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#deleteVideo{{$data->id}}"><i class="fas fa-trash-alt"></i></i></button>
+                                    <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#deleteFoto{{$dataFoto->id}}"><i class="fas fa-trash-alt"></i></i></button>
                                     
                                 </td>
                             </tr>
@@ -129,19 +132,23 @@
 
 
 <!-- Model Tentang Kami -->
+@if (!empty($tentang))
 @include('admin.profil-admin.profil-admin-create-tentang')
 @include('admin.profil-admin.profil-admin-update-tentang')
 @include('admin.profil-admin.profil-admin-delete-tentang')
-
+@endif
 <!-- Model Kontak -->
+@if (!empty($kontak))
 @include('admin.profil-admin.profil-admin-create-kontak')
 @include('admin.profil-admin.profil-admin-update-kontak')
 @include('admin.profil-admin.profil-admin-delete-kontak')
-
+@endif
 <!-- Model Video -->
-@include('admin.profil-admin.profil-admin-create-video')
-@include('admin.profil-admin.profil-admin-update-video')
-@include('admin.profil-admin.profil-admin-delete-video')
+@if (!empty($foto))
+@include('admin.profil-admin.profil-admin-create-foto')
+@include('admin.profil-admin.profil-admin-update-foto')
+@include('admin.profil-admin.profil-admin-delete-foto')
+@endif
 @endsection
 
 

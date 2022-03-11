@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Video_profil;
+use App\Models\FotoHome;
 use App\Models\Tentang_Kami;
 use App\Models\Kontak;
 use Session;
@@ -13,35 +13,57 @@ class ProfilController extends Controller
     //
     public function index()
     {
-        $video = Video_profil::all();
+        $foto = FotoHome::all();
         $tentang = Tentang_Kami::all();
         $kontak = Kontak::all();
-        return view('admin.profil-admin.profil-admin-index',compact('video','tentang','kontak'));
+        // echo $tentang->count();
+        return view('admin.profil-admin.profil-admin-index',compact('foto','tentang','kontak'));
     }
 
     //tambah data video
-    public function videoStore(Request $request)
+    public function fotoStore(Request $request)
     {
-        Video_profil::create([
-            'link' => $request->link
+        $path = null; 
+        if($request->foto_home)
+        {
+            $file = $request->file('foto_home');
+            $path = '/img/porto-img/'.time().'-'.$file->getClientOriginalName();
+            $file->move(public_path('img/porto-img'), $path);
+        }
+            // echo $path;
+        FotoHome::create([
+            'foto' => $path
         ]);
         return redirect('/admin-profil')->with('Data Berhasil Di Simpan!!!');
     }
     
-    public function videoUpdate(Request $request, $id)
+    public function fotoUpdate(Request $request, $id)
     {
-        Video_profil::where('id',$id)
-            ->update([
-            'link' => $request->link
-        ]);
+       
+            if($request->foto_home)
+            {
+                $request->validate([
+                    'foto_home' => 'max:10000'
+                ]);
+                $path = null; 
+
+                $file = $request->file('foto_home');
+                $path = '/img/porto-img/'.time().'-'.$file->getClientOriginalName();
+                $file->move(public_path('img/porto-img'), $path);
+
+                FotoHome::where('id',$id)
+                ->update([
+                    'foto' => $path
+                ]);
+            }
+            
+        
         return redirect('/admin-profil')->with('Data Berhasil Di update!!!');
     }
 
-    public function videoDestroy($id)
+    public function fotoDestroy($id)
     {
-        Video_profil::where('id',$id)
-        ->update([
-        ]);
+        FotoHome::where('id',$id)->delete();
         return redirect('/admin-profil')->with('Data Berhasil Di Hapus!!!');
     }
     

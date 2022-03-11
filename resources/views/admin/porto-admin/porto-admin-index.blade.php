@@ -41,9 +41,9 @@
                             <td class="">
                                 <button class="btn btn-info" alt="View" data-toggle="modal" data-target="#view{{$portos->id}}"><i class="fas fa-eye"></i></i></button>
                                 |
-                                <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#delete{{$portos->id}}"><i class="fas fa-trash-alt"></i></i></button>
-                                |
                                 <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#edit{{$portos->id}}"><i class="fas fa-pen-square"></i></button>
+                                |
+                                <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#delete{{$portos->id}}"><i class="fas fa-trash-alt"></i></i></button>
                             </td>
                         </tr>
                         @empty

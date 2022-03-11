@@ -16,6 +16,7 @@ class CreateGaleriTable extends Migration
         Schema::create('galeri', function (Blueprint $table) {
             $table->id();
             $table->string('foto');
+            $table->string('tampilkan')->default(True);
             $table->timestamps();
             $table->softDeletes();
         });
