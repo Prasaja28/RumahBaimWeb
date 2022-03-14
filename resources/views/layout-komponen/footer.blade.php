@@ -20,6 +20,11 @@
   .credits a {
     color: #F17922;
   }
+  @media(max-width: 600px){
+  .footer .container p{
+      font-size: 20px;
+  }
+  }
 </style>
 <footer class="footer">
   <div class="container text-center">

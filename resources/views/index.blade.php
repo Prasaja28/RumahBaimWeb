@@ -379,6 +379,141 @@
         font-size: 16px;
         margin-left: -51px;
     }
+    @media(max-width: 600px){
+        .bi-list::before {
+            content: "\f479";
+            color: white;
+        }
+        .navbar-mobile ul {
+            display: block;
+            position: absolute;
+            top: 55px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            padding: 10px 0;
+            border-radius: 6px;
+            background-color: #333;
+            overflow-y: auto;
+            transition: 0.3s;
+        }
+        #hero h2 span {
+            color: black;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-family: 'Inter';
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        #hero h2 {
+            color: #F17922;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-family: 'Inter';
+            font-weight: bold;
+            line-height: 1.2;
+            margin-left: 20px;
+        }
+        #hero .col-md-5 p {
+            color: #333333;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            margin-left: 0px;
+            text-align: center;
+        }
+        #hero .btn-get-started {
+            border: none;
+            background: #F17922;
+            color: white;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        .carousel .carousel-inner{
+            margin-left: 8px;
+        }
+        #img-about {
+            Height: 140px;
+            Width: auto;
+            margin-top: 46px;
+            margin-left: 122px;
+        }
+        .col-md-5 h2 {
+            color: white;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            margin-left: 88px;
+        }
+        .col-md-5 p {
+            color: white;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            margin-left: 52px;
+        }
+        .about-content p {
+            color: white;
+            text-align: justify;
+            margin-left: 16px;
+            font-size: 12px;
+        }
+        .text-upper p {
+            color: white;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 30px;
+            text-align: justify;
+        }
+        .work-process img {
+            width: auto;
+            height: 305px;
+            margin-left: -32px;
+            margin-top: -24px;
+        }
+        #img-latest-bg {
+            margin-top: 71px;
+            width: auto;
+            height: 292px;
+        }
+        #content-latest-porto .container .img-content {
+            width: auto;
+            height: 112px;
+            margin-top: -115px;
+            margin-right: -369px;
+            margin-left: 39px;
+        }
+        #portofolios .btn-get-more {
+            margin-top: 44px;
+        }
+        .title-jasa h2 {
+            font-size: 25px;
+        }
+        #faq .container .btn {
+            font-size: 14px;
+        }
+        #call-us .bg-image .container h1 {
+            font-size: 40px;
+        }
+        #call-us .bg-image .container p {
+            font-size: 10px;
+            margin-top: -100px;
+        }
+        #contact .section-title .title-kontak h2 {
+            font-size: 25px;
+        }
+        #contact .info {
+            margin-left: 12px;
+        }
+        #contact .info p {
+            margin-left: -52px;
+        }
+    }
 </style>
 @endsection
 @section('konten')

@@ -18,7 +18,6 @@
         font-family: 'Poppins';
         font-weight: bold;
         font-size: 36px;
-        line-height: 48px;
         color: #333333;
         line-height: 120px;
     }

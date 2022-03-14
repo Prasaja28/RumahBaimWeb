@@ -79,6 +79,9 @@
         color: #333333;
         margin-left: 410px;
     }
+    @media(max-width: 600px){
+        
+    }
 </style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 @endsection
