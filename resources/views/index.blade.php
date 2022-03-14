@@ -41,9 +41,6 @@
         font-size: 18px;
         margin-left: 1px;
     }
-    .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-        color: #F17922;
-    }
     #hero .btn-get-started {
         border: none;
         background: #F17922;
@@ -101,18 +98,18 @@
     }
     .col-md-5 h2{
         color: white;
-        font-family: 'Red Hat Display';
+        font-family: 'Poppins';
         font-style: normal;
         font-weight: bold;
         font-size: 32px;
     }
     .col-md-5 p{
         color: white;
-        font-family: 'Red Hat Display';
+        font-family: 'Poppins';
         font-style: normal;
         font-weight: normal;
         font-size: 15px;
-        margin-left: 6px;
+        margin-left: -19px;
     }
     #about-us-extended{
         background-color: #333333;
@@ -133,7 +130,7 @@
         margin-top: -24px;
     }
     .title-porto{
-        font-family: Montserrat;
+        font-family: Poppins;
         font-style: normal;
         font-weight: bold;
         font-size: 36px;
@@ -166,7 +163,7 @@
         background: #F17922;
         color: white;
         margin-top: 20px;
-        font-family: "Red Hat Display";
+        font-family: "Poppins";
         font-weight: 400;
         font-size: 13px;
         letter-spacing: 1px;
@@ -183,7 +180,7 @@
         border-color: #F17922;
     }
     .title-jasa h2{
-        font-family: Montserrat;
+        font-family: Poppins;
         font-style: normal;
         font-weight: bold;
         font-size: 36px;
@@ -201,7 +198,7 @@
         font-family: Poppins;
         font-style: normal;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 15px;
     }
     #pricing .row #img-c1{
         width: auto;
@@ -216,7 +213,7 @@
     }
     #pricing .row .price-list p{
         background-color: #FFEC45;
-        font-weight: normal;
+        font-weight: 500;
         font-family: Poppins;
         font-size: 10px;
         margin-top: 110px;
@@ -224,12 +221,12 @@
     }
     #pricing .row .price-list span{
         color: #333333;
-        font-weight: 500;
+        font-weight: bold;
         font-size: 13px;
     }
     #pricing .row .price-list2 p{
         background-color: #FFEC45;
-        font-weight: normal;
+        font-weight: 500;
         font-family: Poppins;
         font-size: 10px;
         margin-top: 16px;
@@ -237,7 +234,7 @@
     }
     #pricing .row .price-list2 span{
         color: #333333;
-        font-weight: 500;
+        font-weight: bold;
         font-size: 13px;
     }
     #pricing .row .t_button .btn-get-chat {
@@ -245,7 +242,7 @@
         background: #F17922;
         color: white;
         margin-top: 20px;
-        font-family: "Red Hat Display";
+        font-family: "Poppins";
         font-weight: 400;
         font-size: 13px;
         letter-spacing: 1px;
@@ -288,7 +285,7 @@
         margin-top: -24px;
     }
     #faq .title-faq{
-        font-family: Montserrat;
+        font-family: Poppins;
         font-weight: bold;
         font-size: 36px;
         color: #333333;
@@ -340,7 +337,7 @@
         background: #F17922;
         color: white;
         margin-top: 20px;
-        font-family: "Red Hat Display";
+        font-family: "Poppins";
         font-weight: 400;
         font-size: 13px;
         letter-spacing: 1px;
@@ -369,7 +366,7 @@
         margin-left: -165px;
     }
     #contact .section-title .title-kontak h2{
-        font-family: Montserrat;
+        font-family: Poppins;
         font-style: normal;
         font-weight: bold;
         font-size: 36px;
@@ -497,7 +494,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="detail-porto" class="btn-get-more scrollto">Selengkapnya ></a>
+                <a href="menu-porto" class="btn-get-more scrollto">Selengkapnya ></a>
                 
             </div>
         </section><!-- End Screenshots Section -->

@@ -15,6 +15,9 @@
   #header #logo h1 a{
     color: white;
   }
+  .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+        color: #F17922;
+    }
 </style>
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top d-flex align-items-center">
@@ -23,7 +26,7 @@
       <div id="logo">
         <!-- <h1><a href="index.html"><span>Rumah</span>Baim</a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html"><img src="img/logorb.png" alt="" title="" /></a>
+        <a href="/"><img src="img/logorb.png" alt="" title="" /></a>
       </div>
 
       <nav id="navbar" class="navbar">

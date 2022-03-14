@@ -17,6 +17,9 @@
   .footer .container .credits {
     color: #FFFFFF;
   }
+  .credits a {
+    color: #F17922;
+  }
 </style>
 <footer class="footer">
   <div class="container text-center">
