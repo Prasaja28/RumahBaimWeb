@@ -29,6 +29,7 @@
         position: absolute;
         width: auto;
         height: 300px;
+        margin-left: 11px;
     }
     .porto-list .column {
         float: left;
