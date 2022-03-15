@@ -31,6 +31,7 @@
                     <thead>
                         <tr>
                             <th>Foto</th>
+                            <th>Urutan Tampil</th>
                             <th>Tanggal Diunggah</th>
                             <th>Action</th>
                         </tr>
@@ -42,6 +43,11 @@
                                     <td><img style="width: 150px;" src= "{{ asset('img/porto-img'.$dataFoto->foto) }}" alt=""></td>
                                 @else
                                     <td><img style="width: 150px;" src="{{ $dataFoto->foto }}" alt=""></td>
+                                @endif
+                                @if($dataFoto->status == 1)
+                                    <td>Pertama</td>
+                                @else
+                                    <td>Kedua</td>
                                 @endif
                                 <td>{{$dataFoto->created_at}}</td>
                                 <td class="">
@@ -59,15 +65,15 @@
                 <div class="container text-center"><br>
                     <h4>Data Tentang Kami</h4>
                 </div>
-                @forelse($tentang as $data) 
-                    @empty
+                @if($tentang->count() < 4) 
                     <div class="container"><br>
                         <button class="btn btn-primary" data-toggle="modal" data-target="#ModalCreateTentang">Masukan Data Tentang Kami</button><br><br>
                     </div>
-                @endforelse
+                @endif
                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
+                            <th>Paragraf</th>
                             <th>Deskripsi</th>
                             <th>Tanggal Diunggah</th>
                             <th>Action</th>
@@ -76,6 +82,15 @@
                     <tbody>
                         @foreach($tentang as $dataTentang)
                             <tr>
+                                @if($dataTentang->paragraf == 1)
+                                <td>Pertama</td>
+                                @elseif($dataTentang->paragraf == 2)
+                                <td>Kedua</td>
+                                @elseif($dataTentang->paragraf == 3)
+                                <td>Ketiga</td>
+                                @elseif($dataTentang->paragraf == 4)
+                                <td>Keempat</td>
+                                @endif
                                 <td>{{$dataTentang->deskripsi}}</td>
                                 <td>{{$dataTentang->created_at}}</td>
                                 <td class="">

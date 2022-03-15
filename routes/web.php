@@ -7,6 +7,7 @@ use App\Http\Controllers\PortoController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\LandingController;
 
 
 /*
@@ -20,9 +21,9 @@ use App\Http\Controllers\GaleriController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 Route::get('/menu-porto', function () {
     return view('menu-porto');
 });
@@ -33,6 +34,7 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 });
 
+Route::get('/',[LandingController::class, 'index']);
 //login
 Route::get('/login',[LoginController::class, 'index']);
 Route::post('/login',[LoginController::class, 'login']);

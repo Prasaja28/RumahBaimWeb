@@ -10,6 +10,6 @@ class FotoHome extends Model
     use HasFactory;
     protected $table = 'foto_home';
     protected $primaryKey = 'id';
-    protected $fillable = ['foto'];
+    protected $fillable = ['foto','status'];
     protected $guarded = [];
 }

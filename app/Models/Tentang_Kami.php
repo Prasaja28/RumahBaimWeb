@@ -10,6 +10,6 @@ class Tentang_Kami extends Model
     use HasFactory;
     protected $table = 'tentang_kami';
     protected $primaryKey = 'id';
-    protected $fillable = ['deskripsi','created_at'];
+    protected $fillable = ['paragraf','deskripsi'];
     protected $guarded = [];
 }

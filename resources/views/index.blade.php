@@ -533,7 +533,25 @@
                 </div> -->
                 <div id="carousel-example-generic" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item  active">
+                        @if ($foto->count() != 0)
+                            @foreach($foto as $dataFoto)
+                                @if ($dataFoto->status == 1)
+                                <div class="carousel-item active">
+                                    <div class="top-top">
+                                        <img style="width: 500px;height: 300px;" src="{{$dataFoto->foto}}" alt="">
+                                    </div>
+                                </div>
+                                @else
+                                <div class="carousel-item">
+                                    <div class="top-top">
+                                        <img style="width: 500px;height: 300px;" src="{{$dataFoto->foto}}" alt="">
+                                    </div>
+                                </div>
+                                @endif
+                                
+                            @endforeach
+                        @endif
+                        <!--<div class="carousel-item  active">
                             <div class="top-top">
                                 <img style="width: auto;height: 396px;" src="img/home-carousel.png" alt="">
                             </div>
@@ -543,7 +561,7 @@
                             <div class="top-top">
                                 <img style="width: auto;height: 396px;" src="img/home-carousel2.jpeg" alt="">
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="btm-btm">
                         <ul class="list-unstyled carousel-indicators">
@@ -579,11 +597,16 @@
 
                     <div class="col-md-7 col-lg-5">
                         <div class="about-content" data-aos="fade-left" data-aos-delay="100">
-                            <p>Rumah Baim merupakan Studio Arsitek yang menyediakan<br>layanan jasa pada bidang Konstruksi. Layanan utama dari<br>Rumah Baim yakni pembuatan desain rumah, pembangunan,<br>renovasi, dan desain interior.
+                            @if ($tentang->count() != 0)
+                            @foreach ($tentang as $dataTentang)
+                                <p style="font-size: 16px;">{{$dataTentang->deskripsi}}</p>
+                            @endforeach
+                            @endif
+                            {{-- <p>Rumah Baim merupakan Studio Arsitek yang menyediakan<br>layanan jasa pada bidang Konstruksi. Layanan utama dari<br>Rumah Baim yakni pembuatan desain rumah, pembangunan,<br>renovasi, dan desain interior.
                             </p>
                             <br>
                             <p>Rumah Baim merupakan Studio Arsitek yang menyediakan<br>layanan jasa pada bidang Konstruksi. Layanan utama dari<br>Rumah Baim yakni pembuatan desain rumah, pembangunan,<br>renovasi, dan desain interior.
-                            </p>
+                            </p> --}}
                         </div>
                     </div>
 
@@ -738,63 +761,27 @@
                 </div>
                 <div class="container">
                     <div id="accordion">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h5 class="mb-0">
-                                    <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    CLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?
-                                    </button>
-                                </h5>
-                            </div>
+                        @if($faq->count() != 0)
+                            @foreach($faq as $dataFAQ)
+                                @if($dataFAQ->tampilkan == 1)
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h5 class="mb-0">
+                                                <button class="btn" data-toggle="collapse" data-target="#collapse{{$dataFAQ->id}}" aria-expanded="true" aria-controls="collapse{{$dataFAQ->id}}">
+                                                {{$dataFAQ->pertanyaan}}
+                                                </button>
+                                            </h5>
+                                        </div>
 
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h5 class="mb-0">
-                                    <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h5 class="mb-0">
-                                    <button class="btn collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingFour">
-                                <h5 class="mb-0">
-                                    <button class="btn collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt?
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
+                                        <div id="collapse{{$dataFAQ->id}}" class="collapse" aria-labelledby="heading{{$dataFAQ->id}}" data-parent="#accordion">
+                                            <div class="card-body">
+                                                {{$dataFAQ->jawaban}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach
+                        @endif
                     </div>
                 </div>
             </div>
@@ -812,7 +799,14 @@
                         <p>
                             Jika ada yang ingin ditanyakan anda dapat melakukan konsultasi bersama tim kami secara gratis melalui WhatsApp. Jangan ragu untuk segera mewujudkan rumah impian anda, dengan senang hati kami akan bantu!
                         </p>
-                        <a href="#" class="btn-get-call scrollto">Hubungi Kami</a>
+                        <a 
+                        @if($kontak->count() != 0)
+                        @foreach($kontak as $dataHub)
+                            @if($dataHub->jenis == "whatsapp")
+                                target="_blank" href="https://wa.me/{{$dataHub->isian}}/"
+                            @endif
+                        @endforeach
+                        @endif  class="btn-get-call scrollto">Hubungi Kami</a>
                     </div>
                 </div>
             </div>
@@ -834,9 +828,14 @@
                 <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-lg-3 col-md-4">
                         <div class="info">
+                            @if($kontak->count() != 0)
                             <div>
                                 <h4>Alamat :</h4>
-                                <p>Jl. Imogiri Timur KM 11 Wonokromo Pleret Bantul</p>
+                                @foreach($kontak as $dataKontak)
+                                @if($dataKontak->jenis == "alamat")
+                                <p>{{$dataKontak->isian}}</p>
+                                @endif
+                                @endforeach
                             </div>
                             <div>
                                 <h4>Jam Operasional :</h4>
@@ -844,10 +843,29 @@
                             </div>
                             <div>
                                 <h4>Sosial Media :</h4>
-                                <img src="img/logo-gmail.png" alt=""><p>rumahbaim18@gmail.com</p>
-                                <img src="img/logo-whatsapp.png" alt=""><p>+6285643945374</p>
-                                <img src="img/logo-instagram.png" alt=""><p>@rumah.baim</p>
+                                @foreach($kontak as $dataSosmed)
+                                @if($dataSosmed->jenis != "alamat")
+                                <div class="row">
+                                    <div class="col-lg-2 text-center">
+                                        @if($dataSosmed->jenis == "email")
+                                        <a target="_blank" href="mailto: {{$dataSosmed->isian}}"><img src="img/logo-gmail.png" alt=""></a>
+                                        @endif
+                                        @if($dataSosmed->jenis == "whatsapp")
+                                        <a target="_blank" href="https://wa.me/{{$dataSosmed->isian}}/"><img src="img/logo-whatsapp.png" alt=""></a>
+                                        @endif
+                                        @if($dataSosmed->jenis == "instagram")
+                                        <a target="_blank" href="https://www.instagram.com/{{substr($dataSosmed->isian,1)}}/"><img src="img/logo-instagram.png" alt=""></a>
+                                        @endif
+                                    </div>
+                                    <div class="col-lg-10">
+                                        <p>{{$dataSosmed->isian}}</p>
+                                    </div>
+                                </div>   
+                                @endif                             
+                                @endforeach
                             </div>
+                            @endif
+                            
                         </div>
                     </div>
 

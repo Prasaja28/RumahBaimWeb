@@ -5,7 +5,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="faqupdate">Update Data Video</h5>
+                <h5 class="modal-title" id="faqupdate">Update Data Foto</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -20,6 +20,13 @@
                                 <input type="file" name="foto_home" id="foto_home" accept=".png, .jpg, .jpeg">
                                 <img src="{{ asset($dataFoto->foto) }}" alt="Tidak Ada gambar" style="width:150px; height:100px; margin-top:10px;">
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tentang">Urutan Tampil :</label>
+                            <select class="form-control" name="status">
+                                <option value="1">Pertama</option>
+                                <option value="0">Kedua</option>
+                            </select>
                         </div>
                       <button type="submit" class="btn btn-primary">Simpan</button>
                   </form>

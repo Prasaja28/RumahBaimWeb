@@ -13,7 +13,7 @@
                 <p>Apakah Anda yakin menghapus data tentang kami?</p>    
               </div>
               <div class="modal-footer">
-                  <a href="{{ url('/admin-profil/delete-tentang/'.$data->id)}}" class="btn btn-danger">Delete</a>
+                  <a href="{{ url('/admin-profil/delete-tentang/'.$dataTentang->id)}}" class="btn btn-danger">Delete</a>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>

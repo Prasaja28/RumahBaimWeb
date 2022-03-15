@@ -12,15 +12,26 @@
               <div class="modal-body">
                   <form action="{{ url('/admin-profil/store-tentang') }}" method="post" enctype="multipart/form-data">
                   @csrf
-                      <div class="form-group">
+                        <div class="form-group">
+                            <label for="tentang">Paragraf Ke-?</label>
+                            <select name="paragraf" class="form-control">
+                                <option value="1">Pertama</option>
+                                <option value="2">Kedua</option>
+                                <option value="3">Ketiga</option>
+                                <option value="4">Keempat</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                           <label for="tentang">Deskripsi Tentang Kami:</label>
-                          <textarea type="text" rows="5" class="form-control form-control-border @error('tentang') is-invalid @enderror" id="tentang" placeholder="Deskripsi....." name="tentang" value="{{ old('tentang') }}" required></textarea>
+                          <textarea type="text" style="min-width: 100%" rows="5" class="form-control form-control-border @error('tentang') is-invalid @enderror" id="tentang" name="tentang" required></textarea>
                           @error('tentang')
                               <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
                               </span>
                           @enderror
-                      </div>
+                          <p><i>*tarik garis dua samping kanan bawah untuk memperlebar text area</i></p>
+                        </div>
+                      
                       <button type="submit" class="btn btn-primary">Simpan</button>
                   </form>
               </div>

@@ -16,6 +16,7 @@ class CreateFotoHomeTable extends Migration
         Schema::create('foto_home', function (Blueprint $table) {
             $table->id();
             $table->string('foto');
+            $table->string('status');
             $table->timestamps();
             $table->softDeletes();
         });

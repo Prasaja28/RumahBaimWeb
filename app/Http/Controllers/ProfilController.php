@@ -14,7 +14,7 @@ class ProfilController extends Controller
     public function index()
     {
         $foto = FotoHome::all();
-        $tentang = Tentang_Kami::all();
+        $tentang = Tentang_Kami::orderBy('paragraf')->get();
         $kontak = Kontak::all();
         // echo $tentang->count();
         return view('admin.profil-admin.profil-admin-index',compact('foto','tentang','kontak'));
@@ -31,8 +31,22 @@ class ProfilController extends Controller
             $file->move(public_path('img/porto-img'), $path);
         }
             // echo $path;
+        $data = FotoHome::all();
+        if($data->count() == 0){
+            $status = 1;
+        }else{
+            foreach($data as $data1){
+                if($data1->status == 0){
+                    $status = 1;
+                }else{
+                    $status = 0;
+                }
+            }
+        }
+        
         FotoHome::create([
-            'foto' => $path
+            'foto' => $path,
+            'status' => $status
         ]);
         return redirect('/admin-profil')->with('Data Berhasil Di Simpan!!!');
     }
@@ -51,10 +65,65 @@ class ProfilController extends Controller
                 $path = '/img/porto-img/'.time().'-'.$file->getClientOriginalName();
                 $file->move(public_path('img/porto-img'), $path);
 
-                FotoHome::where('id',$id)
-                ->update([
-                    'foto' => $path
-                ]);
+                $data = FotoHome::all();
+                if($data->count() == 1){
+                    FotoHome::where('id',$id)->update([
+                    'foto' => $path,
+                    'status' =>$request->status
+                    ]);
+                }else{
+                    foreach($data as $data1){
+                        
+                        if($data1->id == $id){
+                            
+                            FotoHome::where('id',$id)->update([
+                                'foto' => $path,
+                                'status' => $request->status 
+                            ]);
+                        }else{
+                            if($request->status == 1){
+                                FotoHome::where('id',$data1->id)->update([
+                                    'status' => 0
+                                ]);
+                            }else{
+                                FotoHome::where('id',$data1->id)->update([
+                                    'status' => 1
+                                ]);
+                            }
+                            echo "gagal";
+                        }
+                        
+                    }
+                }
+                
+            }else{
+                $data = FotoHome::all();
+                if($data->count() == 1){
+                    FotoHome::where('id',$id)->update([
+                    'status' =>$request->status
+                    ]);
+                }else{
+                    foreach($data as $data1){
+                        
+                        if($data1->id == $id){
+                            
+                            FotoHome::where('id',$id)->update([
+                                'status' => $request->status 
+                            ]);
+                        }else{
+                            if($request->status == 1){
+                                FotoHome::where('id',$data1->id)->update([
+                                    'status' => 0
+                                ]);
+                            }else{
+                                FotoHome::where('id',$data1->id)->update([
+                                    'status' => 1
+                                ]);
+                            }
+                        }
+                        
+                    }
+                }
             }
             
         
@@ -69,18 +138,22 @@ class ProfilController extends Controller
     
     public function tentangStore(Request $request)
     {
+        // echo $request->tentang;
         Tentang_Kami::create([
-            'deskripsi' => $request->tentang
+            'deskripsi' => $request->tentang,
+            'paragraf' => $request->paragraf
         ]);
         return redirect('/admin-profil')->with('Data Berhasil Di Simpan!!!');
     }
     
     public function tentangUpdate(Request $request, $id)
     {
-        Tentang_Kami::where('id',$id)
-            ->update([
-            'deskripsi' => $request->tentang
+        Tentang_Kami::where('id',$id)->update([
+            'deskripsi' => $request->tentang,
+            'paragraf' => $request->paragraf
+            
         ]);
+        // echo $request->tentang;
         return redirect('/admin-profil')->with('Data Berhasil Di update!!!');
     }
 
