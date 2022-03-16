@@ -10,16 +10,16 @@
                   </button>
               </div>
               <div class="modal-body">
-                  <form action="{{ url('/admin-profil/store-foto') }}" method="post" enctype="multipart/form-data">
-                  @csrf
+                    <form action="{{ url('/admin-profil/store-foto') }}" method="post" enctype="multipart/form-data" class="dropzone">
+                    @csrf
                         <div class="item form-group" style="margin-right:-40px;">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" style="text-align:left; margin-right: -100px;" >Masukkan Foto <span class="required">*</span></label>
-                            <div class="col-md-9 col-sm-6 col-xs-12" style="margin-left:60px;">
-                                <input type="file" name="foto_home" id="foto_home" accept=".png, .jpg, .jpeg" required>
+                            <!-- <label class="control-label col-md-3 col-sm-3 col-xs-12" style="text-align:left; margin-right: -100px;" >Masukkan Foto <span class="required">*</span></label> -->
+                            <div>
+                                <h3>Masukkan Foto Disini</h3>
                             </div>
                         </div>
-                      <button type="submit" class="btn btn-primary">Simpan</button>
-                  </form>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </form>
               </div>
               <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -28,3 +28,10 @@
     </div>
   </div>
   <!-- End modal Tambah -->
+
+<script type="text/javascript">
+        Dropzone.options.imageUpload = {
+            maxFilesize         :       1,
+            acceptedFiles: ".jpeg,.jpg,.png,.gif"
+        };
+</script>

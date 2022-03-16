@@ -11,3 +11,6 @@
 <!-- Template CSS -->
 <link rel="stylesheet" href="stisla-master/assets/css/style.css">
 <link rel="stylesheet" href="stisla-master/assets/css/components.css">
+
+<!-- dropzone -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/min/dropzone.min.css" rel="stylesheet">
