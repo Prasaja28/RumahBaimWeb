@@ -2,6 +2,9 @@
 @section('title','Rumah Baim Website') <!-- name title -->
 @section('css-internal')
 <style>
+    h1,h2,h3,h4,h5{
+        font-family: 'Inter',
+    }
     .justify-content-center {
         margin-bottom: 145px;
     }
@@ -17,7 +20,6 @@
     #hero{
         background-image:none;
         height: auto;
-        margin-top: 192px;
     }
     #hero h2{
         color: #F17922;
@@ -31,7 +33,7 @@
         margin-bottom: 30px;
         font-size: 32px;
         font-family: 'Inter';
-        font-weight: bold;
+        font-weight: 900;
     }
     #hero .col-md-5 p{
         color: #333333;
@@ -62,9 +64,9 @@
         color: white;
     }
     #img-about{
-        Height: 240px;
+        Height: 200px;
         Width: auto;
-        margin-top: 46px;
+        margin-top: 20px;
     }
     #img-about1{
         display: block;
@@ -82,7 +84,6 @@
     .about-content p{
         color: white;
         text-align: justify;
-        margin-left: -71px;
     }
     .about-content h2{
         font-size: 20px;
@@ -91,10 +92,11 @@
     }
     #about-us{
         background-image: url("img/tentangkami1.png");
-        background-size: 1831px;
+        background-size: 100% 100%;
         height: 100%;
         background-repeat: no-repeat;
         background-color: #333;
+        padding-top: 3%;
     }
     .col-md-5 h2{
         color: white;
@@ -514,31 +516,53 @@
             margin-left: -52px;
         }
     }
+    #carousel{
+        text-align: right;
+    }
+    .no-padding{
+        padding: 0px;
+    }
+    #home-slogan{
+        padding-top: 140pt;
+    }
+    #home-foto{
+        padding-top: 100pt;
+        padding-right:0.7%;
+        padding-left:0.2% 
+    }
+    #home-row{
+        margin-bottom: 0px;
+        background-image: url("/assets/img/bgHalamanUtama.png");
+        background-size: 95% 100%;
+        background-repeat: no-repeat;
+    }
+    .section-row{
+        margin-bottom: 0px;
+    }
 </style>
 @endsection
 @section('konten')
 <!-- ======= Home Section ======= -->
+    
     <section id="hero">
-        <div class="row justify-content-center">
-            <div id="home-col5" class="col-md-5">
+        <div id="home-row" class="row justify-content-center">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5" id="home-slogan">
                 <h2><span>Membangun Rumah itu Mudah Bersama Tim</span> Rumah Baim!</h2>
                 <p>Kami Menyediakan Layanan Jasa Untuk Mewujudkan Rumah Impian Anda</p>
                 <a href="#portofolios" class="btn-get-started scrollto">View Project</a>
                 <a href="#contact" class="btn-get-started scrollto">Hubungi Kami</a>
             </div>
-
-            <div class="col-md-7 col-lg-5">
-                <!-- <div class="videoWrapper">
-                    <iframe width="560" height="349" src="https://www.youtube.com/embed/kCPQUAtMZR4" frameborder="0" allowfullscreen></iframe>
-                </div> -->
+            
+            <div class="col-lg-5 no-padding" id="home-foto">
                 <div id="carousel-example-generic" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
+                    <div id="carousel" class="carousel-inner" role="listbox">
                         @if ($foto->count() != 0)
                             @foreach($foto as $dataFoto)
                                 @if ($dataFoto->status == 1)
                                 <div class="carousel-item active">
                                     <div class="top-top">
-                                        <img style="width: 500px;height: 300px;" src="{{$dataFoto->foto}}" alt="">
+                                        <img style="width: 500px;height: 350px;" src="{{$dataFoto->foto}}" alt="">
                                     </div>
                                 </div>
                                 @else
@@ -551,17 +575,6 @@
                                 
                             @endforeach
                         @endif
-                        <!--<div class="carousel-item  active">
-                            <div class="top-top">
-                                <img style="width: auto;height: 396px;" src="img/home-carousel.png" alt="">
-                            </div>
-                        </div>
-    
-                        <div class="carousel-item ">
-                            <div class="top-top">
-                                <img style="width: auto;height: 396px;" src="img/home-carousel2.jpeg" alt="">
-                            </div>
-                        </div> -->
                     </div>
                     <div class="btm-btm">
                         <ul class="list-unstyled carousel-indicators">
@@ -571,15 +584,16 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-1"></div>
         </div>
+        
     </section><!-- End Home Section -->
-
+    
     <main id="main">
 
         <!-- ======= About Us Section ======= -->
-        <section id="about-us" class="about-us padd-section">
-            <div class="container" data-aos="fade-up">
-                <div class="row justify-content-center">
+        <section id="about-us" class="about-us">
+                <div class="row justify-content-center section-row"  data-aos="fade-up">
 
                     <div class="title-about">
                         <h2>Tentang Kami</h2>
@@ -589,13 +603,13 @@
                         <img id="img-about1" src="img/about1.png" alt="">
                     </div>
 
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <img id="img-about" src="img/logorb.png" alt="About" data-aos="zoom-in" data-aos-delay="100">
                         <h2>RB PROPERTY</h2>
                         <p>"Membangun Rumah itu Mudah"</p>
                     </div>
 
-                    <div class="col-md-7 col-lg-5">
+                    <div class="col-md-6">
                         <div class="about-content" data-aos="fade-left" data-aos-delay="100">
                             @if ($tentang->count() != 0)
                             @foreach ($tentang as $dataTentang)
@@ -611,7 +625,6 @@
                     </div>
 
                 </div>
-            </div>
         </section><!-- End About Us Section -->
 
         <!-- Proses Kerja section -->

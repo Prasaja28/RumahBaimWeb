@@ -8,6 +8,7 @@
 <link href='https://fonts.googleapis.com/css?family=Red Hat Display' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 
 <!-- Vendor CSS Files -->
 <link href="assets/vendor/aos/aos.css" rel="stylesheet">
