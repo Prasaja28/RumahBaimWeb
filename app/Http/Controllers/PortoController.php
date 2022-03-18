@@ -45,7 +45,7 @@ class PortoController extends Controller
         if($request->foto_utama)
         {
             $file = $request->file('foto_utama');
-            $path = '/img/porto-img/'.time().'-'.$file->getClientOriginalName();
+            $path = '/img/porto-img/'.time().'-'.$file->extension();
             $file->move(public_path('img/porto-img'), $path);
         }
             // echo $path;

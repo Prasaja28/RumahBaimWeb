@@ -66,6 +66,7 @@ Route::get('/admin-profil',[ProfilController::class, 'index']);
 Route::get('/admin-profil/delete-foto/{id}',[ProfilController::class, 'fotoDestroy']);
 Route::put('/admin-profil/update-foto/{id}',[ProfilController::class, 'fotoUpdate']);
 Route::post('/admin-profil/store-foto',[ProfilController::class, 'fotoStore']);
+Route::post('/admin-profil/store-foto-media',[ProfilController::class, 'storeMedia']);
 Route::get('/admin-profil/delete-tentang/{id}',[ProfilController::class, 'tentangDestroy']);
 Route::put('/admin-profil/update-tentang/{id}',[ProfilController::class, 'tentangUpdate']);
 Route::post('/admin-profil/store-tentang',[ProfilController::class, 'tentangStore']);

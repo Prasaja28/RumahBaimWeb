@@ -15,7 +15,6 @@ class CreateTentangKamiTable extends Migration
     {
         Schema::create('tentang_kami', function (Blueprint $table) {
             $table->id();
-            $table->string('paragraf');
             $table->text('deskripsi',10000);
             $table->timestamps();
             $table->softDeletes();

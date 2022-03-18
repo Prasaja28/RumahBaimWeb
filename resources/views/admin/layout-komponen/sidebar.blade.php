@@ -17,9 +17,6 @@
         <li class="nav-item dropdown {{ (request()->is('admin-porto*')) ? 'active' : '' }}">
           <a href="{{ url('/admin-porto') }}" class="nav-link"><i class="fas fa-bookmark"></i><span>Portofolio</span></a>
         </li>
-        <li class="nav-item dropdown {{ (request()->is('admin-galeri*')) ? 'active' : '' }}">
-          <a href="{{ url('/admin-galeri') }}" class="nav-link"><i class="fas fa-image"></i><span>Galeri Portofolio</span></a>
-        </li>
         <li class="nav-item dropdown {{ (request()->is('admin-faq*')) ? 'active' : '' }}">
           <a href="{{ url('/admin-faq') }}" class="nav-link"><i class="fas fa-question"></i><span>Tanya Jawab</span></a>
         </li>

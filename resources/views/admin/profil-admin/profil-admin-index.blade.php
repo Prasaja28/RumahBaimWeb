@@ -4,6 +4,7 @@
 <!-- css internal place -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
 @endsection
 @section('profil-admin','active')
 @section('konten')
@@ -40,7 +41,7 @@
                         @foreach($foto as $dataFoto)
                             <tr>
                                 @if($dataFoto->foto == null)
-                                    <td><img style="width: 150px;" src= "{{ asset('img/porto-img'.$dataFoto->foto) }}" alt=""></td>
+                                    <td><img style="width: 150px;" src= "{{ asset('img/profil-img'.$dataFoto->foto) }}" alt=""></td>
                                 @else
                                     <td><img style="width: 150px;" src="{{ $dataFoto->foto }}" alt=""></td>
                                 @endif
@@ -73,7 +74,6 @@
                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
-                            <th>Paragraf</th>
                             <th>Deskripsi</th>
                             <th>Tanggal Diunggah</th>
                             <th>Action</th>
@@ -82,15 +82,6 @@
                     <tbody>
                         @foreach($tentang as $dataTentang)
                             <tr>
-                                @if($dataTentang->paragraf == 1)
-                                <td>Pertama</td>
-                                @elseif($dataTentang->paragraf == 2)
-                                <td>Kedua</td>
-                                @elseif($dataTentang->paragraf == 3)
-                                <td>Ketiga</td>
-                                @elseif($dataTentang->paragraf == 4)
-                                <td>Keempat</td>
-                                @endif
                                 <td>{{$dataTentang->deskripsi}}</td>
                                 <td>{{$dataTentang->created_at}}</td>
                                 <td class="">
@@ -172,6 +163,7 @@
 <script src="{{asset('https://code.jquery.com/jquery-3.5.1.js')}}"></script>
 <script src="{{asset('https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
 <script>
 $(document).ready(function() {
     $('#example').DataTable();

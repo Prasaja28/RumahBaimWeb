@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Models\FotoHome;
 use App\Models\Tentang_Kami;
@@ -10,11 +12,12 @@ use Session;
 
 class ProfilController extends Controller
 {
-    //
+    private $mediaCollection = 'photo';
+
     public function index()
     {
         $foto = FotoHome::all();
-        $tentang = Tentang_Kami::orderBy('paragraf')->get();
+        $tentang = Tentang_Kami::all();
         $kontak = Kontak::all();
         // echo $tentang->count();
         return view('admin.profil-admin.profil-admin-index',compact('foto','tentang','kontak'));
@@ -23,14 +26,27 @@ class ProfilController extends Controller
     //tambah data video
     public function fotoStore(Request $request)
     {
-        $path = null; 
-        if($request->foto_home)
-        {
-            $file = $request->file('foto_home');
-            $path = '/img/porto-img/'.time().'-'.$file->getClientOriginalName();
-            $file->move(public_path('img/porto-img'), $path);
-        }
-            // echo $path;
+        // $path = null; 
+        // if($request->foto_home)
+        // {
+        //     $file = $request->file('foto_home');
+        //     $path = '/img/profil-img/'.time().'-'.$file->extension();
+        //     $file->move(public_path('img/profil-img'), $path);
+        // }
+        // // dd($path);
+        //     // echo $path;
+        // $data = FotoHome::all();
+        // if($data->count() == 0){
+        //     $status = 1;
+        // }else{
+        //     foreach($data as $data1){
+        //         if($data1->status == 0){
+        //             $status = 1;
+        //         }else{
+        //             $status = 0;
+        //         }
+        //     }
+        // }
         $data = FotoHome::all();
         if($data->count() == 0){
             $status = 1;
@@ -44,11 +60,37 @@ class ProfilController extends Controller
             }
         }
         
-        FotoHome::create([
-            'foto' => $path,
-            'status' => $status
+        // FotoHome::create([
+        //     'foto' => $path,
+        //     'status' => $status
+        // ]);
+        $foto = FotoHome::create([
+            'status' => $status,
+            'foto' => "foto",
         ]);
+        foreach ($request->input('photo', []) as $file) {
+            $foto->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection($this->mediaCollection);
+        }
+        // return redirect()->route('products.index');
         return redirect('/admin-profil')->with('Data Berhasil Di Simpan!!!');
+    }
+
+    public function storeMedia(Request $request)
+    {
+        $path = storage_path('tmp/uploads');
+
+        if (!file_exists($path)) {
+            mkdir($path, 0777, true);
+        }
+
+        $file = $request->file('file');
+        $name = uniqid() . '_' . trim($file->getClientOriginalName());
+        $file->move($path, $name);
+
+        return response()->json([
+            'name'          => $name,
+            'original_name' => $file->getClientOriginalName(),
+        ]);
     }
     
     public function fotoUpdate(Request $request, $id)
@@ -140,8 +182,7 @@ class ProfilController extends Controller
     {
         // echo $request->tentang;
         Tentang_Kami::create([
-            'deskripsi' => $request->tentang,
-            'paragraf' => $request->paragraf
+            'deskripsi' => $request->tentang
         ]);
         return redirect('/admin-profil')->with('Data Berhasil Di Simpan!!!');
     }
@@ -149,8 +190,7 @@ class ProfilController extends Controller
     public function tentangUpdate(Request $request, $id)
     {
         Tentang_Kami::where('id',$id)->update([
-            'deskripsi' => $request->tentang,
-            'paragraf' => $request->paragraf
+            'deskripsi' => $request->tentang
             
         ]);
         // echo $request->tentang;
