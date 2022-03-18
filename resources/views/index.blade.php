@@ -64,17 +64,17 @@
         color: white;
     }
     #img-about{
-        Height: 200px;
+        Height: 35%;
         Width: auto;
-        margin-top: 20px;
+        margin-top: 7%;
+        margin-bottom: 0;
     }
     #img-about1{
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 120px;
-        height: 8px;
-        margin-top: 24px;
+        height: 60%;
     }
     .about-content{
         font-size: 20px;
@@ -537,7 +537,29 @@
         background-repeat: no-repeat;
     }
     .section-row{
-        margin-bottom: 0px;
+        margin-bottom: -4%;
+
+    }
+    .vl{
+        border-right: 2px dashed white;
+        height: 100%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:auto;
+        margin-bottom:auto;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+    }
+    #img-ikon-prosedur{
+        height: 50%;
+        width: auto;
+        margin-left: -60%;
+    }
+    .img-porto{
+        max-width:100%;
+        max-height:100%;
     }
 </style>
 @endsection
@@ -596,76 +618,169 @@
                 <div class="row justify-content-center section-row"  data-aos="fade-up">
 
                     <div class="title-about">
-                        <h2>Tentang Kami</h2>
+                        <p class="h4 text-white font-weight-bold">Tentang Kami</p>
                     </div>
                     
                     <div class="line-title">
                         <img id="img-about1" src="img/about1.png" alt="">
                     </div>
-
-                    <div class="col-md-4">
-                        <img id="img-about" src="img/logorb.png" alt="About" data-aos="zoom-in" data-aos-delay="100">
-                        <h2>RB PROPERTY</h2>
-                        <p>"Membangun Rumah itu Mudah"</p>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-5 text-center mb-0">
+                        <img id="img-about" src="{{url('/img/logorb.png')}}" alt="About" data-aos="zoom-in" data-aos-delay="100">
+                        <p class="text-white h5 mb-0">RB PROPERTY</p>
+                        <p class="text-white mt-0 mb-0">"Membangun Rumah itu Mudah"</p>
                     </div>
 
-                    <div class="col-md-6">
-                        <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+                    <div class="col-lg-5 no-padding">
+                        <div class="mt-4" data-aos="fade-left" data-aos-delay="100">
+                            @if ($tentang->count() != 0)
+                            @foreach ($tentang as $dataTentang)
+                                <p class="text-white" style="font-size: 13px; text-align:left;">{{$dataTentang->deskripsi}}</p>
+                            @endforeach
+                            @endif
+                        </div>
+
+                        <!--<div class="about-content no-padding" data-aos="fade-left" data-aos-delay="100">
                             @if ($tentang->count() != 0)
                             @foreach ($tentang as $dataTentang)
                                 <p style="font-size: 16px;">{{$dataTentang->deskripsi}}</p>
                             @endforeach
                             @endif
-                            {{-- <p>Rumah Baim merupakan Studio Arsitek yang menyediakan<br>layanan jasa pada bidang Konstruksi. Layanan utama dari<br>Rumah Baim yakni pembuatan desain rumah, pembangunan,<br>renovasi, dan desain interior.
-                            </p>
-                            <br>
-                            <p>Rumah Baim merupakan Studio Arsitek yang menyediakan<br>layanan jasa pada bidang Konstruksi. Layanan utama dari<br>Rumah Baim yakni pembuatan desain rumah, pembangunan,<br>renovasi, dan desain interior.
-                            </p> --}}
-                        </div>
+                        </div>-->
                     </div>
-
+                    <div class="col-lg-1"></div>
                 </div>
         </section><!-- End About Us Section -->
 
         <!-- Proses Kerja section -->
-        <section id="about-us-extended" class="about-us padd-section">
-            <div class="container">
-                <div class="text-upper" data-aos="fade-up">
-                    <p>
-                    Membangun rumah akan lebih mudah bersama Rumah Baim. Jadi percayakan kebutuhan bangunan Anda pada kami dan kami akan melayani dengan senang hati. Untuk mewujudkan bangunan rumah impian anda, berikut merupakan prosedur kerja layanan jasa kami. Prosedur tersebut dapat berubah sesuai dengan paket layanan jasa yang anda pilih.
-                    </p>
+        <section id="about-us-extended" class="about-us">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div class="text-center" data-aos="fade-up" style="padding-left:-10px;padding-right:-10px;">
+                        <p class="text-center text-white" style="font-size: 13px;"><b>
+                            Membangun rumah akan lebih mudah bersama Rumah Baim. 
+                            Percayakan kebutuhan bangunan Anda pada kami dan kami akan 
+                            melayani dengan senang hati. <br>Untuk mewujudkan bangunan rumah impian Anda, 
+                            berikut merupakan prosedur kerja layanan jasa kami. 
+                            Prosedur tersebut dapat berubah sesuai dengan paket layanan jasa 
+                            yang Anda pilih.</b>
+                        </p>
+                    </div>
                 </div>
-                <div class="work-process" data-aos="fade-up">
-                    <img src="img/proses-kerja.png" alt="">
+                <div class="col-lg-1"></div>
+            </div>
+            
+            {{-- Prosedure --}}
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-4">
+                    <div class="" data-aos="fade-up" style="text-align: right;padding-top:7%;">
+                        <p class="h5" style="color:#F17922;">Survey</p>
+                        <p class="text-white" style="">Melakukan pengecekan lokasi, 
+                            pengumpulan data client, serta membuat estimasi atau 
+                            memperkirakan harga desain & pembangunan
+                        </p>
+                    </div>
                 </div>
+                <div class="col-lg-1"  data-aos="fade-up"  style="padding-right: 0px;">
+                    <div class="vl"></div>
+                </div>
+                <div class="col-lg-1"  data-aos="fade-up" >
+                    <img id="img-ikon-prosedur" src="{{url('/img/Survey.png')}}" alt="desain">
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-4">
+                    
+                </div>
+                <div class="col-lg-1"  data-aos="fade-up"  style="padding-right: 0px;">
+                    <div class="vl"></div>
+                </div>
+                <div class="col-lg-1"  data-aos="fade-up" >
+                    <img id="img-ikon-prosedur" src="{{url('/img/Desain.png')}}" alt="desain">
+                </div>
+                <div class="col-lg-4">
+                    <div class="" data-aos="fade-up" style="text-align: left;;padding-top:7%;">
+                        <p class="h5" style="color:#F17922;">Desain</p>
+                        <p class="text-white">Membuat desain pemodelan 3D untuk bangunan dengan 
+                            proses rendering tampak bangunan</p>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-4">
+                    <div class=""  data-aos="fade-up"  style="text-align: right;;padding-top:7%;">
+                        <p class="h5" style="color:#F17922;">Gambar Detail & RAB</p>
+                        <p class="text-white">
+                            Melakukan pendalaman desain detail bangunan untuk 
+                            membuat perhitungan RAB atau biaya yang diperlukan 
+                            untuk pelaksanaan pembangunan proyek
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-1"  data-aos="fade-up"  style="padding-right: 0px;">
+                    <div class="vl"></div>
+                </div>
+                <div class="col-lg-1"  data-aos="fade-up" >
+                    <img id="img-ikon-prosedur" src="{{url('/img/RAB.png')}}" alt="desain">
+                </div>
+                <div class="col-lg-4">
+                    
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-4">
+                    
+                </div>
+                <div class="col-lg-1"  data-aos="fade-up"  style="padding-right: 0px;">
+                    <div class="vl"></div>
+                </div>
+                <div class="col-lg-1"  data-aos="fade-up" >
+                    <img id="img-ikon-prosedur" src="{{url('/img/Pembangunan.png')}}" alt="desain">
+                </div>
+                <div class="col-lg-4">
+                    <div class=""  data-aos="fade-up"  style="text-align: left;;padding-top:7%;">
+                        <p class="h5" style="color:#F17922;">Pembangunan</p>
+                        <p class="text-white" style="">
+                            Melakukan pendalaman desain detail bangunan 
+                            untuk membuat perhitungan RAB atau biaya yang 
+                            diperlukan untuk pelaksanaan pembangunan proyek
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
             </div>
         </section>
         <!-- end Proses Kerja section -->
 
         <!-- ======= Portofolio Section ======= -->
         <section id="portofolios" class="padd-section text-center">
-            <div class="container" data-aos="fade-up">
+            <div data-aos="fade-up">
                 <div class="row">
                     <div class="title-porto">
                         <h2>Portofolio</h2>
                     </div>
-    
                     <div class="line-title">
                         <img id="img-about1" src="img/about1.png" alt="">
                     </div>
-    
-                    <div class="col-md-5">
-                        <img id="img-latest-bg" src="img/latest.png" alt="latest" data-aos="zoom-in"data-aos-delay="100">
+
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-5">
+                        <img class="img-porto" src="{{url('/img/porto-img/1647334169-Halaman Utama.jpg')}}" alt="latest" data-aos="zoom-in"data-aos-delay="100">
                     </div>
-    
-                    <div id="content-latest-porto" class="col-md-7 col-lg-5">
-                        <div class="container">
-                            <img class="img-content" src="img/content-img.png" alt="">
-                            <img class="img-content" src="img/content-img.png" alt="">
-                        </div>
+                    <div class="col-lg-5">
+                        <img class="img-porto" src="{{url('/img/porto-img/1647334182-Halaman Utama 2.jpg')}}" alt="latest" data-aos="zoom-in"data-aos-delay="100">
                     </div>
+                    <div class="col-lg-1"></div>
                 </div>
-                <a href="menu-porto" class="btn-get-more scrollto">Selengkapnya ></a>
                 
             </div>
         </section><!-- End Screenshots Section -->
