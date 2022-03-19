@@ -139,47 +139,19 @@
         line-height: 44px;
         color: #333333;
     }
-    #img-latest-bg{
-        margin-top: 71px;
+    #team .center-block{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
-    #content-latest-porto{
-        background-image: url(img/porto-black.png);
-        background-repeat: no-repeat;
-        width: 740px;
-        margin-left: -75px;
-        margin-top: 100px;
-    }
-    #content-latest-porto .container{
-        position:absolute;
-        margin-left: -145px;
-    }
-    #content-latest-porto .container .img-content{
-        width: auto;
-        height: 220px;
-        margin-top: 72px;
-        margin-right: 40px;
-        margin-left: -50px;
-    }
-    #portofolios .btn-get-more {
-        border: none;
-        background: #F17922;
-        color: white;
-        margin-top: 20px;
-        font-family: "Poppins";
-        font-weight: 400;
-        font-size: 13px;
-        letter-spacing: 1px;
-        display: inline-block;
-        padding: 11px 36px;
-        border-radius: 50px;
-        transition: 0.5s;
-        margin-bottom: 30px;
-    }
-    #portofolios .btn-get-more:hover {
-        background: #FFE5D2;
-        color: #F17922;
-        border-style: solid;
-        border-color: #F17922;
+    #team .team-content p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 36px;
+        text-align: center;
+        color: #FFFFFF;
     }
     .title-jasa h2{
         font-family: Poppins;
@@ -478,21 +450,6 @@
             margin-left: -32px;
             margin-top: -24px;
         }
-        #img-latest-bg {
-            margin-top: 71px;
-            width: auto;
-            height: 292px;
-        }
-        #content-latest-porto .container .img-content {
-            width: auto;
-            height: 112px;
-            margin-top: -115px;
-            margin-right: -369px;
-            margin-left: 39px;
-        }
-        #portofolios .btn-get-more {
-            margin-top: 44px;
-        }
         .title-jasa h2 {
             font-size: 25px;
         }
@@ -594,7 +551,6 @@
                                     </div>
                                 </div>
                                 @endif
-                                
                             @endforeach
                         @endif
                     </div>
@@ -762,7 +718,7 @@
         <!-- end Proses Kerja section -->
 
         <!-- ======= Portofolio Section ======= -->
-        <section id="portofolios" class="padd-section text-center">
+        <!-- <section id="portofolios" class="padd-section text-center">
             <div data-aos="fade-up">
                 <div class="row">
                     <div class="title-porto">
@@ -771,10 +727,21 @@
                     <div class="line-title">
                         <img id="img-about1" src="img/about1.png" alt="">
                     </div>
-
+                    
                     <div class="col-lg-1"></div>
-                    <div class="col-lg-5">
-                        <img class="img-porto" src="{{url('/img/porto-img/1647334169-Halaman Utama.jpg')}}" alt="latest" data-aos="zoom-in"data-aos-delay="100">
+                    <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="team-block bottom">
+                            <img class="img-porto" src="{{url('/img/porto-img/1647334169-Halaman Utama.jpg')}}" alt="img">
+                            <div class="team-content">
+                                <ul class="list-unstyled">
+                                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                                </ul>
+                                <span>manager</span>
+                                <h4>Kimberly Tran</h4>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-5">
                         <img class="img-porto" src="{{url('/img/porto-img/1647334182-Halaman Utama 2.jpg')}}" alt="latest" data-aos="zoom-in"data-aos-delay="100">
@@ -783,7 +750,43 @@
                 </div>
                 
             </div>
-        </section><!-- End Screenshots Section -->
+        </section>End Screenshots Section -->
+
+        <section id="team" class="padd-section text-center">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title text-center">
+                    <div class="title-porto">
+                        <h2>Portofolio</h2>
+                    </div>
+                    <div class="line-title">
+                        <img id="img-about1" src="img/about1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="row center-block">
+                    <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="team-block bottom">
+                            <img src="{{url('/img/porto-img/1647334169-Halaman Utama.jpg')}}" class="img-responsive" alt="img">
+                            <div class="team-content">
+                                <div class="container">
+                                    <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="team-block bottom">
+                            <img src="{{url('/img/porto-img/1647334182-Halaman Utama 2.jpg')}}" class="img-responsive" alt="img">
+                            <div class="team-content">
+                                <div class="container">
+                                    <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Team Section -->
 
         <!-- ======= service Section ======= -->
         <section id="pricing" class="padd-section text-cente">
