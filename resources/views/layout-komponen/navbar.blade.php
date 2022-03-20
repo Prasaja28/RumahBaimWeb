@@ -49,6 +49,7 @@
             <li><a class="nav-link scrollto" href="#about-us">Tentang Kami</a></li>
             <li><a class="nav-link scrollto" href="#team">Portofolio</a></li>
             <li><a class="nav-link scrollto" href="#pricing">Paket Jasa</a></li>
+            <li><a class="nav-link scrollto" href="#testimonials">Testimoni</a></li>
             <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
             <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           </ul>

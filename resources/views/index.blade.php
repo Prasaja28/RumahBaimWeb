@@ -131,10 +131,10 @@
         margin-left: -89px;
         margin-top: -24px;
     }
-    .title-porto{
-        font-family: Poppins;
+    .title-porto h2{
+        font-family: 'Montserrat';
         font-style: normal;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 36px;
         line-height: 44px;
         color: #333333;
@@ -185,31 +185,22 @@
         margin-bottom: 20px;
         margin-left: 10px;
     }
-    #pricing .row .price-list p{
-        background-color: #FFEC45;
-        font-weight: 500;
-        font-family: Poppins;
-        font-size: 10px;
-        margin-top: 110px;
+    #pricing .row .price-list{
+        margin-top: 92px;
+    }
+    #pricing .row .price-list img{
+        width: auto;
+        height: 90px;
+        margin-left: -22px;
+        margin-right: auto;
         margin-bottom: 20px;
     }
-    #pricing .row .price-list span{
-        color: #333333;
-        font-weight: bold;
-        font-size: 13px;
-    }
-    #pricing .row .price-list2 p{
-        background-color: #FFEC45;
-        font-weight: 500;
-        font-family: Poppins;
-        font-size: 10px;
-        margin-top: 16px;
+    #pricing .row .price-list2 img{
+        width: auto;
+        height: 90px;
+        margin-left: -22px;
+        margin-right: auto;
         margin-bottom: 20px;
-    }
-    #pricing .row .price-list2 span{
-        color: #333333;
-        font-weight: bold;
-        font-size: 13px;
     }
     #pricing .row .t_button .btn-get-chat {
         border: none;
@@ -258,11 +249,30 @@
         margin-left: -1px;
         margin-top: -24px;
     }
-    #faq .title-faq{
+    #testimonials .title-testimoni p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+        color: #333333;
+    }
+    #testimonials .text-center {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        color: #5E5E5E;
+    }
+    #faq {
+        background-color: #333333;
+    }
+    #faq .title-faq h2{
         font-family: Poppins;
         font-weight: bold;
         font-size: 36px;
-        color: #333333;
+        color: white;
     }
     #faq .container #accordion{
         margin-top: 60px;
@@ -752,6 +762,7 @@
             </div>
         </section>End Screenshots Section -->
 
+        <!-- ======= Portofolio Section ======= -->
         <section id="team" class="padd-section text-center">
             <div class="container" data-aos="fade-up">
                 <div class="section-title text-center">
@@ -784,24 +795,44 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="team-block bottom">
+                            <img src="{{url('/img/porto-img/1647334169-Halaman Utama.jpg')}}" class="img-responsive" alt="img">
+                            <div class="team-content">
+                                <div class="container">
+                                    <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="team-block bottom">
+                            <img src="{{url('/img/porto-img/1647334182-Halaman Utama 2.jpg')}}" class="img-responsive" alt="img">
+                            <div class="team-content">
+                                <div class="container">
+                                    <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section><!-- End Team Section -->
+        </section><!-- End Screenshots Section -->
 
         <!-- ======= service Section ======= -->
         <section id="pricing" class="padd-section text-cente">
-            <div class="container" data-aos="fade-up">
-                    <div class="section-title text-center">
-                        <div class="title-jasa">
-                            <h2>Paket Jasa</h2>
-                        </div>
+        <div class="container" data-aos="fade-up">
+            <div class="section-title text-center">
+                <div class="title-jasa">
+                    <h2>Paket Jasa</h2>
+                </div>
                 
-                        <div class="line-title">
-                            <img id="img-about1" src="img/about1.png" alt="">
-                        </div>
-                    </div>
+                <div class="line-title">
+                    <img id="img-about1" src="img/about1.png" alt="">
+                </div>
+            </div>
 
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
 
                     <div class="col-md-6 col-lg-3">
                         <div class="block-pricing">
@@ -810,9 +841,7 @@
                                 <img id="img-c1" src="img/img-service1.png" alt="">
                                 <img id="img-c2" src="img/jasa-content1.png" alt="">
                                 <div class="price-list">
-                                    <p>
-                                        Harga mulai dari <span>Rp 50 ribu /m2</span>
-                                    </p>    
+                                    <img src="img/price1.png" alt="">  
                                 </div>
                                 <div class="t_button">
                                     <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
@@ -828,9 +857,7 @@
                             <img id="img-c1-2" src="img/img-service2.png" alt="">
                             <img id="img-c2" src="img/jasa-content2.png" alt="">
                             <div class="price-list2">
-                                <p>
-                                    Harga mulai dari <span>Rp 2 juta / m2</span>
-                                </p>    
+                                <img src="img/price2.png" alt="">    
                             </div>
                             <div class="t_button">
                                 <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
@@ -846,9 +873,7 @@
                             <img id="img-c1-3" src="img/img-service3.png" alt="">
                             <img id="img-c2" src="img/jasa-content3.png" alt="">
                             <div class="price-list2">
-                                <p>
-                                    Harga mulai dari <span>Rp 2 juta / m2</span>
-                                </p>    
+                                <img src="img/price2.png" alt="">
                             </div>
                             <div class="t_button">
                                 <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
@@ -864,9 +889,7 @@
                             <img id="img-c1-4" src="img/img-service4.png" alt="">
                             <img id="img-c2" src="img/jasa-content4.png" alt="">
                             <div class="price-list2">
-                                <p>
-                                    Harga mulai dari <span>Rp 2 juta / m2</span>
-                                </p>    
+                                <img src="img/price2.png" alt="">    
                             </div>
                             <div class="t_button">
                                 <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
@@ -877,6 +900,26 @@
             </div>
         </div>
         </section><!-- End Pricing Section -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="padd-section text-center">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title text-center">
+                    <div class="title-testimoni">
+                        <p>Testimoni</p>
+                    </div>
+                    <div class="line-title">
+                        <img id="img-about1" src="img/about1.png" alt="">
+                    </div>
+                </div>
+                <div class="text-center" data-aos="fade-up" style="padding-left:-10px;padding-right:-10px;">
+                    <p class="text-center"><b>
+                        Lebih dari 90% Pelanggan Rumah Baim merasa puas dengan layanan yang diberikan<br>
+                        dan melakukan repeat order </b>
+                    </p>
+                </div>
+            </div>
+        </section><!-- End Testimonials Section -->
 
         <!-- ======= faq Section ======= -->
         <section id="faq" class="padd-section">
