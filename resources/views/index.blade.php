@@ -144,6 +144,9 @@
         flex-direction: row;
         justify-content: center;
     }
+    #team .team-block{
+        margin: 10px;
+    }
     #team .team-content p{
         font-family: 'Poppins';
         font-style: normal;
@@ -152,6 +155,46 @@
         line-height: 36px;
         text-align: center;
         color: #FFFFFF;
+    }
+    #team .modal-body .header1 .container{
+        background-color: #F17922;
+        border-radius: 10px;
+        height: 72px;
+        align-items: center;
+        display: flex;
+    }
+    #team .modal-body .header1 .container h3{
+        font-family: 'Red Hat Display';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 37px;
+        color: #FFFFFF;
+    }
+    #team .modal-body .header1 .title-desc p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #5E5E5E;
+        margin-top: 20px;
+    }
+    #team .modal-body .desc p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 24px;
+        color: #5E5E5E;
+    }
+    #team .modal-body .title-gal p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #5E5E5E;
     }
     .title-jasa h2{
         font-family: Poppins;
@@ -257,13 +300,72 @@
         line-height: 44px;
         color: #333333;
     }
-    #testimonials .text-center {
+    #testimonials .information-cust .text-center {
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 500;
         font-size: 24px;
         line-height: 36px;
         color: #5E5E5E;
+    }
+    #testimonials .testi {
+        margin-top: 80px;
+    }
+    #testimonials .row {
+        margin-top: 30px;
+    }
+    #testimonials .row .col-md-4 {
+        margin: 40px auto;
+    }
+    #testimonials .row .col-md-4 .profile{
+        padding: 70px 10px 10px;
+        background-color: white;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        border-radius: 50px;
+    }
+    #testimonials .row .col-md-4 .head-name p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+    }
+    #testimonials .row .col-md-4 .head-service p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000000;
+    }
+    #testimonials .row .col-md-4 .profile img{
+        top: -60px;
+        position: absolute;
+        left: calc(50% - 60px);
+        /* border: 10px solid white; */
+    }
+    #testimonials .row .col-md-4 .profile .user{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+    #testimonials .row blockquote{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #5E5E5E;
+    }
+    #testimonials .row blockquote::before{
+        content: "\201D";
+        font-size: 50px;
+        position: relative;
+        color: #F17922;
+        line-height: 20px;
+        bottom: -15px;
+        right: 5px;
     }
     #faq {
         background-color: #333333;
@@ -529,6 +631,7 @@
         max-height:100%;
     }
 </style>
+<link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' rel='stylesheet'>
 @endsection
 @section('konten')
 <!-- ======= Home Section ======= -->
@@ -777,7 +880,9 @@
                 <div class="row center-block">
                     <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
                         <div class="team-block bottom">
-                            <img src="{{url('/img/porto-img/1647334169-Halaman Utama.jpg')}}" class="img-responsive" alt="img">
+                            <a href="" data-toggle="modal" data-target="#myModal">
+                                <img src="{{url('/img/porto-img/1647334169-Halaman Utama.jpg')}}" class="img-responsive" alt="img">
+                            </a>
                             <div class="team-content">
                                 <div class="container">
                                     <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
@@ -811,6 +916,64 @@
                             <div class="team-content">
                                 <div class="container">
                                     <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="header1">
+                                <div class="container text-center" data-aos="fade-up">
+                                    <h3>Pembangunan Rumah Tahfiz</h3>
+                                </div>
+                                <div class="descript1 text-center" data-aos="fade-right">
+                                    <div class="title-desc">
+                                        <p>Deskripsi Proyek</p>
+                                    </div>
+                                    <div class="desc">
+                                        <p>Proyek pembangunan untuk Rumah Tahfidz Nurul Ilmi dilaksanakan pada tahun 2018 sampai dengan tahun 2019. Proyek ini merupakan salah satu proyek menarik yang kami kerjakan dimana kami membangun rumah 3 lantai yang cukup kompleks dalam pelaksanaannya. Luas tanah sekitar 90 m2 dan luas bangunannya 240 m2.</p>
+                                    </div>
+                                </div>
+                                <div class="title-gal">
+                                    <p>Galeri</p>
+                                </div>
+                                <div id="demo" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ul class="carousel-indicators">
+                                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                        <li data-target="#demo" data-slide-to="1"></li>
+                                        <li data-target="#demo" data-slide-to="2"></li>
+                                    </ul>
+                                
+                                    <!-- The slideshow -->
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                        <img src="img/renovasi-gal.jpg" alt="Los Angeles" width="1100" height="500">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="img/renovasi-gal.jpg" alt="Chicago" width="1100" height="500">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="img/renovasi-gal.jpg" alt="New York" width="1100" height="500">
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Left and right controls -->
+                                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -912,11 +1075,57 @@
                         <img id="img-about1" src="img/about1.png" alt="">
                     </div>
                 </div>
-                <div class="text-center" data-aos="fade-up" style="padding-left:-10px;padding-right:-10px;">
+                <div class="information-cust" data-aos="fade-up" style="padding-left:-10px;padding-right:-10px;">
                     <p class="text-center"><b>
                         Lebih dari 90% Pelanggan Rumah Baim merasa puas dengan layanan yang diberikan<br>
                         dan melakukan repeat order </b>
                     </p>
+                </div>
+            </div>
+            <div class="container testi">
+                <div class="row">
+                    <div class="col-md-4 text-center" data-aos="fade-up">
+                        <div class="profile">
+                            <img src="img/user.png" class="user">
+                            <div class="head-name">
+                                <p>Bayu ya</p>
+                            </div>
+                            <div class="head-service">
+                                <p>Layanan Jasa Renovasi</p>
+                            </div>
+                            <blockquote>
+                                Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa RenovasiLayanan Jasa Renovasi.
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center" data-aos="fade-up">
+                        <div class="profile">
+                            <img src="img/user.png" class="user">
+                            <div class="head-name">
+                                <p>Bayu ya</p>
+                            </div>
+                            <div class="head-service">
+                                <p>Layanan Jasa Renovasi</p>
+                            </div>
+                            <blockquote>
+                                Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa RenovasiLayanan Jasa Renovasi.
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center" data-aos="fade-up">
+                        <div class="profile">
+                            <img src="img/user.png" class="user">
+                            <div class="head-name">
+                                <p>Bayu ya</p>
+                            </div>
+                            <div class="head-service">
+                                <p>Layanan Jasa Renovasi</p>
+                            </div>
+                            <blockquote>
+                                Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa RenovasiLayanan Jasa Renovasi.
+                            </blockquote>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section><!-- End Testimonials Section -->
