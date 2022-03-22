@@ -196,6 +196,9 @@
         line-height: 24px;
         color: #5E5E5E;
     }
+    #team #myCarousel .carousel-inner img{
+        width:100%;
+    }
     .title-jasa h2{
         font-family: Poppins;
         font-style: normal;
@@ -892,7 +895,9 @@
                     </div>
                     <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
                         <div class="team-block bottom">
-                            <img src="{{url('/img/porto-img/1647334182-Halaman Utama 2.jpg')}}" class="img-responsive" alt="img">
+                            <a href="" data-toggle="modal" data-target="#myModal">
+                                <img src="{{url('/img/porto-img/1647334182-Halaman Utama 2.jpg')}}" class="img-responsive" alt="img">
+                            </a>
                             <div class="team-content">
                                 <div class="container">
                                     <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
@@ -902,7 +907,9 @@
                     </div>
                     <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
                         <div class="team-block bottom">
-                            <img src="{{url('/img/porto-img/1647334169-Halaman Utama.jpg')}}" class="img-responsive" alt="img">
+                            <a href="" data-toggle="modal" data-target="#myModal">
+                                <img src="{{url('/img/porto-img/1647334169-Halaman Utama.jpg')}}" class="img-responsive" alt="img">
+                            </a>
                             <div class="team-content">
                                 <div class="container">
                                     <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
@@ -912,7 +919,9 @@
                     </div>
                     <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
                         <div class="team-block bottom">
-                            <img src="{{url('/img/porto-img/1647334182-Halaman Utama 2.jpg')}}" class="img-responsive" alt="img">
+                            <a href="" data-toggle="modal" data-target="#myModal">
+                                <img src="{{url('/img/porto-img/1647334182-Halaman Utama 2.jpg')}}" class="img-responsive" alt="img">
+                            </a>
                             <div class="team-content">
                                 <div class="container">
                                     <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
@@ -957,13 +966,13 @@
                                     <!-- The slideshow -->
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                        <img src="img/renovasi-gal.jpg" alt="Los Angeles" width="1100" height="500">
+                                        <img src="img/renovasi-gal.jpg" alt="Los Angeles">
                                         </div>
                                         <div class="carousel-item">
-                                        <img src="img/renovasi-gal.jpg" alt="Chicago" width="1100" height="500">
+                                        <img src="img/renovasi-gal.jpg" alt="Chicago">
                                         </div>
                                         <div class="carousel-item">
-                                        <img src="img/renovasi-gal.jpg" alt="New York" width="1100" height="500">
+                                        <img src="img/renovasi-gal.jpg" alt="New York">
                                         </div>
                                     </div>
                                 
