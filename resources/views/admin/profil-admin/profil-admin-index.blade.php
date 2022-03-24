@@ -23,11 +23,9 @@
                 <div class="container text-center"><br>
                     <h4>Data Foto Bagian Depan</h4>
                 </div>
-                @if($foto->count() < 2)
                     <div class="container"><br>
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#ModalCreateVideo">Masukan Data Foto</button><br><br>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#ModalCreateFotoHome">Masukan Data Foto</button><br><br>
                     </div>
-                @endif
                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
@@ -169,4 +167,28 @@ $(document).ready(function() {
     $('#example').DataTable();
 } );
 </script>
+@endsection
+
+@section('js-internal')
+<script type="text/javascript">
+  
+    Dropzone.autoDiscover = false;
+  
+    var myDropzone = new Dropzone(".dropzone", { 
+       autoProcessQueue: false,
+       maxFilesize: 1,
+       uploadMultiple: true,
+       headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+       acceptedFiles: ".jpeg,.jpg,.png,.gif",
+       success: function(file, res) {
+           console.log(res);
+       }
+    });
+  
+    $('#btn_uploadFiles').click(function(){
+       myDropzone.processQueue();
+    });
+      
+</script>
+
 @endsection

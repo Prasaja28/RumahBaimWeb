@@ -5,7 +5,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\PortoController;
 use App\Http\Controllers\UsersController;
-use App\Http\Controllers\ProfilController;
+// use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\LandingController;
 
@@ -73,6 +74,18 @@ Route::post('/admin-profil/store-tentang',[ProfilController::class, 'tentangStor
 Route::get('/admin-profil/delete-kontak/{id}',[ProfilController::class, 'kontakDestroy']);
 Route::put('/admin-profil/update-kontak/{id}',[ProfilController::class, 'kontakUpdate']);
 Route::post('/admin-profil/store-kontak',[ProfilController::class, 'kontakStore']);
+
+//Profile
+Route::get('/admin-profile',[ProfileController::class, 'index'])->name('admin-profile');
+Route::get('/admin-profile/delete-foto/{id}',[ProfileController::class, 'fotoDestroy']);
+Route::post('/admin-profile/update-foto/{id}',[ProfileController::class, 'fotoUpdate'])->name('updateFoto');
+Route::post('/admin-profile/store-foto',[ProfileController::class, 'fotoStore']);
+Route::get('/admin-profile/delete-tentang/{id}',[ProfileController::class, 'tentangDestroy']);
+Route::post('/admin-profile/update-tentang/{id}',[ProfileController::class, 'tentangUpdate']);
+Route::post('/admin-profile/store-tentang',[ProfileController::class, 'tentangStore']);
+Route::get('/admin-profile/delete-kontak/{id}',[ProfileController::class, 'kontakDestroy']);
+Route::put('/admin-profile/update-kontak/{id}',[ProfileController::class, 'kontakUpdate']);
+Route::post('/admin-profile/store-kontak',[ProfileController::class, 'kontakStore'])->name('storeKontak');
 
 //galeri portofolio
 Route::get('/admin-galeri',[GaleriController::class, 'index']);

@@ -16,7 +16,7 @@ class CreateKontakTable extends Migration
         Schema::create('kontak', function (Blueprint $table) {
             $table->id();
             $table->string('jenis');
-            $table->string('isian');
+            $table->string('isian')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

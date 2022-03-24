@@ -26,53 +26,31 @@ class ProfilController extends Controller
     //tambah data video
     public function fotoStore(Request $request)
     {
-        // $path = null; 
-        // if($request->foto_home)
-        // {
-        //     $file = $request->file('foto_home');
-        //     $path = '/img/profil-img/'.time().'-'.$file->extension();
-        //     $file->move(public_path('img/profil-img'), $path);
-        // }
-        // // dd($path);
-        //     // echo $path;
-        // $data = FotoHome::all();
-        // if($data->count() == 0){
-        //     $status = 1;
-        // }else{
-        //     foreach($data as $data1){
-        //         if($data1->status == 0){
-        //             $status = 1;
-        //         }else{
-        //             $status = 0;
-        //         }
-        //     }
-        // }
-        $data = FotoHome::all();
-        if($data->count() == 0){
-            $status = 1;
-        }else{
-            foreach($data as $data1){
-                if($data1->status == 0){
-                    $status = 1;
+        try {
+            $set = 0;
+            foreach($request->file as $key => $value){
+                $imgName = 'img/profil-img/'.time().'-'.$value->getClientOriginalName().'.'.$value->extension();
+                // return $imgName;
+                $value->move(public_path('img/profil-img/'), $imgName);
+                if($set == 0){
+                    FotoHome::create([
+                        'foto' => $imgName,
+                        'status' => 1
+                    ]);
                 }else{
-                    $status = 0;
+                    FotoHome::create([
+                        'foto' => $imgName,
+                        'status' => 0
+                    ]);
                 }
+                $set=$set+1;
             }
+        } catch (Throwable $th) {
+            throw $th;
         }
         
-        // FotoHome::create([
-        //     'foto' => $path,
-        //     'status' => $status
-        // ]);
-        $foto = FotoHome::create([
-            'status' => $status,
-            'foto' => "foto",
-        ]);
-        foreach ($request->input('photo', []) as $file) {
-            $foto->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection($this->mediaCollection);
-        }
-        // return redirect()->route('products.index');
-        return redirect('/admin-profil')->with('Data Berhasil Di Simpan!!!');
+        return redirect('/admin-profile')->with('Data Berhasil Di Simpan!!!');
+        
     }
 
     public function storeMedia(Request $request)

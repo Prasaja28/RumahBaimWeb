@@ -1,6 +1,3 @@
-<!-- Modal Tambah Bidang -->
-<!-- Modal -->
-
 <div class="modal bd-example-modal-lg" id="ModalCreateFotoHome" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -11,7 +8,7 @@
                   </button>
               </div>
               <div class="modal-body text-center">
-                  <form action="/admin-profil/store-foto" method="post" enctype="multipart/form-data" id="image-upload" class="dropzone">
+                  <form action="/admin-profile/store-foto" method="post" enctype="multipart/form-data" id="image-upload" class="dropzone">
                   @csrf
                         
                   </form>
@@ -33,4 +30,3 @@
     </div>
   </div>
   <!-- End modal Tambah -->
-

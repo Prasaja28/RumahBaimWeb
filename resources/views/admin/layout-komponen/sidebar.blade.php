@@ -11,8 +11,8 @@
         <li class="nav-item dropdown {{ (request()->is('dashboard*')) ? 'active' : '' }}">
           <a href="{{ url('/dashboard') }}" class="nav-link"><i class="fas fa-home"></i><span>Beranda</span></a>
         </li>
-        <li class="nav-item dropdown {{ (request()->is('admin-profil*')) ? 'active' : '' }}">
-          <a href="{{ url('/admin-profil') }}" class="nav-link"><i class="fas fa-fire"></i><span>Profil</span></a>
+        <li class="nav-item dropdown {{ (request()->is('admin-profile*')) ? 'active' : '' }}">
+          <a href="{{ url('/admin-profile') }}" class="nav-link"><i class="fas fa-fire"></i><span>Profil</span></a>
         </li>       
         <li class="nav-item dropdown {{ (request()->is('admin-porto*')) ? 'active' : '' }}">
           <a href="{{ url('/admin-porto') }}" class="nav-link"><i class="fas fa-bookmark"></i><span>Portofolio</span></a>
