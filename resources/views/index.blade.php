@@ -156,48 +156,69 @@
         text-align: center;
         color: #FFFFFF;
     }
-    #team .modal-body .header1 .container{
+    #team .modal-content {
+        width: 1192px;
+        margin-left: -340px;
+    }
+    #team .modal-header{
         background-color: #F17922;
-        border-radius: 10px;
-        height: 72px;
-        align-items: center;
-        display: flex;
     }
-    #team .modal-body .header1 .container h3{
-        font-family: 'Red Hat Display';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 37px;
-        color: #FFFFFF;
-    }
-    #team .modal-body .header1 .title-desc p{
+    #team .modal-header h3{
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 700;
-        font-size: 16px;
-        line-height: 24px;
-        color: #5E5E5E;
-        margin-top: 20px;
+        font-size: 32px;
+        line-height: 39px;
+        color: #FFFFFF;
+        margin-left: auto;
+    }
+    #team .modal-body {
+        background-image: url('img/back-modal.png');
+        background-color: #333333;
+    }
+    #team .modal-body .header1 .title-desc p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        color: #FFFFFF;
     }
     #team .modal-body .desc p{
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
-        font-size: 12px;
-        line-height: 24px;
-        color: #5E5E5E;
-    }
-    #team .modal-body .title-gal p{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
         font-size: 16px;
         line-height: 24px;
-        color: #5E5E5E;
+        color: #FFFFFF;
     }
-    #team #myCarousel .carousel-inner img{
-        width:100%;
+    #team .modal-body .back-carousel{
+        background-color: #666666;
+        height: 368px;
+    }
+    #team .carousel-inner img{
+        width: 491px;
+        height: 324px;
+        margin-top: 20px;
+    }
+    #team .carousel-inner .col-lg-5 h2{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        color: #FFFFFF;
+        text-align: left;
+        margin-top: 69px;
+    }
+    #team .carousel-inner .col-lg-5 p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: justify;
+        color: #FFFFFF;
     }
     .title-jasa h2{
         font-family: Poppins;
@@ -937,13 +958,11 @@
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
+                            <h3>Pembangunan Rumah Tahfiz</h3>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <div class="modal-body">
                             <div class="header1">
-                                <div class="container text-center" data-aos="fade-up">
-                                    <h3>Pembangunan Rumah Tahfiz</h3>
-                                </div>
                                 <div class="descript1 text-center" data-aos="fade-right">
                                     <div class="title-desc">
                                         <p>Deskripsi Proyek</p>
@@ -952,37 +971,66 @@
                                         <p>Proyek pembangunan untuk Rumah Tahfidz Nurul Ilmi dilaksanakan pada tahun 2018 sampai dengan tahun 2019. Proyek ini merupakan salah satu proyek menarik yang kami kerjakan dimana kami membangun rumah 3 lantai yang cukup kompleks dalam pelaksanaannya. Luas tanah sekitar 90 m2 dan luas bangunannya 240 m2.</p>
                                     </div>
                                 </div>
-                                <div class="title-gal">
-                                    <p>Galeri</p>
-                                </div>
-                                <div id="demo" class="carousel slide" data-ride="carousel">
-                                    <!-- Indicators -->
-                                    <ul class="carousel-indicators">
-                                        <li data-target="#demo" data-slide-to="0" class="active"></li>
-                                        <li data-target="#demo" data-slide-to="1"></li>
-                                        <li data-target="#demo" data-slide-to="2"></li>
-                                    </ul>
-                                
-                                    <!-- The slideshow -->
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                        <img src="img/renovasi-gal.jpg" alt="Los Angeles">
+                                <div class="container back-carousel">
+                                    <div id="demo" class="carousel slide" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ul class="carousel-indicators">
+                                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                            <li data-target="#demo" data-slide-to="1"></li>
+                                            <li data-target="#demo" data-slide-to="2"></li>
+                                        </ul>
+                                    
+                                        <!-- The slideshow -->
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row">
+                                                    <div class="col-lg-1"></div>
+                                                    <div class="col-lg-5">
+                                                        <h2>Proses Pembangunan</h2>
+                                                        <p>Proyek pembangunan untuk Rumah Tahfidz Nurul Ilmi dilaksanakan pada tahun 2018 sampai dengan tahun 2019. Proyek ini merupakan salah satu proyek menarik yang kami kerjakan dimana kami membangun rumah 3 lantai yang cukup kompleks dalam pelaksanaannya. Luas tanah sekitar 90 m2 dan luas bangunannya 240 m2.</p>
+                                                    </div>
+                                                    <div class="col-lg-5 no-padding">
+                                                        <img src="img/renovasi-gal.jpg" alt="Los Angeles">
+                                                    </div>
+                                                    <div class="col-lg-1"></div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-lg-1"></div>
+                                                    <div class="col-lg-5">
+                                                        <h2>Proses Pembangunan</h2>
+                                                        <p>Proyek pembangunan untuk Rumah Tahfidz Nurul Ilmi dilaksanakan pada tahun 2018 sampai dengan tahun 2019. Proyek ini merupakan salah satu proyek menarik yang kami kerjakan dimana kami membangun rumah 3 lantai yang cukup kompleks dalam pelaksanaannya. Luas tanah sekitar 90 m2 dan luas bangunannya 240 m2.</p>
+                                                    </div>
+                                                    <div class="col-lg-5 no-padding">
+                                                        <img src="img/renovasi-gal.jpg" alt="Los Angeles">
+                                                    </div>
+                                                    <div class="col-lg-1"></div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row">
+                                                    <div class="col-lg-1"></div>
+                                                    <div class="col-lg-5">
+                                                        <h2>Proses Pembangunan</h2>
+                                                        <p>Proyek pembangunan untuk Rumah Tahfidz Nurul Ilmi dilaksanakan pada tahun 2018 sampai dengan tahun 2019. Proyek ini merupakan salah satu proyek menarik yang kami kerjakan dimana kami membangun rumah 3 lantai yang cukup kompleks dalam pelaksanaannya. Luas tanah sekitar 90 m2 dan luas bangunannya 240 m2.</p>
+                                                    </div>
+                                                    <div class="col-lg-5 no-padding">
+                                                        <img src="img/renovasi-gal.jpg" alt="Los Angeles">
+                                                    </div>
+                                                    <div class="col-lg-1"></div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="carousel-item">
-                                        <img src="img/renovasi-gal.jpg" alt="Chicago">
-                                        </div>
-                                        <div class="carousel-item">
-                                        <img src="img/renovasi-gal.jpg" alt="New York">
-                                        </div>
+                                    
+                                        <!-- Left and right controls -->
+                                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </a>
                                     </div>
-                                
-                                    <!-- Left and right controls -->
-                                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                                        <span class="carousel-control-prev-icon"></span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#demo" data-slide="next">
-                                        <span class="carousel-control-next-icon"></span>
-                                    </a>
                                 </div>
                             </div>
                         </div>
