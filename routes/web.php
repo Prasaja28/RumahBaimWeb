@@ -7,6 +7,7 @@ use App\Http\Controllers\PortoController;
 use App\Http\Controllers\UsersController;
 // use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\LandingController;
 
@@ -93,3 +94,9 @@ Route::get('/admin-galeri/show',[GaleriController::class, 'show']);
 Route::get('/admin-galeri/delete/{id}',[GaleriController::class, 'destroy']);
 Route::put('/admin-galeri/update/{id}',[GaleriController::class, 'update']);
 Route::post('/admin-galeri/store',[GaleriController::class, 'store']);
+
+//testimoni
+Route::get('/admin-testi',[TestimoniController::class, 'index']);
+Route::get('/admin-testi/delete/{id}',[TestimoniController::class, 'destroy']);
+Route::put('/admin-testi/update/{id}',[TestimoniController::class, 'update']);
+Route::post('/admin-testi/store',[TestimoniController::class, 'store']);
