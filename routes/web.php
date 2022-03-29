@@ -64,17 +64,17 @@ Route::put('/admin-akun/update/{id}',[UsersController::class, 'update']);
 Route::post('/admin-akun/store',[UsersController::class, 'store']);
 
 //Profil
-Route::get('/admin-profil',[ProfilController::class, 'index']);
-Route::get('/admin-profil/delete-foto/{id}',[ProfilController::class, 'fotoDestroy']);
-Route::put('/admin-profil/update-foto/{id}',[ProfilController::class, 'fotoUpdate']);
-Route::post('/admin-profil/store-foto',[ProfilController::class, 'fotoStore']);
-Route::post('/admin-profil/store-foto-media',[ProfilController::class, 'storeMedia']);
-Route::get('/admin-profil/delete-tentang/{id}',[ProfilController::class, 'tentangDestroy']);
-Route::put('/admin-profil/update-tentang/{id}',[ProfilController::class, 'tentangUpdate']);
-Route::post('/admin-profil/store-tentang',[ProfilController::class, 'tentangStore']);
-Route::get('/admin-profil/delete-kontak/{id}',[ProfilController::class, 'kontakDestroy']);
-Route::put('/admin-profil/update-kontak/{id}',[ProfilController::class, 'kontakUpdate']);
-Route::post('/admin-profil/store-kontak',[ProfilController::class, 'kontakStore']);
+// Route::get('/admin-profil',[ProfileController::class, 'index']);
+// Route::get('/admin-profil/delete-foto/{id}',[ProfileController::class, 'fotoDestroy']);
+// Route::put('/admin-profil/update-foto/{id}',[ProfileController::class, 'fotoUpdate']);
+// Route::post('/admin-profil/store-foto',[ProfileController::class, 'fotoStore']);
+// Route::post('/admin-profil/store-foto-media',[ProfileController::class, 'storeMedia']);
+// Route::get('/admin-profil/delete-tentang/{id}',[ProfileController::class, 'tentangDestroy']);
+// Route::put('/admin-profil/update-tentang/{id}',[ProfileController::class, 'tentangUpdate']);
+// Route::post('/admin-profil/store-tentang',[ProfileController::class, 'tentangStore']);
+// Route::get('/admin-profil/delete-kontak/{id}',[ProfileController::class, 'kontakDestroy']);
+// Route::put('/admin-profil/update-kontak/{id}',[ProfileController::class, 'kontakUpdate']);
+// Route::post('/admin-profil/store-kontak',[ProfileController::class, 'kontakStore']);
 
 //Profile
 Route::get('/admin-profile',[ProfileController::class, 'index'])->name('admin-profile');
@@ -94,6 +94,7 @@ Route::get('/admin-galeri/show',[GaleriController::class, 'show']);
 Route::get('/admin-galeri/delete/{id}',[GaleriController::class, 'destroy']);
 Route::put('/admin-galeri/update/{id}',[GaleriController::class, 'update']);
 Route::post('/admin-galeri/store',[GaleriController::class, 'store']);
+Route::post('/admin-galeri/store/media',[GaleriController::class, 'storeMedia']);
 
 //testimoni
 Route::get('/admin-testi',[TestimoniController::class, 'index']);

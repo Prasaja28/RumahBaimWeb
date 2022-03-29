@@ -4,6 +4,7 @@
 <!-- css internal place -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
 @endsection
 @section('porto-admin','active')
 @section('konten')
@@ -65,6 +66,32 @@
 
 @section('script')
 <!-- script internal place -->
+<script>
+      var uploadedDocumentMap = {}
+      Dropzone.options.documentDropzone = {
+         url: '{{ ('/admin-galeri/store/media') }}',
+         maxFilesize: 2, // MB
+         addRemoveLinks: true,
+         acceptedFiles: ".jpeg,.jpg,.png,.gif",
+         headers: {
+            'X-CSRF-TOKEN': "{{ csrf_token() }}"
+         },
+         success: function(file, response) {
+            $('form').append('<input type="hidden" name="photo[]" value="' + response.name + '">')
+            uploadedDocumentMap[file.name] = response.name
+         },
+         removedfile: function(file) {
+            file.previewElement.remove()
+            var name = ''
+            if (typeof file.file_name !== 'undefined') {
+               name = file.file_name
+            } else {
+               name = uploadedDocumentMap[file.name]
+            }
+            $('form').find('input[name="photo[]"][value="' + name + '"]').remove()
+         }
+      }
+</script>
 <script src="{{asset('https://code.jquery.com/jquery-3.5.1.js')}}"></script>
 <script src="{{asset('https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js')}}"></script>

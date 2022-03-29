@@ -31,10 +31,12 @@
                         @enderror
                     </div>
                     <div class="item form-group" style="margin-right:-40px;">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" style="text-align:left; margin-right: -100px;" >Masukkan Foto <span class="required">*</span></label>
+                        <!-- <label class="control-label col-md-3 col-sm-3 col-xs-12" style="text-align:left; margin-right: -100px;" >Masukkan Foto <span class="required">*</span></label>
                         <div class="col-md-9 col-sm-6 col-xs-12" style="margin-left:60px;">
                             <input type="file" name="foto_utama" id="foto_utama" accept=".png, .jpg, .jpeg" required>
-                        </div>
+                        </div> -->
+                        <label for="document">Photo</label>
+                        <div class="needsclick dropzone" id="document-dropzone">
                     </div>
                     <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
