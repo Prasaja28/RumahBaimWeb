@@ -101,3 +101,34 @@ $(document).ready(function() {
 } );
 </script>
 @endsection
+
+@section('js-internal')
+<script>
+ClassicEditor
+    .create( document.querySelector( '#deskripsiPorto' ) )
+    .then( editor => {
+            console.log( editor );
+    } )
+    .catch( error => {
+            console.error( error );
+    } );
+
+    Dropzone.autoDiscover = false;
+  
+    var portoDropzone = new Dropzone(".dropzone", { 
+       autoProcessQueue: false,
+       maxFilesize: 10000,
+       uploadMultiple: true,
+       addRemoveLinks:true,
+       headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+       acceptedFiles: ".jpeg,.jpg,.png,.gif",
+       success: function(file, res) {
+           console.log(res);
+       }
+    });
+  
+    $('#simpanPorto').click(function(){
+        portoDropzone.processQueue();
+    });
+</script>
+@endsection
