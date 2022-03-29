@@ -653,7 +653,7 @@
     #img-ikon-prosedur{
         height: 50%;
         width: auto;
-        margin-left: -60%;
+        margin-left: -67%;
     }
     .img-porto{
         max-width:100%;
@@ -1303,14 +1303,25 @@
                                         <a target="_blank" href="mailto: {{$dataSosmed->isian}}"><img src="img/logo-gmail.png" alt=""></a>
                                         @endif
                                         @if($dataSosmed->jenis == "whatsapp")
-                                        <a target="_blank" href="https://wa.me/{{$dataSosmed->isian}}/"><img src="img/logo-whatsapp.png" alt=""></a>
+                                        <a target="_blank" href="https://wa.me/{{$dataSosmed->isian}}/"><img class="mb-2" src="img/logo-whatsapp.png" alt=""></a>
                                         @endif
                                         @if($dataSosmed->jenis == "instagram")
                                         <a target="_blank" href="https://www.instagram.com/{{substr($dataSosmed->isian,1)}}/"><img src="img/logo-instagram.png" alt=""></a>
                                         @endif
                                     </div>
                                     <div class="col-lg-10">
-                                        <p>{{$dataSosmed->isian}}</p>
+                                        <p 
+                                        @if($dataSosmed->jenis == "email")
+                                        class="mb-0 pt-1"
+                                        @endif
+                                        @if($dataSosmed->jenis == "whatsapp")
+                                        class="mb-0 pt-3"
+                                        @endif
+                                        @if($dataSosmed->jenis == "instagram")
+                                        class="mb-0 pt-2"
+                                        @endif>
+                                            {{$dataSosmed->isian}}
+                                        </p>
                                     </div>
                                 </div>   
                                 @endif                             
@@ -1322,7 +1333,7 @@
                     </div>
 
                     <div class="col-lg-5 col-md-8">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.1409907669185!2d110.38376870218993!3d-7.797628036231348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5734088512fd%3A0x26690348ac8080f4!2secc.co.id%20(PT.%20ECC)!5e0!3m2!1sid!2sid!4v1646798364536!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.1409907669185!2d110.38376870218993!3d-7.797628036231348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5734088512fd%3A0x26690348ac8080f4!2secc.co.id%20(PT.%20ECC)!5e0!3m2!1sid!2sid!4v1646798364536!5m2!1sid!2sid" width="600" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>

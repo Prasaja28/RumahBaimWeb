@@ -22,11 +22,14 @@ class ProfileController extends Controller
     public function fotoStore(Request $request){
         // return redirect('admin-profile')->with('Data Berhasil Di Simpan!!!');
         try {
-            
+            // return $request->file[0]->getClientOriginalName();
+            $request->validate([
+                'file' => 'max:10000'
+            ]);
             foreach($request->file as $key => $value){
-                $imgName = 'img/profil-img/'.time().'-'.$value->getClientOriginalName().'.'.$value->extension();
-                // return $imgName;
-                $value->move(public_path('img/profil-img/'), $imgName);
+                $imgName = 'img/profil-img/'.time().'-'.$value->getClientOriginalName();
+                // return $value;
+                $value->move(public_path('img/profil-img'), $imgName);
                 FotoHome::create([
                     'foto' => $imgName,
                     'status' => 1

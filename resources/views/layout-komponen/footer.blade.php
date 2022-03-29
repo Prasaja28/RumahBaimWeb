@@ -26,11 +26,8 @@
   }
   }
 </style>
-<footer class="footer">
+<footer class="footer p-2">
   <div class="container text-center">
-    <p>&copy; 2022 Rumah Baim Property</p>
-    <div class="credits">
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
+    <p class="m-0" style="font-size: 14px">Rumah Baim Property &copy; 2022 </p>
   </div>
 </footer><!-- End  Footer -->
