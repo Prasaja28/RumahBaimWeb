@@ -53,6 +53,7 @@ Route::get('/admin-porto',[PortoController::class, 'index']);
 Route::get('/admin-porto/delete/{id}',[PortoController::class, 'destroy']);
 Route::put('/admin-porto/update/{id}',[PortoController::class, 'update']);
 Route::post('/admin-porto/store',[PortoController::class, 'store']);
+// Route::post('/admin-porto/store/media',[PortoController::class, 'storeMedia']);
 
 //detail Portofolio
 Route::get('/admin-porto-detail/{id}',[PortoController::class, 'show']);
@@ -94,7 +95,6 @@ Route::get('/admin-galeri/show',[GaleriController::class, 'show']);
 Route::get('/admin-galeri/delete/{id}',[GaleriController::class, 'destroy']);
 Route::put('/admin-galeri/update/{id}',[GaleriController::class, 'update']);
 Route::post('/admin-galeri/store',[GaleriController::class, 'store']);
-Route::post('/admin-galeri/store/media',[GaleriController::class, 'storeMedia']);
 
 //testimoni
 Route::get('/admin-testi',[TestimoniController::class, 'index']);

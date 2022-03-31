@@ -245,7 +245,7 @@ $(document).ready(function() {
   
     var myDropzone = new Dropzone(".dropzone", { 
        autoProcessQueue: false,
-       maxFilesize: 10000,
+       maxFilesize: 1,
        uploadMultiple: true,
        addRemoveLinks:true,
        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
@@ -257,8 +257,8 @@ $(document).ready(function() {
   
     $('#btn_uploadFiles').click(function(){
        myDropzone.processQueue();
-    //    setTimeout(function() {$('#ModalCreateFotoHome').modal('hide');},6000);
-    //    window.location.href = "{{ route('admin-profile')}}";
+       setTimeout(function() {$('#ModalCreateFotoHome').modal('hide');},6000);
+       window.location.href = "{{ route('admin-profile')}}";
     });
 
     $('.updateStatusFoto').click(function(){

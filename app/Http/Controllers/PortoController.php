@@ -38,50 +38,27 @@ class PortoController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'foto_utama' => 'max:88'
-        // ]);
-        // $path = null; 
-        // if($request->foto_utama)
-        // {
-        //     $file = $request->file('foto_utama');
-        //     $path = '/img/porto-img/'.time().'-'.$file->extension();
-        //     $file->move(public_path('img/porto-img'), $path);
-        // }
-        //     // echo $path;
-        // Portofolio::create([
-        //     'nama_desain' => $request->nama_desain,
-        //     'deskripsi' => $request->deskripsi,
-        //     'foto_utama' => $path
-        // ]);
-        // return redirect('/admin-porto')->with('Data Berhasil Di Simpan!!!');
-        
-        $portof = Portofolio::create([
-            'nama_desain' => $request->nama_desain,
-            'deskripsi' => $request->deskripsi,
-        ]);
-        foreach ($request->input('foto_utama', []) as $file) {
-            $portof->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection($this->mediaCollection);
+        dd($request);
+        try {
+            // return $request->file[0]->getClientOriginalName();
+            $request->validate([
+                'file' => 'max:10000'
+            ]);
+            foreach($request->file as $key => $value){
+                $imgName = 'img/profil-img/'.time().'-'.$value->getClientOriginalName();
+                // return $value;
+                $value->move(public_path('img/porto-img'), $imgName);
+                Portofolio::create([
+                    'nama_desain' => $request->nama_desain,
+                    'deskripsi' => $request->deskripsi,
+                    'foto' => $imgName,
+                    'status' => 1
+                ]);
+            }
+        } catch (Throwable $th) {
+            throw $th;
         }
         return redirect('/admin-porto');
-    }
-
-    public function storeMedia(Request $request)
-    {
-        $path = storage_path('tmp/uploads');
-
-        if (!file_exists($path)) {
-            mkdir($path, 0777, true);
-        }
-
-        $file = $request->file('file');
-        $name = uniqid() . '_' . trim($file->getClientOriginalName());
-        $file->move($path, $name);
-
-        return response()->json([
-            'name'          => $name,
-            'original_name' => $file->getClientOriginalName(),
-        ]);
     }
 
     /**

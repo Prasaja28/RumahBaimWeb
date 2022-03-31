@@ -10,6 +10,7 @@
 @section('konten')
 <!-- Content Body place -->
 <div class="main-content">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <section class="section">
         <div class="section-header">
             <h1>Portofolio</h1>
@@ -66,32 +67,6 @@
 
 @section('script')
 <!-- script internal place -->
-<script>
-      var uploadedDocumentMap = {}
-      Dropzone.options.documentDropzone = {
-         url: '{{ ('/admin-galeri/store/media') }}',
-         maxFilesize: 2, // MB
-         addRemoveLinks: true,
-         acceptedFiles: ".jpeg,.jpg,.png,.gif",
-         headers: {
-            'X-CSRF-TOKEN': "{{ csrf_token() }}"
-         },
-         success: function(file, response) {
-            $('form').append('<input type="hidden" name="photo[]" value="' + response.name + '">')
-            uploadedDocumentMap[file.name] = response.name
-         },
-         removedfile: function(file) {
-            file.previewElement.remove()
-            var name = ''
-            if (typeof file.file_name !== 'undefined') {
-               name = file.file_name
-            } else {
-               name = uploadedDocumentMap[file.name]
-            }
-            $('form').find('input[name="photo[]"][value="' + name + '"]').remove()
-         }
-      }
-</script>
 <script src="{{asset('https://code.jquery.com/jquery-3.5.1.js')}}"></script>
 <script src="{{asset('https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js')}}"></script>
@@ -117,7 +92,7 @@ ClassicEditor
   
     var portoDropzone = new Dropzone(".dropzone", { 
        autoProcessQueue: false,
-       maxFilesize: 10000,
+       maxFilesize: 10,
        uploadMultiple: true,
        addRemoveLinks:true,
        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
@@ -126,9 +101,30 @@ ClassicEditor
            console.log(res);
        }
     });
-  
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
     $('#simpanPorto').click(function(){
         portoDropzone.processQueue();
+        // console.log(portoDropzone.processQueue());
+        var nades = document.getElementById("nama_desain").value;
+        console.log(nades);
+        // var descPor = document.getElementById("deskripsiPorto").html;
+        // console.log(descPor);
+        $.ajax({type: "POST",
+            url: "/admin-porto/store",
+            data: { deskripsi: nades},
+            success:function(result) {
+            alert('ok');
+            },
+            error:function(result) {
+            alert('error');
+            }
+        });
     });
 </script>
 @endsection
