@@ -170,6 +170,7 @@
         </div>
         <div class="row">
             <div class="col-12">
+            @if($kontak->count() != null)
               <div class="card card-statistic-1">
                   <div class="container"><br>
                     <div class="text-center mw-100">
@@ -181,6 +182,7 @@
                         <div class="form-group">
                             <label class="label label-default" for="alamat">Alamat</label>
                             <input name="alamat" class="form-control" id="input_alamat" value="{{$kontak[0]->isian}}">
+                            
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -205,6 +207,7 @@
                     </div>
                 </div>
               </div>
+              @endif
             </div>
         </div>
     </section>
