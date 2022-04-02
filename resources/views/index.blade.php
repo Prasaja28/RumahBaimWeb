@@ -147,7 +147,7 @@
     #team .team-block{
         margin: 10px;
     }
-    #team .team-content p{
+    #team #carousel-example-1z .team-content p{
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 600;
@@ -156,6 +156,7 @@
         text-align: center;
         color: #FFFFFF;
     }
+    
     #team .modal-content {
         width: 1192px;
         margin-left: -340px;
@@ -913,56 +914,195 @@
                     </div>
                 </div>
 
-                <div class="row center-block">
-                    <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="team-block bottom">
-                            <a href="" data-toggle="modal" data-target="#myModal">
-                                <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                            </a>
-                            <div class="team-content">
-                                <div class="container">
-                                    <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                <!--Carousel Wrapper-->
+                <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!--Indicators-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+                    </ol>
+                    <!--/.Indicators-->
+                    <!--Slides-->
+                    <div class="carousel-inner" role="listbox">
+                        <!--First slide-->
+                        <div class="carousel-item active">
+                            <div class="row center-block" id="port1">
+                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="team-block bottom">
+                                        <a href="" data-toggle="modal" data-target="#myModal">
+                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
+                                        </a>
+                                        <div class="team-content">
+                                            <div class="container">
+                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="team-block bottom">
+                                        <a href="" data-toggle="modal" data-target="#myModal">
+                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
+                                        </a>
+                                        <div class="team-content">
+                                            <div class="container">
+                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="team-block bottom">
+                                        <a href="" data-toggle="modal" data-target="#myModal">
+                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
+                                        </a>
+                                        <div class="team-content">
+                                            <div class="container">
+                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="team-block bottom">
+                                        <a href="" data-toggle="modal" data-target="#myModal">
+                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
+                                        </a>
+                                        <div class="team-content">
+                                            <div class="container">
+                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="team-block bottom">
-                            <a href="" data-toggle="modal" data-target="#myModal">
-                                <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                            </a>
-                            <div class="team-content">
-                                <div class="container">
-                                    <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                        <!--/First slide-->
+                        <!--Second slide-->
+                        <div class="carousel-item">
+                        <div class="row center-block" id="port1">
+                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="team-block bottom">
+                                        <a href="" data-toggle="modal" data-target="#myModal">
+                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
+                                        </a>
+                                        <div class="team-content">
+                                            <div class="container">
+                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="team-block bottom">
+                                        <a href="" data-toggle="modal" data-target="#myModal">
+                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
+                                        </a>
+                                        <div class="team-content">
+                                            <div class="container">
+                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="team-block bottom">
+                                        <a href="" data-toggle="modal" data-target="#myModal">
+                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
+                                        </a>
+                                        <div class="team-content">
+                                            <div class="container">
+                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="team-block bottom">
+                                        <a href="" data-toggle="modal" data-target="#myModal">
+                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
+                                        </a>
+                                        <div class="team-content">
+                                            <div class="container">
+                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="team-block bottom">
-                            <a href="" data-toggle="modal" data-target="#myModal">
-                                <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                            </a>
-                            <div class="team-content">
-                                <div class="container">
-                                    <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                        <!--/Second slide-->
+                        <!--Third slide-->
+                        <div class="carousel-item">
+                        <div class="row center-block" id="port1">
+                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="team-block bottom">
+                                        <a href="" data-toggle="modal" data-target="#myModal">
+                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
+                                        </a>
+                                        <div class="team-content">
+                                            <div class="container">
+                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="team-block bottom">
+                                        <a href="" data-toggle="modal" data-target="#myModal">
+                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
+                                        </a>
+                                        <div class="team-content">
+                                            <div class="container">
+                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="team-block bottom">
+                                        <a href="" data-toggle="modal" data-target="#myModal">
+                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
+                                        </a>
+                                        <div class="team-content">
+                                            <div class="container">
+                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                                    <div class="team-block bottom">
+                                        <a href="" data-toggle="modal" data-target="#myModal">
+                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
+                                        </a>
+                                        <div class="team-content">
+                                            <div class="container">
+                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!--/Third slide-->
                     </div>
-                    <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="team-block bottom">
-                            <a href="" data-toggle="modal" data-target="#myModal">
-                                <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                            </a>
-                            <div class="team-content">
-                                <div class="container">
-                                    <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!--/.Slides-->
+                    <!--Controls-->
+                    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <!--/.Controls-->
                 </div>
+                <!--/.Carousel Wrapper-->
+
+                
             </div>
             <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
@@ -1053,27 +1193,43 @@
 
         <!-- ======= service Section ======= -->
         <section id="pricing" class="padd-section text-cente">
-        <div class="container" data-aos="fade-up">
-            <div class="section-title text-center">
-                <div class="title-jasa">
-                    <h2>Paket Jasa</h2>
+            <div class="container" data-aos="fade-up">
+                <div class="section-title text-center">
+                    <div class="title-jasa">
+                        <h2>Paket Jasa</h2>
+                    </div>
+                    
+                    <div class="line-title">
+                        <img id="img-about1" src="img/about1.png" alt="">
+                    </div>
                 </div>
-                
-                <div class="line-title">
-                    <img id="img-about1" src="img/about1.png" alt="">
-                </div>
-            </div>
 
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="block-pricing">
+                                <div class="pricing-table">
+                                    <h4>Desain</h4>
+                                    <img id="img-c1" src="img/img-service1.png" alt="">
+                                    <img id="img-c2" src="img/jasa-content1.png" alt="">
+                                    <div class="price-list">
+                                        <img src="img/price1.png" alt="">  
+                                    </div>
+                                    <div class="t_button">
+                                        <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     <div class="col-md-6 col-lg-3">
                         <div class="block-pricing">
                             <div class="pricing-table">
-                                <h4>Desain</h4>
-                                <img id="img-c1" src="img/img-service1.png" alt="">
-                                <img id="img-c2" src="img/jasa-content1.png" alt="">
-                                <div class="price-list">
-                                    <img src="img/price1.png" alt="">  
+                                <h4>Desain dan Bangun</h4>
+                                <img id="img-c1-2" src="img/img-service2.png" alt="">
+                                <img id="img-c2" src="img/jasa-content2.png" alt="">
+                                <div class="price-list2">
+                                    <img src="img/price2.png" alt="">    
                                 </div>
                                 <div class="t_button">
                                     <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
@@ -1082,55 +1238,39 @@
                         </div>
                     </div>
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="block-pricing">
-                        <div class="pricing-table">
-                            <h4>Desain dan Bangun</h4>
-                            <img id="img-c1-2" src="img/img-service2.png" alt="">
-                            <img id="img-c2" src="img/jasa-content2.png" alt="">
-                            <div class="price-list2">
-                                <img src="img/price2.png" alt="">    
-                            </div>
-                            <div class="t_button">
-                                <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="block-pricing">
-                        <div class="pricing-table">
-                            <h4>Renovasi</h4>
-                            <img id="img-c1-3" src="img/img-service3.png" alt="">
-                            <img id="img-c2" src="img/jasa-content3.png" alt="">
-                            <div class="price-list2">
-                                <img src="img/price2.png" alt="">
-                            </div>
-                            <div class="t_button">
-                                <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="block-pricing">
+                            <div class="pricing-table">
+                                <h4>Renovasi</h4>
+                                <img id="img-c1-3" src="img/img-service3.png" alt="">
+                                <img id="img-c2" src="img/jasa-content3.png" alt="">
+                                <div class="price-list2">
+                                    <img src="img/price2.png" alt="">
+                                </div>
+                                <div class="t_button">
+                                    <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-md-6 col-lg-3">
-                    <div class="block-pricing">
-                        <div class="pricing-table">
-                            <h4>Desain Interior</h4>
-                            <img id="img-c1-4" src="img/img-service4.png" alt="">
-                            <img id="img-c2" src="img/jasa-content4.png" alt="">
-                            <div class="price-list2">
-                                <img src="img/price2.png" alt="">    
-                            </div>
-                            <div class="t_button">
-                                <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="block-pricing">
+                            <div class="pricing-table">
+                                <h4>Desain Interior</h4>
+                                <img id="img-c1-4" src="img/img-service4.png" alt="">
+                                <img id="img-c2" src="img/jasa-content4.png" alt="">
+                                <div class="price-list2">
+                                    <img src="img/price2.png" alt="">    
+                                </div>
+                                <div class="t_button">
+                                    <a href="#" class="btn-get-chat scrollto">Konsultasi</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </section><!-- End Pricing Section -->
 
         <!-- ======= Testimonials Section ======= -->
