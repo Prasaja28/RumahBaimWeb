@@ -36,7 +36,7 @@
                             <td>{{$loop->iteration}}</td>
                             <td>{{$portos->nama_desain}}</td>
                             @if($portos->foto_utama == null)
-                                <td><img style="width: 150px;" src= "{{ asset('img/porto-img'.$portos->file_path) }}" alt=""></td>
+                                <td><img style="width: 150px;" src= "{{ asset('img/porto-img'.$portos->foto_utama) }}" alt=""></td>
                             @else
                                 <td><img style="width: 150px;" src="{{ $portos->foto_utama }}" alt=""></td>
                             @endif
@@ -79,15 +79,18 @@ $(document).ready(function() {
 
 @section('js-internal')
 <script>
-ClassicEditor
+    ClassicEditor
     .create( document.querySelector( '#deskripsiPorto' ) )
     .then( editor => {
-            console.log( editor );
+        theEditor = editor;
+            // console.log( editor );
     } )
     .catch( error => {
             console.error( error );
     } );
-
+    function getDataFromTheEditor(){
+        return theEditor.getData();
+    }
     Dropzone.autoDiscover = false;
   
     var portoDropzone = new Dropzone(".dropzone", { 
@@ -98,7 +101,7 @@ ClassicEditor
        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
        acceptedFiles: ".jpeg,.jpg,.png,.gif",
        success: function(file, res) {
-           console.log(res);
+        //    console.log(res);
        }
     });
 
@@ -109,22 +112,34 @@ ClassicEditor
     });
 
     $('#simpanPorto').click(function(){
-        portoDropzone.processQueue();
-        // console.log(portoDropzone.processQueue());
-        var nades = document.getElementById("nama_desain").value;
-        console.log(nades);
-        // var descPor = document.getElementById("deskripsiPorto").html;
-        // console.log(descPor);
-        $.ajax({type: "POST",
-            url: "/admin-porto/store",
-            data: { deskripsi: nades},
-            success:function(result) {
-            alert('ok');
-            },
-            error:function(result) {
-            alert('error');
-            }
-        });
+        //save database
+        var idPorto;
+        try {
+            var url = '{{ route("storePorto") }}';
+            var nama = document.getElementById("nama_desain").value;
+            var desk = getDataFromTheEditor();
+            $.ajax({
+                type : "POST",
+                url : url,
+                dataType:'json',
+                data: { 
+                    nama: nama, 
+                    desk: desk 
+                }, 
+                success:function(response){
+                    idPorto = response;
+                    portoDropzone.processQueue();
+                    console.log(idPorto);
+
+                    location.reload();
+                }
+            });
+        }
+        catch(err) {
+            console.log(err.message);
+        }
+        
+
     });
 </script>
 @endsection

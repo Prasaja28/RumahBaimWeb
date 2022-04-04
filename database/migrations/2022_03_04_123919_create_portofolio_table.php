@@ -17,7 +17,7 @@ class CreatePortofolioTable extends Migration
             $table->id();
             $table->string('nama_desain');
             $table->string('deskripsi');
-            $table->string('foto_utama');
+            $table->string('foto_utama')->nullable();
             $table->string('tampilkan')->default(True);
             $table->timestamps();
             $table->softDeletes();

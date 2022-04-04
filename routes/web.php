@@ -49,10 +49,11 @@ Route::put('/admin-faq/update/{id}',[FaqController::class, 'update']);
 Route::post('/admin-faq/store',[FaqController::class, 'store']);
 
 //portofolio
-Route::get('/admin-porto',[PortoController::class, 'index']);
+Route::get('/admin-porto',[PortoController::class, 'index'])->name('portoIndex');
 Route::get('/admin-porto/delete/{id}',[PortoController::class, 'destroy']);
 Route::put('/admin-porto/update/{id}',[PortoController::class, 'update']);
-Route::post('/admin-porto/store',[PortoController::class, 'store']);
+Route::post('/admin-porto/store',[PortoController::class, 'store'])->name('storePorto');
+Route::post('/admin-porto/save-photo',[PortoController::class, 'savePhoto'])->name('savePhoto');
 // Route::post('/admin-porto/store/media',[PortoController::class, 'storeMedia']);
 
 //detail Portofolio

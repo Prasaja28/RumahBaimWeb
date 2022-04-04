@@ -12,7 +12,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label class="label label-default">Nama Portofolio</label>
-                    <input class="form-control form-control-border @error('nama_desain') is-invalid @enderror" placeholder="Masukkan Nama Portofolio" id="nama_desain" name="nama_desain" value="{{ old('nama_desain') }}" required>
+                    <input class="form-control form-control-border @error('nama_desain') is-invalid @enderror" placeholder="Masukkan Nama Portofolio" id="nama_desain" name="nama_desain"  required>
                     @error('nama_desain')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -21,7 +21,7 @@
                 </div>
                 <div class="form-group">
                     <label class="label label-default">Deskripsi</label>
-                    <textarea class="form-control form-control-border @error('deskripsi') is-invalid @enderror" id="deskripsiPorto" name="deskripsiPorto" value="{{ old('deskripsi') }}" required></textarea>
+                    <textarea class="form-control form-control-border @error('deskripsi') is-invalid @enderror" id="deskripsiPorto" name="deskripsiPorto" required></textarea>
                     @error('deskripsi')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group">
                     <label class="label label-default">Masukkan Foto Portofolio</label>
-                    <form action="/admin-porto/store" method="POST" class="dropzone" name="photos" id="portoPhotos">
+                    <form action="/admin-porto/save-photo" method="POST" class="dropzone" name="photos" id="portoPhotos">
                     @csrf
                     </form>
                 </div>

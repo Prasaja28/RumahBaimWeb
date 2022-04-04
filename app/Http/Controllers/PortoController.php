@@ -38,27 +38,19 @@ class PortoController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        // $id = Portofolio::select('id')->orderBy('created_at','desc')->take(1)->get();
+        
         try {
-            // return $request->file[0]->getClientOriginalName();
-            $request->validate([
-                'file' => 'max:10000'
+            $data = Portofolio::create([
+                'nama_desain' => $request->get('nama'),
+                'deskripsi' => $request->get('desk'),
+                'status' => 1
             ]);
-            foreach($request->file as $key => $value){
-                $imgName = 'img/profil-img/'.time().'-'.$value->getClientOriginalName();
-                // return $value;
-                $value->move(public_path('img/porto-img'), $imgName);
-                Portofolio::create([
-                    'nama_desain' => $request->nama_desain,
-                    'deskripsi' => $request->deskripsi,
-                    'foto' => $imgName,
-                    'status' => 1
-                ]);
-            }
+            
         } catch (Throwable $th) {
             throw $th;
         }
-        return redirect('/admin-porto');
+        return $data->id;
     }
 
     /**
@@ -127,4 +119,41 @@ class PortoController extends Controller
         Portofolio::where('id',$id)->delete();
         return redirect('/admin-porto')->with('Data Berhasil Di Hapus!!!');
     }
+
+    public function savePhoto(Request $request)
+    {
+        $i = 0;
+        $id = Portofolio::select('id')->orderBy('created_at','desc')->take(1)->get();
+        $id = $id[0]['id'];
+        try {
+            // return $request->file[0]->getClientOriginalName();
+            $request->validate([
+                'file' => 'max:10000'
+            ]);
+            foreach($request->file as $key => $value){
+                $imgName = 'img/porto-img/'.time().'-'.$value->getClientOriginalName();
+                // return $value;
+                $value->move(public_path('img/porto-img'), $imgName);
+                if($i == 0){
+                    Portofolio::where('id',$id)
+                    ->update([
+                        'foto_utama' => $imgName
+                    ]);
+                }else{
+                    GaleriPorto::create([
+                        'foto' => $imgName,
+                        'tampilkan' => 1,
+                        'porto_id' => $id
+                    ]);
+                }
+                $i++;
+                // array_push($dataPath,$imgName);
+                return;
+            }
+        } catch (Throwable $th) {
+            throw $th;
+        }
+        
+    }
+
 }
