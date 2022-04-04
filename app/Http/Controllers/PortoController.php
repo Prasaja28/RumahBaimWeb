@@ -17,7 +17,8 @@ class PortoController extends Controller
     public function index()
     {
         $porto = Portofolio::all();
-        return view('admin.porto-admin.porto-admin-index',compact('porto'));
+        $galeri = GaleriPorto::all();
+        return view('admin.porto-admin.porto-admin-index',compact('porto','galeri'));
     }
 
     /**
@@ -64,7 +65,7 @@ class PortoController extends Controller
         //
         $detail = Portofolio::where('id',$id)->get();
         $galeri = GaleriPorto::where('porto_id', $id)->get();
-        return view('admin.porto-admin.porto-admin-detail',compact('detail'));
+        return view('admin.porto-admin.porto-admin-detail',compact('detail','galeri'));
     }
 
     /**

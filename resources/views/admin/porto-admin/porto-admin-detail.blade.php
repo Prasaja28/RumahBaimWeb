@@ -15,6 +15,9 @@
                         <h6>{{ $portos->nama_desain }}</h6>
                         <img src="{{ asset($portos->foto_utama) }}" alt="Tidak Ada gambar" style="width:150px; height:100px; margin-top:10px;"><br><br>
                         <p><b>Deskripsi :</b> {{ $portos->deskripsi }}</p>
+                        @foreach($galeri as $data)
+                          <img src="{{ $data->foto }}" alt="Tidak Ada gambar" style="width:150px; height:100px;">
+                        @endforeach
                     </div>
                 </div>
             </div>
