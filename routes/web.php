@@ -57,7 +57,7 @@ Route::post('/admin-porto/save-photo',[PortoController::class, 'savePhoto'])->na
 // Route::post('/admin-porto/store/media',[PortoController::class, 'storeMedia']);
 
 //detail Portofolio
-Route::get('/admin-porto-detail/{id}',[PortoController::class, 'show']);
+Route::get('/admin-porto-detail/{id}',[PortoController::class, 'detail']);
 
 //Akun
 Route::get('/admin-akun',[UsersController::class, 'index']);

@@ -41,7 +41,7 @@
                                 <td><img style="width: 150px;" src="{{ $portos->foto_utama }}" alt=""></td>
                             @endif
                             <td class="">
-                                <button class="btn btn-info" alt="View" data-toggle="modal" data-target="#view{{$portos->id}}"><i class="fas fa-eye"></i></i></button>
+                                <a href="{{ url('admin-porto-detail/'.$portos->id)}}" class="btn btn-info"><i class="fas fa-eye"></i></i></a>
                                 |
                                 <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#edit{{$portos->id}}"><i class="fas fa-pen-square"></i></button>
                                 |
@@ -62,7 +62,6 @@
 @include('admin.porto-admin.porto-admin-delete')
 <!-- Model Update -->
 @include('admin.porto-admin.porto-admin-update')
-@include('admin.porto-admin.porto-admin-detail')
 @endsection
 
 @section('script')

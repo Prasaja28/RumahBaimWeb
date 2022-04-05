@@ -1,30 +1,74 @@
-<!-- Modal -->
-@foreach ($porto as $portos)
-<div class="modal fade bd-example-modal-lg" id="view{{$portos->id}}" tabindex="-1" role="dialog" aria-labelledby="faqupdate" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="faqupdate">Lihat Detail Portofolio</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+@extends('/admin/layout-komponen/master')
+@section('title','Portofolio')
+@section('css-internal')
+<!-- css internal place -->
+<style>
+.deskripsi-porto p{
+ margin-bottom: 0px;
+}
+</style>
+@endsection
+@section('konten')
+<!-- Content Body place -->
+<div class="main-content">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <section class="section">
+        <div class="section-header">
+            <h1>Detail Portofolio</h1>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-statistic-1 p-3">
+              <div class="container"><br>
+                  <a href="{{url('/admin-porto')}}" class="btn btn-info">Kembali</a><br><br>
+              </div>
+              <div class="container text-center">
+                @if($porto->count() != 0)
+                  <p>{{$porto[0]['nama_desain']}}</p>
+                  <img style="width: 150px;" src="{{ url($porto[0]['foto_utama']) }}"><br>
+                  <div class="deskripsi-porto">{!! $porto[0]['deskripsi'] !!}</div>
+                @endif
+              </div>
+              <br>
+              <div class="container">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#tambahGaleri">Tambah Galeri</button>
+              </div>
+              <br>
+              <table id="tabel_galeri" class="table table-striped table-bordered" style="width:100%">
+                  <thead>
+                      <tr>
+                          <th>Foto</th>
+                          <th class="text-center">Waktu Diunggah</th>
+                          <th class="text-center">Hapus?</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    @forelse($galeri as $data)
+                      <tr>
+                        <td>
+                          <img style="width: 150px;" src="{{url($data->foto)}}" >
+                        </td>
+                        <td  class="text-center">{{$data->created_at}}</td>
+                        <td class="text-center">
+                          <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#deleteFoto{{$data->id}}"><i class="fas fa-trash-alt"></i></i></button>
+                        </td>
+                      </tr>
+                    @empty
+                    @endforelse
+                  </tbody>
+              </table>
             </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h6>{{ $portos->nama_desain }}</h6>
-                        <img src="{{ asset($portos->foto_utama) }}" alt="Tidak Ada gambar" style="width:150px; height:100px; margin-top:10px;"><br><br>
-                        <p><b>Deskripsi :</b> {{ $portos->deskripsi }}</p>
-                        @foreach($galeri as $data)
-                          <img src="{{ $data->foto }}" alt="Tidak Ada gambar" style="width:150px; height:100px;">
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
       </div>
-    </div>
-  </div>
+    </section>
 </div>
-@endforeach
+
+@endsection
+
+
+
+@section('js-internal')
+<script>
+    $('#tabel_galeri').DataTable();
+</script>
+@endsection

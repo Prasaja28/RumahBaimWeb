@@ -30,6 +30,15 @@ class PortoController extends Controller
     {
         //
     }
+    
+    public function detail($id)
+    {
+        //
+        $porto = Portofolio::where('id',$id)->get();
+        $galeri = GaleriPorto::where('porto_id',$id)->get();
+        // echo $porto[0]['foto_utama'];
+        return view('admin.porto-admin.porto-admin-detail',compact('porto','galeri'));
+    }
 
     /**
      * Store a newly created resource in storage.
