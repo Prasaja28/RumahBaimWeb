@@ -797,7 +797,7 @@ section {
         opacity: 0;
     }
 }
-@-webkit-keyframes pulsate2 {
+@keyframes pulsate2 {
     0% {
         transform: scale(0.1, 0.1);
         opacity: 1;

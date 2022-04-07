@@ -329,7 +329,7 @@
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 500;
-        font-size: 24px;
+        font-size: 15px;
         line-height: 36px;
         color: #5E5E5E;
     }
@@ -494,6 +494,7 @@
         .bi-list::before {
             content: "\f479";
             color: white;
+            margin-left: 214px;
         }
         .navbar-mobile ul {
             display: block;
@@ -507,6 +508,11 @@
             background-color: #333;
             overflow-y: auto;
             transition: 0.3s;
+        }
+        #header #logo img {
+            width: auto;
+            height: 68px;
+            padding-left: 30%;
         }
         #hero h2 span {
             color: black;
@@ -525,6 +531,15 @@
             line-height: 1.2;
             margin-left: 20px;
         }
+        #hero p{
+            color: #505050;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            line-height: 2;
+            margin-bottom: 20px;
+            text-align: center;
+        }
         #hero .col-md-5 p {
             color: #333333;
             font-family: 'Poppins';
@@ -539,7 +554,7 @@
             background: #F17922;
             color: white;
             margin-top: 20px;
-            margin-left: 10px;
+            margin-left: 60px;
         }
         .carousel .carousel-inner{
             margin-left: 8px;
@@ -552,8 +567,8 @@
         }
         #about-us-extended #tab-request-mobile img{
             width: auto;
-            height: 323px;
-            margin-left: -47px;
+            height: 260px;
+            margin-left: -37px;
         }
         .col-md-5 h2 {
             color: white;
@@ -577,6 +592,60 @@
             margin-left: 16px;
             font-size: 12px;
         }
+        #team .modal-content {
+            width: 230px;
+            margin-left: 41px;
+        }
+        #team .modal-header h3 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 22px;
+            color: #FFFFFF;
+            margin-left: auto;
+        }
+        #team .modal-body .header1 .title-desc p {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 36px;
+            color: #FFFFFF;
+        }
+        #team .modal-body .desc p {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 8px;
+            line-height: 24px;
+            color: #FFFFFF;
+        }
+        #team .carousel-inner .col-lg-5 h2 {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 36px;
+            color: #FFFFFF;
+            text-align: left;
+            margin-top: -10px;
+        }
+        #team .carousel-inner .col-lg-5 p {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 8px;
+            /* line-height: 24px; */
+            text-align: justify;
+            color: #FFFFFF;
+            padding-right: 5%;
+        }
+        /* #team .carousel-inner img {
+            width: auto;
+            height: 109px;
+            margin-top: -11px;
+        } */
         .text-upper p {
             color: white;
             font-family: Poppins;
@@ -599,7 +668,7 @@
             font-size: 14px;
         }
         #call-us .bg-image .container h1 {
-            font-size: 40px;
+            font-size: 20px;
         }
         #call-us .bg-image .container p {
             font-size: 10px;
@@ -661,7 +730,7 @@
         max-height:100%;
     }
 </style>
-<link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' rel='stylesheet'>
+<!-- <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' rel='stylesheet'> -->
 @endsection
 @section('konten')
 <!-- ======= Home Section ======= -->
@@ -1473,7 +1542,9 @@
                     </div>
 
                     <div class="col-lg-5 col-md-8">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.1409907669185!2d110.38376870218993!3d-7.797628036231348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5734088512fd%3A0x26690348ac8080f4!2secc.co.id%20(PT.%20ECC)!5e0!3m2!1sid!2sid!4v1646798364536!5m2!1sid!2sid" width="600" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <div class="container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.1409907669185!2d110.38376870218993!3d-7.797628036231348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5734088512fd%3A0x26690348ac8080f4!2secc.co.id%20(PT.%20ECC)!5e0!3m2!1sid!2sid!4v1646798364536!5m2!1sid!2sid" width="600" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
