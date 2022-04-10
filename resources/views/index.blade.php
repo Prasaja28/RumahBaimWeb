@@ -171,7 +171,7 @@
         font-size: 32px;
         line-height: 39px;
         color: #FFFFFF;
-        margin-left: auto;
+        text-align: center;
     }
     #team .modal-body {
         background-image: url('img/back-modal.png');
@@ -198,8 +198,8 @@
         height: 368px;
     }
     #team .carousel-inner img{
-        width: 491px;
-        height: 324px;
+        width: 446px;
+        height: 296px;
         margin-top: 20px;
     }
     #team .carousel-inner .col-lg-5 h2{
@@ -211,6 +211,27 @@
         color: #FFFFFF;
         text-align: left;
         margin-top: 69px;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        height: 100px;
+        width: 100px;
+        outline: black;
+        background-size: 100%, 100%;
+        background-image: none;
+    }
+
+    .carousel-control-next-icon:after
+    {
+        content: '>';
+        font-size: 55px;
+        color: black;
+    }
+
+    .carousel-control-prev-icon:after {
+        content: '<';
+        font-size: 55px;
+        color: black;
     }
     #team .carousel-inner .col-lg-5 p{
         font-family: 'Poppins';
