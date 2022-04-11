@@ -197,7 +197,7 @@
         background-color: #666666;
         height: 368px;
     }
-    #team .carousel-inner img{
+    #team #car1 img{
         width: 446px;
         height: 296px;
         margin-top: 20px;
@@ -212,27 +212,36 @@
         text-align: left;
         margin-top: 69px;
     }
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
+    /* .carousel-control-next, .carousel-control-prev {
+        
+    } */
+    #prev,
+    #next {
         height: 100px;
         width: 100px;
         outline: black;
         background-size: 100%, 100%;
+        background-color: #E0E0E0;
+        border-radius: 50%;
+        border: 1px solid #E0E0E0;
         background-image: none;
+        margin-right: -76px;
+        margin-left: -76px;
+        margin-top: 408px;
     }
 
-    .carousel-control-next-icon:after
+    /* #next:after
     {
         content: '>';
         font-size: 55px;
-        color: black;
+        color: white;
     }
 
-    .carousel-control-prev-icon:after {
+    #prev:after {
         content: '<';
         font-size: 55px;
-        color: black;
-    }
+        color: white;
+    } */
     #team .carousel-inner .col-lg-5 p{
         font-family: 'Poppins';
         font-style: normal;
@@ -656,11 +665,16 @@
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 400;
-            font-size: 8px;
+            font-size: 5px;
             /* line-height: 24px; */
             text-align: justify;
             color: #FFFFFF;
             padding-right: 5%;
+        }
+        #team #car1 img {
+            width: auto;
+            height: 128px;
+            margin-top: -17px;
         }
         /* #team .carousel-inner img {
             width: auto;
@@ -958,41 +972,6 @@
         <!-- end Proses Kerja section -->
 
         <!-- ======= Portofolio Section ======= -->
-        <!-- <section id="portofolios" class="padd-section text-center">
-            <div data-aos="fade-up">
-                <div class="row">
-                    <div class="title-porto">
-                        <h2>Portofolio</h2>
-                    </div>
-                    <div class="line-title">
-                        <img id="img-about1" src="img/about1.png" alt="">
-                    </div>
-                    
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="team-block bottom">
-                            <img class="img-porto" src="{{url('/img/porto-img/1647334169-Halaman Utama.jpg')}}" alt="img">
-                            <div class="team-content">
-                                <ul class="list-unstyled">
-                                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                                <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                                <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
-                                </ul>
-                                <span>manager</span>
-                                <h4>Kimberly Tran</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <img class="img-porto" src="{{url('/img/porto-img/1647334182-Halaman Utama 2.jpg')}}" alt="latest" data-aos="zoom-in"data-aos-delay="100">
-                    </div>
-                    <div class="col-lg-1"></div>
-                </div>
-                
-            </div>
-        </section>End Screenshots Section -->
-
-        <!-- ======= Portofolio Section ======= -->
         <section id="team" class="padd-section text-center">
             <div class="container" data-aos="fade-up">
                 <div class="section-title text-center">
@@ -1014,7 +993,7 @@
                     </ol>
                     <!--/.Indicators-->
                     <!--Slides-->
-                    <div class="carousel-inner" role="listbox">
+                    <div class="carousel-inner" role="listbox" >
                         <!--First slide-->
                         <div class="carousel-item active">
                             <div class="row center-block" id="port1">
@@ -1179,17 +1158,18 @@
                         <!--/Third slide-->
                     </div>
                     <!--/.Slides-->
-                    <!--Controls-->
-                    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                    <!--/.Controls-->
+                    
                 </div>
+                <!--Controls-->
+                <a id="prev" class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a id="next" class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <!--/.Controls-->
                 <!--/.Carousel Wrapper-->
 
                 
@@ -1223,7 +1203,7 @@
                                         </ul>
                                     
                                         <!-- The slideshow -->
-                                        <div class="carousel-inner">
+                                        <div class="carousel-inner" id="car1">
                                             <div class="carousel-item active">
                                                 <div class="row">
                                                     <div class="col-lg-1"></div>
