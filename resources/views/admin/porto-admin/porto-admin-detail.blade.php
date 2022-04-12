@@ -22,11 +22,23 @@
               <div class="container"><br>
                   <a href="{{url('/admin-porto')}}" class="btn btn-info">Kembali</a><br><br>
               </div>
-              <div class="container text-center">
+              <div class="container">
                 @if($porto->count() != 0)
-                  <p>{{$porto[0]['nama_desain']}}</p>
-                  <img style="width: 150px;" src="{{ url($porto[0]['foto_utama']) }}"><br>
-                  <div class="deskripsi-porto">{!! $porto[0]['deskripsi'] !!}</div>
+                  <div class="row">
+                    <div class="col-lg-12 text-center">
+                      <p class="h4"><b>{{$porto[0]['nama_desain']}}</b></p>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-lg-6" style="text-align: right">
+                      <img style="width: 250px;" src="{{ url($porto[0]['foto_utama']) }}">
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="deskripsi-porto">{!! $porto[0]['deskripsi'] !!}</div>
+                    </div>
+                  </div>
+                  <br>
                 @endif
               </div>
               <br>
@@ -50,7 +62,7 @@
                         </td>
                         <td  class="text-center">{{$data->created_at}}</td>
                         <td class="text-center">
-                          <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#deleteFoto{{$data->id}}"><i class="fas fa-trash-alt"></i></i></button>
+                          <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#deleteGaleri{{$data->id}}"><i class="fas fa-trash-alt"></i></i></button>
                         </td>
                       </tr>
                     @empty
@@ -63,6 +75,10 @@
     </section>
 </div>
 
+@include('admin.porto-admin.porto-admin-create-galeri')
+@if($galeri->count() > 0)
+@include('admin.porto-admin.porto-admin-delete-galeri')
+@endif
 @endsection
 
 
@@ -70,5 +86,29 @@
 @section('js-internal')
 <script>
     $('#tabel_galeri').DataTable();
+
+    Dropzone.autoDiscover = false;
+  
+    var galeriDropzone = new Dropzone(".dropzone", { 
+       autoProcessQueue: false,
+       maxFilesize: 10,
+       uploadMultiple: true,
+       addRemoveLinks:true,
+       headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+       acceptedFiles: ".jpeg,.jpg,.png,.gif",
+       success: function(file, res) {
+        //    console.log(res);
+       }
+    });
+
+    $('#simpanGaleri').click(function(){
+        //save database
+        galeriDropzone.processQueue();
+        setTimeout(function () {
+          alert('Reloading Page');
+          location.reload(true);
+        }, 3000);
+                  
+    });
 </script>
 @endsection

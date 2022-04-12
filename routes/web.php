@@ -51,9 +51,12 @@ Route::post('/admin-faq/store',[FaqController::class, 'store']);
 //portofolio
 Route::get('/admin-porto',[PortoController::class, 'index'])->name('portoIndex');
 Route::get('/admin-porto/delete/{id}',[PortoController::class, 'destroy']);
-Route::put('/admin-porto/update/{id}',[PortoController::class, 'update']);
+Route::post('/admin-porto/update/{id}',[PortoController::class, 'update'])->name('updatePorto');
+Route::post('/admin-porto/update-photo/{id}',[PortoController::class, 'updatePhoto']);
 Route::post('/admin-porto/store',[PortoController::class, 'store'])->name('storePorto');
 Route::post('/admin-porto/save-photo',[PortoController::class, 'savePhoto'])->name('savePhoto');
+Route::post('/admin-porto/save-galeri/{id}',[PortoController::class, 'saveGaleri'])->name('saveGaleri');
+Route::get('/admin-porto/delete-galeri/{id}',[PortoController::class, 'destroyGaleri']);
 // Route::post('/admin-porto/store/media',[PortoController::class, 'storeMedia']);
 
 //detail Portofolio

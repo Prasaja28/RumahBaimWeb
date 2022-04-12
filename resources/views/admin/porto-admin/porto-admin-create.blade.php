@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group">
                     <label class="label label-default">Masukkan Foto Portofolio</label>
-                    <form action="/admin-porto/save-photo" method="POST" class="dropzone" name="photos" id="portoPhotos">
+                    <form action="/admin-porto/save-photo" method="POST" class="dropzone" name="photos" id="portoInsert">
                     @csrf
                     </form>
                 </div>

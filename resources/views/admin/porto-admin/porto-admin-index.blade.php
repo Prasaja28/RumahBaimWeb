@@ -17,11 +17,11 @@
         </div>
         <div class="row">
             <div class="col-12">
-              <div class="card card-statistic-1">
+              <div class="card card-statistic-1 p-3">
                 <div class="container"><br>
                     <button class="btn btn-primary" data-toggle="modal" data-target="#createPortofolio">Tambah Data</button><br><br>
                 </div>
-                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                <table id="tb_porto" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -42,10 +42,10 @@
                             @endif
                             <td class="">
                                 <a href="{{ url('admin-porto-detail/'.$portos->id)}}" class="btn btn-info"><i class="fas fa-eye"></i></i></a>
+                                <!--|
+                                <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#editPorto{{$portos->id}}"><i class="fas fa-pen-square"></i></button> -->
                                 |
-                                <button class="btn btn-success" alt="Edit" data-toggle="modal" data-target="#edit{{$portos->id}}"><i class="fas fa-pen-square"></i></button>
-                                |
-                                <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#delete{{$portos->id}}"><i class="fas fa-trash-alt"></i></i></button>
+                                <button class="btn btn-danger" alt="Hapus" data-toggle="modal" data-target="#deletePorto{{$portos->id}}"><i class="fas fa-trash-alt"></i></i></button>
                             </td>
                         </tr>
                         @empty
@@ -59,9 +59,11 @@
 </div>
 @include('admin.porto-admin.porto-admin-create')
 <!-- Model Delete -->
+@if($porto->count() >0)
 @include('admin.porto-admin.porto-admin-delete')
-<!-- Model Update -->
 @include('admin.porto-admin.porto-admin-update')
+@endif
+
 @endsection
 
 @section('script')
@@ -71,13 +73,15 @@
 <script src="{{asset('https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js')}}"></script>
 <script>
 $(document).ready(function() {
-    $('#example').DataTable();
+    
 } );
 </script>
 @endsection
 
 @section('js-internal')
 <script>
+    $('#tb_porto').DataTable();
+
     ClassicEditor
     .create( document.querySelector( '#deskripsiPorto' ) )
     .then( editor => {
@@ -92,9 +96,10 @@ $(document).ready(function() {
     }
     Dropzone.autoDiscover = false;
   
-    var portoDropzone = new Dropzone(".dropzone", { 
+    var portoDropzone = new Dropzone('#portoInsert', { 
        autoProcessQueue: false,
        maxFilesize: 10,
+       parallelUploads: 30,
        uploadMultiple: true,
        addRemoveLinks:true,
        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
@@ -113,6 +118,7 @@ $(document).ready(function() {
     $('#simpanPorto').click(function(){
         //save database
         var idPorto;
+        
         try {
             var url = '{{ route("storePorto") }}';
             var nama = document.getElementById("nama_desain").value;
@@ -129,8 +135,10 @@ $(document).ready(function() {
                     idPorto = response;
                     portoDropzone.processQueue();
                     console.log(idPorto);
-
-                    location.reload();
+                    setTimeout(function () {
+                    alert('Reloading Page');
+                    location.reload(true);
+                    }, 3000);
                 }
             });
         }
@@ -139,6 +147,65 @@ $(document).ready(function() {
         }
         
 
+    });
+
+    ClassicEditor
+    .create( document.querySelector( '#deskripsiPortoEdit' ) )
+    .then( editor => {
+        theEdit = editor;
+            // console.log( editor );
+    } )
+    .catch( error => {
+            console.error( error );
+    } );
+    function getDataFromEdit(){
+        return theEdit.getData();
+    }
+
+    var portoEditDropzone = new Dropzone('#portoEdit', { 
+       autoProcessQueue: false,
+       maxFilesize: 10,
+       uploadMultiple: false,
+       maxFiles: 1,
+       addRemoveLinks:true,
+       headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+       acceptedFiles: ".jpeg,.jpg,.png,.gif",
+       success: function(file, res) {
+           console.log(res);
+       }
+    });
+
+    $('#simpanEditPorto').click(function(){
+        //save database
+        // console.log('tess');
+        // var idPorto;
+        var id = $(this).attr("data-id");
+        try {
+            var url = '{{ route("updatePorto", ":id") }}';
+            url = url.replace(':id', id);
+            var nama = document.getElementById("nama_desainEdit").value;
+            var desk = getDataFromEdit();
+            $.ajax({
+                type : "POST",
+                url : url,
+                dataType:'json',
+                data: { 
+                    nama: nama, 
+                    desk: desk 
+                }, 
+                success:function(response){
+                    // console.log(response);
+                    
+                }
+            });
+            portoEditDropzone.processQueue();
+            // console.log(idPorto);
+
+            // location.reload();
+        }
+        catch(err) {
+            console.log(err.message);
+        }
     });
 </script>
 @endsection
