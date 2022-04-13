@@ -113,6 +113,15 @@
         font-size: 15px;
         margin-left: -19px;
     }
+    .mt-4 p{
+        color: white;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 24px;
+        text-align: justify;
+    }
     #about-us-extended{
         background-color: #333333;
     }
@@ -445,7 +454,7 @@
     #faq .container .card-body{
         font-family: Poppins;
         font-weight: normal;
-        font-size: 12px;
+        font-size: 16px;
         color: #5E5E5E;
     }
     #faq .container .card-header{
@@ -788,13 +797,13 @@
                                 @if ($dataFoto->status == 1)
                                 <div class="carousel-item active">
                                     <div class="top-top">
-                                        <img style="width: 500px;height: 350px;" src="{{$dataFoto->foto}}" alt="">
+                                        <img  src="{{$dataFoto->foto}}" alt="">
                                     </div>
                                 </div>
                                 @else
                                 <div class="carousel-item">
                                     <div class="top-top">
-                                        <img style="width: 500px;height: 300px;" src="{{$dataFoto->foto}}" alt="">
+                                        <img src="{{$dataFoto->foto}}" alt="">
                                     </div>
                                 </div>
                                 @endif
@@ -838,7 +847,7 @@
                         <div class="mt-4" data-aos="fade-left" data-aos-delay="100">
                             @if ($tentang->count() != 0)
                             @foreach ($tentang as $dataTentang)
-                                <p class="text-white" style="font-size: 13px; text-align:left;">{{$dataTentang->deskripsi}}</p>
+                                <p class="text-white" style="font-size: 13px; text-align:left;">{!!$dataTentang->deskripsi!!}</p>
                             @endforeach
                             @endif
                         </div>
