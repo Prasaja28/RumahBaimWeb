@@ -132,9 +132,6 @@
         font-weight: 400;
         font-size: 10px;
         line-height: 24px;
-        text-align: center;
-        padding-left: 5%;
-        padding-right: 5%;
     }
     #about-us-extended{
         background-color: #333333;
@@ -653,6 +650,17 @@
             text-align: justify;
             margin-left: 16px;
             font-size: 12px;
+        }
+        .mt-4 p {
+            color: white;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 24px;
+            text-align: center;
+            padding-left: 5%;
+            padding-right: 5%;
         }
         #team .modal-content {
             width: 230px;
