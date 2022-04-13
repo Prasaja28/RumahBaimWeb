@@ -5,7 +5,7 @@
         alt="RumahBaim"><span style="color: #F17922">Rumah Baim</span>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
-      <a href="index.html"><span style="color: #F17922">RB</span></a>
+      <a href=""><span style="color: #F17922">RB</span></a>
     </div>
     <ul class="sidebar-menu">
         <li class="nav-item dropdown {{ (request()->is('dashboard*')) ? 'active' : '' }}">

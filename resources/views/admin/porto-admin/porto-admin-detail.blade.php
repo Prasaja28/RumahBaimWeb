@@ -1,13 +1,17 @@
 @extends('/admin/layout-komponen/master')
-@section('title','Portofolio')
-@section('css-internal')
+@section('title','Detail Portofolio')
+@section('css')
 <!-- css internal place -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
 <style>
 .deskripsi-porto p{
  margin-bottom: 0px;
 }
 </style>
 @endsection
+@section('porto-admin','active')
 @section('konten')
 <!-- Content Body place -->
 <div class="main-content">

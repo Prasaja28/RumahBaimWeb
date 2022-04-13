@@ -993,169 +993,51 @@
                     </ol>
                     <!--/.Indicators-->
                     <!--Slides-->
+                    
                     <div class="carousel-inner" role="listbox" >
                         <!--First slide-->
-                        <div class="carousel-item active">
-                            <div class="row center-block" id="port1">
-                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
+                        <?php
+                        $i = 0;
+                        foreach($portofolio as $porto){
+                            if($i % 4 == 0){
+                                if($i <= 0){
+                        ?>
+                                <div class="carousel-item active">
+                                    <div class="row center-block" id="port1">
+                                <?php
+                                }else{
+                                    ?>
+                                    <div class="carousel-item">
+                                        <div class="row center-block" id="port1">
+                                    <?php
+                                }
+                            }
+                            ?>
+                                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
                                     <div class="team-block bottom">
-                                        <a href="" data-toggle="modal" data-target="#myModal">
-                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
+                                        <a href="" data-toggle="modal" data-target="#myModal{{$porto->id}}">
+                                            <img src="{{$porto->foto_utama}}" class="img-responsive" alt="img">
                                         </a>
                                         <div class="team-content">
                                             <div class="container">
-                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
+                                                <p>{{$porto->nama_desain}}</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                                    <div class="team-block bottom">
-                                        <a href="" data-toggle="modal" data-target="#myModal">
-                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                                        </a>
-                                        <div class="team-content">
-                                            <div class="container">
-                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
-                                            </div>
-                                        </div>
+                            <?php
+                            if ($i % 3 == 0 && $i !=0){
+                            ?>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                                    <div class="team-block bottom">
-                                        <a href="" data-toggle="modal" data-target="#myModal">
-                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                                        </a>
-                                        <div class="team-content">
-                                            <div class="container">
-                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                                    <div class="team-block bottom">
-                                        <a href="" data-toggle="modal" data-target="#myModal">
-                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                                        </a>
-                                        <div class="team-content">
-                                            <div class="container">
-                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/First slide-->
-                        <!--Second slide-->
-                        <div class="carousel-item">
-                        <div class="row center-block" id="port1">
-                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                                    <div class="team-block bottom">
-                                        <a href="" data-toggle="modal" data-target="#myModal">
-                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                                        </a>
-                                        <div class="team-content">
-                                            <div class="container">
-                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                                    <div class="team-block bottom">
-                                        <a href="" data-toggle="modal" data-target="#myModal">
-                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                                        </a>
-                                        <div class="team-content">
-                                            <div class="container">
-                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                                    <div class="team-block bottom">
-                                        <a href="" data-toggle="modal" data-target="#myModal">
-                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                                        </a>
-                                        <div class="team-content">
-                                            <div class="container">
-                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                                    <div class="team-block bottom">
-                                        <a href="" data-toggle="modal" data-target="#myModal">
-                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                                        </a>
-                                        <div class="team-content">
-                                            <div class="container">
-                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/Second slide-->
-                        <!--Third slide-->
-                        <div class="carousel-item">
-                        <div class="row center-block" id="port1">
-                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                                    <div class="team-block bottom">
-                                        <a href="" data-toggle="modal" data-target="#myModal">
-                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                                        </a>
-                                        <div class="team-content">
-                                            <div class="container">
-                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                                    <div class="team-block bottom">
-                                        <a href="" data-toggle="modal" data-target="#myModal">
-                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                                        </a>
-                                        <div class="team-content">
-                                            <div class="container">
-                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                                    <div class="team-block bottom">
-                                        <a href="" data-toggle="modal" data-target="#myModal">
-                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                                        </a>
-                                        <div class="team-content">
-                                            <div class="container">
-                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-md-2 col-lg-5" data-aos="zoom-in" data-aos-delay="100">
-                                    <div class="team-block bottom">
-                                        <a href="" data-toggle="modal" data-target="#myModal">
-                                            <img src="{{url('/img/renovasi-gal.png')}}" class="img-responsive" alt="img">
-                                        </a>
-                                        <div class="team-content">
-                                            <div class="container">
-                                                <p>Pembangunan Rumah Tahfiz Nurul Ilmi</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/Third slide-->
+                            <?php
+                            }
+                            ?>
+                            <?php
+                            $i++;
+                        }
+                        ?>
+                        
                     </div>
                     <!--/.Slides-->
                     
@@ -1175,90 +1057,92 @@
                 
             </div>
             <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3>Pembangunan Rumah Tahfiz</h3>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="header1">
-                                <div class="descript1 text-center" data-aos="fade-right">
-                                    <div class="title-desc">
-                                        <p>Deskripsi Proyek</p>
-                                    </div>
-                                    <div class="desc">
-                                        <p>Proyek pembangunan untuk Rumah Tahfidz Nurul Ilmi dilaksanakan pada tahun 2018 sampai dengan tahun 2019. Proyek ini merupakan salah satu proyek menarik yang kami kerjakan dimana kami membangun rumah 3 lantai yang cukup kompleks dalam pelaksanaannya. Luas tanah sekitar 90 m2 dan luas bangunannya 240 m2.</p>
-                                    </div>
-                                </div>
-                                <div class="container back-carousel">
-                                    <div id="demo" class="carousel slide" data-ride="carousel">
-                                        <!-- Indicators -->
-                                        <ul class="carousel-indicators">
-                                            <li data-target="#demo" data-slide-to="0" class="active"></li>
-                                            <li data-target="#demo" data-slide-to="1"></li>
-                                            <li data-target="#demo" data-slide-to="2"></li>
-                                        </ul>
-                                    
-                                        <!-- The slideshow -->
-                                        <div class="carousel-inner" id="car1">
-                                            <div class="carousel-item active">
-                                                <div class="row">
-                                                    <div class="col-lg-1"></div>
-                                                    <div class="col-lg-5">
-                                                        <h2>Proses Pembangunan</h2>
-                                                        <p>Proyek pembangunan untuk Rumah Tahfidz Nurul Ilmi dilaksanakan pada tahun 2018 sampai dengan tahun 2019. Proyek ini merupakan salah satu proyek menarik yang kami kerjakan dimana kami membangun rumah 3 lantai yang cukup kompleks dalam pelaksanaannya. Luas tanah sekitar 90 m2 dan luas bangunannya 240 m2.</p>
-                                                    </div>
-                                                    <div class="col-lg-5 no-padding">
-                                                        <img src="img/renovasi-gal.jpg" alt="Los Angeles">
-                                                    </div>
-                                                    <div class="col-lg-1"></div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="row">
-                                                    <div class="col-lg-1"></div>
-                                                    <div class="col-lg-5">
-                                                        <h2>Proses Pembangunan</h2>
-                                                        <p>Proyek pembangunan untuk Rumah Tahfidz Nurul Ilmi dilaksanakan pada tahun 2018 sampai dengan tahun 2019. Proyek ini merupakan salah satu proyek menarik yang kami kerjakan dimana kami membangun rumah 3 lantai yang cukup kompleks dalam pelaksanaannya. Luas tanah sekitar 90 m2 dan luas bangunannya 240 m2.</p>
-                                                    </div>
-                                                    <div class="col-lg-5 no-padding">
-                                                        <img src="img/renovasi-gal.jpg" alt="Los Angeles">
-                                                    </div>
-                                                    <div class="col-lg-1"></div>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <div class="row">
-                                                    <div class="col-lg-1"></div>
-                                                    <div class="col-lg-5">
-                                                        <h2>Proses Pembangunan</h2>
-                                                        <p>Proyek pembangunan untuk Rumah Tahfidz Nurul Ilmi dilaksanakan pada tahun 2018 sampai dengan tahun 2019. Proyek ini merupakan salah satu proyek menarik yang kami kerjakan dimana kami membangun rumah 3 lantai yang cukup kompleks dalam pelaksanaannya. Luas tanah sekitar 90 m2 dan luas bangunannya 240 m2.</p>
-                                                    </div>
-                                                    <div class="col-lg-5 no-padding">
-                                                        <img src="img/renovasi-gal.jpg" alt="Los Angeles">
-                                                    </div>
-                                                    <div class="col-lg-1"></div>
-                                                </div>
-                                            </div>
+            @foreach($portofolio as $porto)
+                <div class="modal fade" id="myModal{{$porto->id}}" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>{{$porto->nama_desain}}</h3>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="header1">
+                                    <div class="descript1 text-center" data-aos="fade-right">
+                                        <div class="title-desc">
+                                            <p>Deskripsi Proyek</p>
                                         </div>
-                                    
-                                        <!-- Left and right controls -->
-                                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                                            <span class="carousel-control-prev-icon"></span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#demo" data-slide="next">
-                                            <span class="carousel-control-next-icon"></span>
-                                        </a>
+                                        <div class="desc">
+                                            <p>{!!$porto->deskripsi!!}</p>
+                                        </div>
+                                    </div>
+                                    <div class="container back-carousel">
+                                        <div id="demo" class="carousel slide" data-ride="carousel">
+                                            <!-- Indicators -->
+                                            <ul class="carousel-indicators">
+                                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                                <li data-target="#demo" data-slide-to="1"></li>
+                                                <li data-target="#demo" data-slide-to="2"></li>
+                                            </ul>
+                                        
+                                            <!-- The slideshow -->
+                                            <div class="carousel-inner" id="car1">
+                                                <div class="carousel-item active">
+                                                    <div class="row">
+                                                        <div class="col-lg-1"></div>
+                                                        <div class="col-lg-5">
+                                                            <h2>Proses Pembangunan</h2>
+                                                            <p>Proyek pembangunan untuk Rumah Tahfidz Nurul Ilmi dilaksanakan pada tahun 2018 sampai dengan tahun 2019. Proyek ini merupakan salah satu proyek menarik yang kami kerjakan dimana kami membangun rumah 3 lantai yang cukup kompleks dalam pelaksanaannya. Luas tanah sekitar 90 m2 dan luas bangunannya 240 m2.</p>
+                                                        </div>
+                                                        <div class="col-lg-5 no-padding">
+                                                            <img src="img/renovasi-gal.jpg" alt="Los Angeles">
+                                                        </div>
+                                                        <div class="col-lg-1"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="row">
+                                                        <div class="col-lg-1"></div>
+                                                        <div class="col-lg-5">
+                                                            <h2>Proses Pembangunan</h2>
+                                                            <p>Proyek pembangunan untuk Rumah Tahfidz Nurul Ilmi dilaksanakan pada tahun 2018 sampai dengan tahun 2019. Proyek ini merupakan salah satu proyek menarik yang kami kerjakan dimana kami membangun rumah 3 lantai yang cukup kompleks dalam pelaksanaannya. Luas tanah sekitar 90 m2 dan luas bangunannya 240 m2.</p>
+                                                        </div>
+                                                        <div class="col-lg-5 no-padding">
+                                                            <img src="img/renovasi-gal.jpg" alt="Los Angeles">
+                                                        </div>
+                                                        <div class="col-lg-1"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="row">
+                                                        <div class="col-lg-1"></div>
+                                                        <div class="col-lg-5">
+                                                            <h2>Proses Pembangunan</h2>
+                                                            <p>Proyek pembangunan untuk Rumah Tahfidz Nurul Ilmi dilaksanakan pada tahun 2018 sampai dengan tahun 2019. Proyek ini merupakan salah satu proyek menarik yang kami kerjakan dimana kami membangun rumah 3 lantai yang cukup kompleks dalam pelaksanaannya. Luas tanah sekitar 90 m2 dan luas bangunannya 240 m2.</p>
+                                                        </div>
+                                                        <div class="col-lg-5 no-padding">
+                                                            <img src="img/renovasi-gal.jpg" alt="Los Angeles">
+                                                        </div>
+                                                        <div class="col-lg-1"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                            <!-- Left and right controls -->
+                                            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                                <span class="carousel-control-prev-icon"></span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#demo" data-slide="next">
+                                                <span class="carousel-control-next-icon"></span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
         </section><!-- End Screenshots Section -->
 
         <!-- ======= service Section ======= -->
