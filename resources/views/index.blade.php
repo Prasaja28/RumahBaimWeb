@@ -98,6 +98,18 @@
         background-color: #333;
         padding-top: 3%;
     }
+    #about-us-extended .text-center {
+        padding-left:-10px;
+        padding-right:-10px;
+    }
+    #about-us-extended .text-center p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
     .col-md-5 h2{
         color: white;
         font-family: 'Poppins';
@@ -118,9 +130,11 @@
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 10px;
         line-height: 24px;
-        text-align: justify;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     #about-us-extended{
         background-color: #333333;
@@ -533,7 +547,7 @@
         .bi-list::before {
             content: "\f479";
             color: white;
-            margin-left: 214px;
+            margin-left: 264px;
         }
         .navbar-mobile ul {
             display: block;
@@ -552,6 +566,12 @@
             width: auto;
             height: 68px;
             padding-left: 30%;
+        }
+        #hero img {
+            max-width: 100%;
+            /* margin-bottom: 30px; */
+            padding-left: 5%;
+            padding-right: 5%;
         }
         #hero h2 span {
             color: black;
@@ -593,7 +613,10 @@
             background: #F17922;
             color: white;
             margin-top: 20px;
-            margin-left: 60px;
+        }
+        #hero .buttonss {
+            padding-left: 3%;
+            padding-right: 2%;
         }
         .carousel .carousel-inner{
             margin-left: 8px;
@@ -606,7 +629,7 @@
         }
         #about-us-extended #tab-request-mobile img{
             width: auto;
-            height: 260px;
+            height: 304px;
             margin-left: -37px;
         }
         .col-md-5 h2 {
@@ -785,8 +808,10 @@
             <div class="col-lg-5" id="home-slogan">
                 <h2><span>Membangun Rumah itu Mudah Bersama Tim</span> Rumah Baim!</h2>
                 <p>Kami Menyediakan Layanan Jasa Untuk Mewujudkan Rumah Impian Anda</p>
-                <a href="#portofolios" class="btn-get-started scrollto">View Project</a>
-                <a href="#contact" class="btn-get-started scrollto">Hubungi Kami</a>
+                <div class="buttonss">
+                    <a href="#portofolios" class="btn-get-started scrollto">View Project</a>
+                    <a href="#contact" class="btn-get-started scrollto">Hubungi Kami</a>
+                </div>
             </div>
             
             <div class="col-lg-5 no-padding" id="home-foto">
@@ -869,8 +894,8 @@
             <div class="row">
                 <div class="col-lg-1"></div>
                 <div class="col-lg-10">
-                    <div class="text-center" data-aos="fade-up" style="padding-left:-10px;padding-right:-10px;">
-                        <p class="text-center text-white" style="font-size: 13px;"><b>
+                    <div class="text-center" data-aos="fade-up">
+                        <p class="text-center text-white" ><b>
                             Membangun rumah akan lebih mudah bersama Rumah Baim. 
                             Percayakan kebutuhan bangunan Anda pada kami dan kami akan 
                             melayani dengan senang hati. <br>Untuk mewujudkan bangunan rumah impian Anda, 
@@ -1435,10 +1460,8 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-5 col-md-8">
-                        <div class="container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.1409907669185!2d110.38376870218993!3d-7.797628036231348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5734088512fd%3A0x26690348ac8080f4!2secc.co.id%20(PT.%20ECC)!5e0!3m2!1sid!2sid!4v1646798364536!5m2!1sid!2sid" width="600" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
+                    <div class="col-md-8">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.1409907669185!2d110.38376870218993!3d-7.797628036231348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5734088512fd%3A0x26690348ac8080f4!2secc.co.id%20(PT.%20ECC)!5e0!3m2!1sid!2sid!4v1646798364536!5m2!1sid!2sid" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
