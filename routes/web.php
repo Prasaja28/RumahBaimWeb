@@ -100,7 +100,7 @@ Route::get('/admin-galeri/delete/{id}',[GaleriController::class, 'destroy']);
 Route::put('/admin-galeri/update/{id}',[GaleriController::class, 'update']);
 Route::post('/admin-galeri/store',[GaleriController::class, 'store']);
 
-//testimoni
+//testimoni-admin
 Route::get('/admin-testi',[TestimoniController::class, 'index']);
 Route::get('/admin-testi/delete/{id}',[TestimoniController::class, 'destroy']);
 Route::put('/admin-testi/update/{id}',[TestimoniController::class, 'update']);

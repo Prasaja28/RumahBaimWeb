@@ -9,6 +9,7 @@ use App\Models\GaleriPorto;
 use App\Models\Kontak;
 use App\Models\Portofolio;
 use App\Models\Tentang_Kami;
+use App\Models\Testimoni;
 use Session;
 
 class LandingController extends Controller
@@ -22,9 +23,10 @@ class LandingController extends Controller
         $kontak = Kontak::all();
         $portofolio = Portofolio::all();
         $tentang = Tentang_Kami::all();
+        $testi = Testimoni::all();
         // foreach($tentang as $data){
         //     echo $data->deskripsi;
         // }
-        return view('index',compact('faq','foto','galeri','kontak','portofolio','tentang'));
+        return view('index',compact('faq','foto','galeri','kontak','portofolio','tentang','testi'));
     }
 }

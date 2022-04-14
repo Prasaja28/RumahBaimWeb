@@ -1289,7 +1289,27 @@
             </div>
             <div class="container testi">
                 <div class="row">
+                @if ($testi->count() != 0)
+                    @foreach($testi as $tes)
+                        @if ($tes->status == 1)
                     <div class="col-md-4 text-center" data-aos="fade-up">
+                        <div class="profile">
+                            <img src="{{$tes->foto}}" class="user">
+                            <div class="head-name">
+                                <p>{!!$tes->nama!!}</p>
+                            </div>
+                            <div class="head-service">
+                                <p>{!!$tes->service!!}</p>
+                            </div>
+                            <blockquote>
+                                {{$tes->review}}
+                            </blockquote>
+                        </div>
+                    </div>
+                    @endif
+                    @endforeach
+                    @endif
+                    <!-- <div class="col-md-4 text-center" data-aos="fade-up">
                         <div class="profile">
                             <img src="img/user.png" class="user">
                             <div class="head-name">
@@ -1316,21 +1336,7 @@
                                 Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa RenovasiLayanan Jasa Renovasi.
                             </blockquote>
                         </div>
-                    </div>
-                    <div class="col-md-4 text-center" data-aos="fade-up">
-                        <div class="profile">
-                            <img src="img/user.png" class="user">
-                            <div class="head-name">
-                                <p>Bayu ya</p>
-                            </div>
-                            <div class="head-service">
-                                <p>Layanan Jasa Renovasi</p>
-                            </div>
-                            <blockquote>
-                                Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa RenovasiLayanan Jasa Renovasi.
-                            </blockquote>
-                        </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section><!-- End Testimonials Section -->
