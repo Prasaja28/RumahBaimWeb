@@ -25,10 +25,10 @@
                         <label for="service">Pilih Pelayanan :</label>
                         <select type="text" class="custom-select form-control-border @error('service') is-invalid @enderror" id="service" placeholder="service....." name="service" value="{{ old('service') }}" required>
                             <option selected="Selected" value="" disabled>Pilih Jasa</option>
-                            <option value="desain">Desain</option>
-                            <option value="desain&bangun">Desain dan Bangun</option>
-                            <option value="renov">Renovasi</option>
-                            <option value="desain_interior">Desain Interior</option>
+                            <option value="Desain">Desain</option>
+                            <option value="Desain dan Bangun">Desain dan Bangun</option>
+                            <option value="Renovasi">Renovasi</option>
+                            <option value="Desain Interior">Desain Interior</option>
                         </select>
                         @error('service')
                             <span class="invalid-feedback" role="alert">

@@ -136,6 +136,11 @@
     #about-us-extended{
         background-color: #333333;
     }
+    #tab-request-dekstop #img-ikon-prosedur{
+        height: 50%;
+        width: auto;
+        margin-left: -67%;
+    }
     .text-upper p{
         color: white;
         font-family: Poppins;
@@ -424,6 +429,7 @@
         width: 120px;
         height: 120px;
         border-radius: 50%;
+        object-fit: cover;
     }
     #testimonials .row blockquote{
         font-family: 'Poppins';
@@ -629,9 +635,11 @@
             margin-left: 9px;
         }
         #about-us-extended #tab-request-mobile img{
+            height: 100px;
             width: auto;
-            height: 304px;
-            margin-left: -37px;
+        }
+        #proses-mobile{
+            margin-bottom: 40px;
         }
         #about-us-extended .text-center p {
             font-family: 'Poppins';
@@ -806,11 +814,6 @@
         right:0;
         top:0;
         bottom:0;
-    }
-    #img-ikon-prosedur{
-        height: 50%;
-        width: auto;
-        margin-left: -67%;
     }
     .img-porto{
         max-width:100%;
@@ -1021,91 +1024,43 @@
                 <!-- <div class="container" data-aos="fade-up">
                     <img src="img/proses-kerja.png" alt="proses kerja">
                 </div> -->
-                <div class="row">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-4">
-                        <div class="" data-aos="fade-up" style="text-align: right;padding-top:7%;">
-                            <p class="h5" style="color:#F17922;">Survey</p>
-                            <p class="text-white" style="">Melakukan pengecekan lokasi, 
-                                pengumpulan data client, serta membuat estimasi atau 
-                                memperkirakan harga desain & pembangunan
-                            </p>
+                <div class="container">
+                    <div class="row">
+                        <div id="proses-mobile" class="col-lg-4">
+                            <div class="" data-aos="fade-up" style="text-align: center;padding-top:7%;">
+                                <img id="img-ikon-prosedur" src="{{url('/img/Survey.png')}}" alt="desain">
+                                <p class="h5" style="color:#F17922;">Survey</p>
+                                <p class="text-white" style="">Melakukan pengecekan lokasi, 
+                                    pengumpulan data client, serta membuat estimasi atau 
+                                    memperkirakan harga desain & pembangunan
+                                </p>
+                            </div>
+                            <div class="" data-aos="fade-up" style="text-align: center;;padding-top:7%;">
+                                <img id="img-ikon-prosedur" src="{{url('/img/Desain.png')}}" alt="desain">
+                                <p class="h5" style="color:#F17922;">Desain</p>
+                                <p class="text-white">Membuat desain pemodelan 3D untuk bangunan dengan 
+                                    proses rendering tampak bangunan</p>
+                            </div>
+                            <div class=""  data-aos="fade-up"  style="text-align: center;;padding-top:7%;">
+                                <img id="img-ikon-prosedur" src="{{url('/img/RAB.png')}}" alt="desain">
+                                <p class="h5" style="color:#F17922;">Gambar Detail & RAB</p>
+                                <p class="text-white">
+                                    Melakukan pendalaman desain detail bangunan untuk 
+                                    membuat perhitungan RAB atau biaya yang diperlukan 
+                                    untuk pelaksanaan pembangunan proyek
+                                </p>
+                            </div>
+                            <div class=""  data-aos="fade-up"  style="text-align: center;;padding-top:7%;">
+                                <img id="img-ikon-prosedur" src="{{url('/img/Pembangunan.png')}}" alt="desain">
+                                <p class="h5" style="color:#F17922;">Pembangunan</p>
+                                <p class="text-white" style="">
+                                    Melakukan pendalaman desain detail bangunan 
+                                    untuk membuat perhitungan RAB atau biaya yang 
+                                    diperlukan untuk pelaksanaan pembangunan proyek
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-1"  data-aos="fade-up"  style="padding-right: 0px;">
-                        <div class="vl"></div>
-                    </div>
-                    <div class="col-lg-1"  data-aos="fade-up" >
-                        <img id="img-ikon-prosedur" src="{{url('/img/Survey.png')}}" alt="desain">
-                    </div>
-                    <div class="col-lg-4"></div>
-                    <div class="col-lg-1"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-4">
-                        
-                    </div>
-                    <div class="col-lg-1"  data-aos="fade-up"  style="padding-right: 0px;">
-                        <div class="vl"></div>
-                    </div>
-                    <div class="col-lg-1"  data-aos="fade-up" >
-                        <img id="img-ikon-prosedur" src="{{url('/img/Desain.png')}}" alt="desain">
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="" data-aos="fade-up" style="text-align: left;;padding-top:7%;">
-                            <p class="h5" style="color:#F17922;">Desain</p>
-                            <p class="text-white">Membuat desain pemodelan 3D untuk bangunan dengan 
-                                proses rendering tampak bangunan</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-4">
-                        <div class=""  data-aos="fade-up"  style="text-align: right;;padding-top:7%;">
-                            <p class="h5" style="color:#F17922;">Gambar Detail & RAB</p>
-                            <p class="text-white">
-                                Melakukan pendalaman desain detail bangunan untuk 
-                                membuat perhitungan RAB atau biaya yang diperlukan 
-                                untuk pelaksanaan pembangunan proyek
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"  data-aos="fade-up"  style="padding-right: 0px;">
-                        <div class="vl"></div>
-                    </div>
-                    <div class="col-lg-1"  data-aos="fade-up" >
-                        <img id="img-ikon-prosedur" src="{{url('/img/RAB.png')}}" alt="desain">
-                    </div>
-                    <div class="col-lg-4">
-                        
-                    </div>
-                    <div class="col-lg-1"></div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-4">
-                        
-                    </div>
-                    <div class="col-lg-1"  data-aos="fade-up"  style="padding-right: 0px;">
-                        <div class="vl"></div>
-                    </div>
-                    <div class="col-lg-1"  data-aos="fade-up" >
-                        <img id="img-ikon-prosedur" src="{{url('/img/Pembangunan.png')}}" alt="desain">
-                    </div>
-                    <div class="col-lg-4">
-                        <div class=""  data-aos="fade-up"  style="text-align: left;;padding-top:7%;">
-                            <p class="h5" style="color:#F17922;">Pembangunan</p>
-                            <p class="text-white" style="">
-                                Melakukan pendalaman desain detail bangunan 
-                                untuk membuat perhitungan RAB atau biaya yang 
-                                diperlukan untuk pelaksanaan pembangunan proyek
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-1"></div>
                 </div>
             </div>
         </section>
