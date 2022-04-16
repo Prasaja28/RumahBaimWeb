@@ -106,7 +106,7 @@
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
-        font-size: 10px;
+        font-size: 15px;
         padding-left: 5%;
         padding-right: 5%;
     }
@@ -130,7 +130,7 @@
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
-        font-size: 10px;
+        font-size: 14px;
         line-height: 24px;
     }
     #about-us-extended{
@@ -540,6 +540,9 @@
         font-size: 16px;
         margin-left: -51px;
     }
+    #kontak-info {
+        padding-left: 10%;
+    }
     @media(max-width: 600px){
         .bi-list::before {
             content: "\f479";
@@ -585,7 +588,8 @@
             font-family: 'Inter';
             font-weight: bold;
             line-height: 1.2;
-            margin-left: 20px;
+            text-align: center;
+            /* margin-left: 20px; */
         }
         #hero p{
             color: #505050;
@@ -629,6 +633,14 @@
             height: 304px;
             margin-left: -37px;
         }
+        #about-us-extended .text-center p {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
         .col-md-5 h2 {
             color: white;
             font-family: 'Poppins';
@@ -656,7 +668,7 @@
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 400;
-            font-size: 10px;
+            font-size: 13px;
             line-height: 24px;
             text-align: center;
             padding-left: 5%;
@@ -918,7 +930,7 @@
             
             {{-- Prosedure --}}
             <div id="tab-request-dekstop">
-                <div class="row" id="tab-request-dekstop">
+                <div class="row">
                     <div class="col-lg-1"></div>
                     <div class="col-lg-4">
                         <div class="" data-aos="fade-up" style="text-align: right;padding-top:7%;">
@@ -1006,8 +1018,94 @@
                 </div>
             </div>
             <div id="tab-request-mobile">
-                <div class="container" data-aos="fade-up">
+                <!-- <div class="container" data-aos="fade-up">
                     <img src="img/proses-kerja.png" alt="proses kerja">
+                </div> -->
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-4">
+                        <div class="" data-aos="fade-up" style="text-align: right;padding-top:7%;">
+                            <p class="h5" style="color:#F17922;">Survey</p>
+                            <p class="text-white" style="">Melakukan pengecekan lokasi, 
+                                pengumpulan data client, serta membuat estimasi atau 
+                                memperkirakan harga desain & pembangunan
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"  data-aos="fade-up"  style="padding-right: 0px;">
+                        <div class="vl"></div>
+                    </div>
+                    <div class="col-lg-1"  data-aos="fade-up" >
+                        <img id="img-ikon-prosedur" src="{{url('/img/Survey.png')}}" alt="desain">
+                    </div>
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-4">
+                        
+                    </div>
+                    <div class="col-lg-1"  data-aos="fade-up"  style="padding-right: 0px;">
+                        <div class="vl"></div>
+                    </div>
+                    <div class="col-lg-1"  data-aos="fade-up" >
+                        <img id="img-ikon-prosedur" src="{{url('/img/Desain.png')}}" alt="desain">
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="" data-aos="fade-up" style="text-align: left;;padding-top:7%;">
+                            <p class="h5" style="color:#F17922;">Desain</p>
+                            <p class="text-white">Membuat desain pemodelan 3D untuk bangunan dengan 
+                                proses rendering tampak bangunan</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-4">
+                        <div class=""  data-aos="fade-up"  style="text-align: right;;padding-top:7%;">
+                            <p class="h5" style="color:#F17922;">Gambar Detail & RAB</p>
+                            <p class="text-white">
+                                Melakukan pendalaman desain detail bangunan untuk 
+                                membuat perhitungan RAB atau biaya yang diperlukan 
+                                untuk pelaksanaan pembangunan proyek
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"  data-aos="fade-up"  style="padding-right: 0px;">
+                        <div class="vl"></div>
+                    </div>
+                    <div class="col-lg-1"  data-aos="fade-up" >
+                        <img id="img-ikon-prosedur" src="{{url('/img/RAB.png')}}" alt="desain">
+                    </div>
+                    <div class="col-lg-4">
+                        
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-4">
+                        
+                    </div>
+                    <div class="col-lg-1"  data-aos="fade-up"  style="padding-right: 0px;">
+                        <div class="vl"></div>
+                    </div>
+                    <div class="col-lg-1"  data-aos="fade-up" >
+                        <img id="img-ikon-prosedur" src="{{url('/img/Pembangunan.png')}}" alt="desain">
+                    </div>
+                    <div class="col-lg-4">
+                        <div class=""  data-aos="fade-up"  style="text-align: left;;padding-top:7%;">
+                            <p class="h5" style="color:#F17922;">Pembangunan</p>
+                            <p class="text-white" style="">
+                                Melakukan pendalaman desain detail bangunan 
+                                untuk membuat perhitungan RAB atau biaya yang 
+                                diperlukan untuk pelaksanaan pembangunan proyek
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
                 </div>
             </div>
         </section>
@@ -1420,7 +1518,7 @@
                 </div>
 
                 <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-lg-3 col-md-4">
+                    <div id="kontak-info" class="col-lg-3 col-md-4">
                         <div class="info">
                             @if($kontak->count() != 0)
                             <div>
