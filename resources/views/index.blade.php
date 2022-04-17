@@ -605,6 +605,8 @@
             line-height: 2;
             margin-bottom: 20px;
             text-align: center;
+            padding-left: 2%;
+            padding-right: 2%;
         }
         #hero .col-md-5 p {
             color: #333333;
@@ -766,7 +768,7 @@
             font-size: 20px;
         }
         #call-us .bg-image .container p {
-            font-size: 10px;
+            font-size: 15px;
             margin-top: -100px;
         }
         #contact .section-title .title-kontak h2 {
@@ -774,9 +776,6 @@
         }
         #contact .info {
             margin-left: 12px;
-        }
-        #contact .info p {
-            margin-left: -52px;
         }
     }
     #carousel{
@@ -818,6 +817,13 @@
     .img-porto{
         max-width:100%;
         max-height:100%;
+    }
+    #kontak-info {
+        margin-bottom: 40px;
+    }
+    #kontak-info img{
+        margin-top: 20px;
+        margin-right: 320px;
     }
 </style>
 <!-- <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' rel='stylesheet'> -->
@@ -1345,51 +1351,23 @@
                 @if ($testi->count() != 0)
                     @foreach($testi as $tes)
                         @if ($tes->status == 1)
-                    <div class="col-md-4 text-center" data-aos="fade-up">
-                        <div class="profile">
-                            <img src="{{$tes->foto}}" class="user">
-                            <div class="head-name">
-                                <p>{!!$tes->nama!!}</p>
+                        <div class="col-md-4 text-center" data-aos="fade-up">
+                            <div class="profile">
+                                <img src="{{$tes->foto}}" class="user">
+                                <div class="head-name">
+                                    <p>{!!$tes->nama!!}</p>
+                                </div>
+                                <div class="head-service">
+                                    <p>{!!$tes->service!!}</p>
+                                </div>
+                                <blockquote>
+                                    {{$tes->review}}
+                                </blockquote>
                             </div>
-                            <div class="head-service">
-                                <p>{!!$tes->service!!}</p>
-                            </div>
-                            <blockquote>
-                                {{$tes->review}}
-                            </blockquote>
                         </div>
-                    </div>
-                    @endif
+                        @endif
                     @endforeach
-                    @endif
-                    <!-- <div class="col-md-4 text-center" data-aos="fade-up">
-                        <div class="profile">
-                            <img src="img/user.png" class="user">
-                            <div class="head-name">
-                                <p>Bayu ya</p>
-                            </div>
-                            <div class="head-service">
-                                <p>Layanan Jasa Renovasi</p>
-                            </div>
-                            <blockquote>
-                                Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa RenovasiLayanan Jasa Renovasi.
-                            </blockquote>
-                        </div>
-                    </div>
-                    <div class="col-md-4 text-center" data-aos="fade-up">
-                        <div class="profile">
-                            <img src="img/user.png" class="user">
-                            <div class="head-name">
-                                <p>Bayu ya</p>
-                            </div>
-                            <div class="head-service">
-                                <p>Layanan Jasa Renovasi</p>
-                            </div>
-                            <blockquote>
-                                Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa Renovasi Layanan Jasa RenovasiLayanan Jasa Renovasi.
-                            </blockquote>
-                        </div>
-                    </div> -->
+                @endif
                 </div>
             </div>
         </section><!-- End Testimonials Section -->
