@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File; 
 use Illuminate\Http\Request;
 use App\Models\Testimoni;
 
@@ -121,7 +122,16 @@ class TestimoniController extends Controller
      */
     public function destroy($id)
     {
-        Testimoni::where('id',$id)->delete();
-        return redirect('/admin-testi')->with('Data Berhasil Di Simpan!!!');
+        $avatar = Testimoni::findOrFail($id);
+        // $image_path = app_path("/img/testimoni-img/{$avatar->foto}");
+        $image_path = public_path().'/img/testimoni-img/'.$avatar->foto;
+
+        if (File::exists($image_path)) {
+            // unlink($image_path);
+            File::delete($image_path);
+        }
+        $avatar->delete();
+
+        return redirect('/admin-testi')->with('Data Berhasil Di dihapus!!!');
     }
 }

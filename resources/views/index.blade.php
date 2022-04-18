@@ -553,7 +553,7 @@
         .bi-list::before {
             content: "\f479";
             color: white;
-            margin-left: 264px;
+            margin-left: 314px;
         }
         .navbar-mobile ul {
             display: block;
@@ -624,8 +624,7 @@
             margin-top: 20px;
         }
         #hero .buttonss {
-            padding-left: 3%;
-            padding-right: 2%;
+            padding-left: 8%;
         }
         .carousel .carousel-inner{
             margin-left: 8px;
