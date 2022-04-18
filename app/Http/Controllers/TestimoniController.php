@@ -42,9 +42,10 @@ class TestimoniController extends Controller
         if($request->foto)
         {
             $file = $request->file('foto');
-            $path = '/img/testimoni-img/'.time().'-'.$file->extension();
+            $path = '/img/testimoni-img/'.time().'-'.$file->getClientOriginalName();
             $file->move(public_path('img/testimoni-img'), $path);
         }
+        // return $path;
 
         Testimoni::create([
             'foto' => $path,

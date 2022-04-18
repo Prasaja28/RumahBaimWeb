@@ -35,7 +35,7 @@
                     @forelse($testi as $data)
                         <tr>
                             <td>{{$loop->iteration}}</td>
-                            <td>{{$data->foto}}</td>
+                            <td><img style="width: 150px;height:auto;" src="{{ url($data->foto)}}" ></td>
                             <td>{{$data->nama}}</td>
                             <td>{{$data->service}}</td>
                             <td>{{$data->review}}</td>
