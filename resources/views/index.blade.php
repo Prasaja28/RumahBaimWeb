@@ -1478,7 +1478,7 @@
                                         <a target="_blank" href="https://wa.me/{{$dataSosmed->isian}}/"><img class="mb-2" src="img/logo-whatsapp.png" alt=""></a>
                                         @endif
                                         @if($dataSosmed->jenis == "instagram")
-                                        <a target="_blank" href="https://www.instagram.com/{{substr($dataSosmed->isian,1)}}/"><img src="img/logo-instagram.png" alt=""></a>
+                                        <a target="_blank" href="https://www.instagram.com/{{substr($dataSosmed->isian,0)}}/"><img src="img/logo-instagram.png" alt=""></a>
                                         @endif
                                     </div>
                                     <div class="col-lg-10">
