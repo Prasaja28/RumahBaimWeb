@@ -23,7 +23,10 @@ class LandingController extends Controller
         $kontak = Kontak::all();
         $portofolio = Portofolio::all();
         $tentang = Tentang_Kami::all();
-        $testi = Testimoni::all();
+        $testi = Testimoni::select('*')
+        ->orderBy('id', 'desc')
+        ->limit(3)
+        ->get();
         // foreach($tentang as $data){
         //     echo $data->deskripsi;
         // }
