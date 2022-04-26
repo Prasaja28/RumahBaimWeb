@@ -824,6 +824,9 @@
         margin-top: 20px;
         margin-right: 320px;
     }
+    .modal-backdrop {
+        z-index: -1;
+    }
 </style>
 <!-- <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' rel='stylesheet'> -->
 @endsection
