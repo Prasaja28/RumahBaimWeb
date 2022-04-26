@@ -837,7 +837,7 @@
                 <h2><span>Membangun Rumah itu Mudah Bersama Tim</span> Rumah Baim!</h2>
                 <p>Kami Menyediakan Layanan Jasa Untuk Mewujudkan Rumah Impian Anda</p>
                 <div class="buttonss">
-                    <a href="#portofolios" class="btn-get-started scrollto">View Project</a>
+                    <a href="#team" class="btn-get-started scrollto">View Project</a>
                     <a href="#contact" class="btn-get-started scrollto">Hubungi Kami</a>
                 </div>
             </div>
